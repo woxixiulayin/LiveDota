@@ -1,0 +1,1063 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cur",
+				"current_page"
+			],
+			[
+				"hig",
+				"hilghtlight_tips"
+			],
+			[
+				"hi",
+				"hilghtlight_tips"
+			],
+			[
+				"cu",
+				"current_page"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"i",
+				"img	Tag"
+			],
+			[
+				"func",
+				"function without name"
+			],
+			[
+				"mouseo",
+				"mouseout	Event"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"client",
+				"clientWidth	Element"
+			],
+			[
+				"tar",
+				"transform"
+			],
+			[
+				"add",
+				"addEvent	(common.js)"
+			],
+			[
+				"settime",
+				"setTimeout(func, delay)	Window"
+			],
+			[
+				"visi",
+				"visibility = 'hidden'	Style CSS"
+			],
+			[
+				"pare",
+				"parentNode	Node"
+			],
+			[
+				"trans",
+				"transform"
+			],
+			[
+				"fla",
+				"floatediv"
+			],
+			[
+				"head",
+				"header	Tag"
+			],
+			[
+				"tran",
+				"transform	Style CSS"
+			],
+			[
+				"visibi",
+				"visibility = 'visible'	Style CSS"
+			],
+			[
+				"selec",
+				"selectors"
+			],
+			[
+				"tip",
+				"tip_wrap"
+			],
+			[
+				"getele",
+				"getElementsByTagName(name)	Element"
+			],
+			[
+				"btn_c",
+				"btn_confirm"
+			],
+			[
+				"btn",
+				"btn_style"
+			],
+			[
+				"crea",
+				"createTip"
+			],
+			[
+				"adde",
+				"addEventListener(type, listener)	EventTarget"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"univer",
+				"university	(index.html)"
+			],
+			[
+				"se",
+				"selectedIndex"
+			],
+			[
+				"uni",
+				"universityInfo"
+			],
+			[
+				"sel",
+				"selectcity"
+			],
+			[
+				"b",
+				"block"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"isp",
+				"ispassed"
+			],
+			[
+				"hint",
+				"hintText"
+			],
+			[
+				"tex",
+				"textContent	Node"
+			],
+			[
+				"sty",
+				"style"
+			],
+			[
+				"geta",
+				"getAttribute(attributeName)	Element"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"gettat",
+				"getAttribute(attributeName)	Element"
+			],
+			[
+				"Clas",
+				"className	Element"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"ind",
+				"index"
+			],
+			[
+				"hin",
+				"hints"
+			],
+			[
+				"ty",
+				"type"
+			],
+			[
+				"index",
+				"indexOf(searchValue)	String"
+			],
+			[
+				"input",
+				"input_password	(index.html)"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"inp",
+				"input_name"
+			],
+			[
+				"call",
+				"callback	(spider.js)"
+			],
+			[
+				"get",
+				"getJSON"
+			],
+			[
+				"src",
+				"script	(index.html)"
+			],
+			[
+				"pro",
+				"promise	(main.js)"
+			],
+			[
+				"chec",
+				"checkInputName"
+			],
+			[
+				"ele",
+				"element"
+			],
+			[
+				"has",
+				"hasAttribute(attrName)	Element"
+			],
+			[
+				"name",
+				"name_hint"
+			],
+			[
+				"task",
+				"task29"
+			],
+			[
+				"border-col",
+				"border-color"
+			],
+			[
+				"style",
+				"stylesheet	(index.html)"
+			],
+			[
+				"requ",
+				"require	(server.js)"
+			],
+			[
+				"sta",
+				"static	(index.html)"
+			],
+			[
+				"respo",
+				"responseText	XMLHttpRequest"
+			],
+			[
+				"read",
+				"readyState	Document"
+			],
+			[
+				"J",
+				"Jobdesclistener"
+			],
+			[
+				"msg",
+				"msgConstructor"
+			],
+			[
+				"lis",
+				"listerner"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"tem",
+				"template_rendered	instance"
+			],
+			[
+				"power",
+				"powerrate"
+			],
+			[
+				"shi",
+				"ships"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"inde",
+				"indexs"
+			],
+			[
+				"shp",
+				"ships"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"enti",
+				"entityType"
+			],
+			[
+				"en",
+				"entity"
+			],
+			[
+				"send",
+				"sendCommond"
+			],
+			[
+				"st",
+				"stop"
+			],
+			[
+				"star",
+				"start"
+			],
+			[
+				"com",
+				"commmond"
+			],
+			[
+				"ship",
+				"shipctldiv"
+			],
+			[
+				"creat",
+				"createShip"
+			],
+			[
+				"coma",
+				"commander	(task26-test.js)"
+			],
+			[
+				"sihp",
+				"shipctldiv"
+			],
+			[
+				"btt",
+				"button	(style.css)"
+			],
+			[
+				"createele",
+				"createElement	(task26-test.js)"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"fill",
+				"fillStyle"
+			],
+			[
+				"addT",
+				"addText"
+			],
+			[
+				"comm",
+				"commmond"
+			],
+			[
+				"des",
+				"destory"
+			],
+			[
+				"S",
+				"Star"
+			],
+			[
+				"C",
+				"Commander"
+			],
+			[
+				"ad",
+				"add"
+			],
+			[
+				"show",
+				"showtimer"
+			],
+			[
+				"ste",
+				"steptiming"
+			],
+			[
+				"iss",
+				"isstop"
+			],
+			[
+				"ent",
+				"entites"
+			],
+			[
+				"exc",
+				"expect"
+			],
+			[
+				"check",
+				"checkProperty"
+			],
+			[
+				"draw",
+				"drawLine"
+			],
+			[
+				"create",
+				"createElement"
+			],
+			[
+				"conslo",
+				"console.log()"
+			],
+			[
+				"root",
+				"rootdiv"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"setti",
+				"setTimeout(func, delay)	Window"
+			],
+			[
+				"class",
+				"className	Element"
+			],
+			[
+				"tree",
+				"tree2Dom"
+			],
+			[
+				"lef",
+				"leftnode"
+			],
+			[
+				"left",
+				"leftnode"
+			],
+			[
+				"rig",
+				"rightnode"
+			],
+			[
+				"ri",
+				"rightvalue"
+			],
+			[
+				"cre",
+				"createEle"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"mari",
+				"margin"
+			],
+			[
+				"hobb",
+				"hobbitsArray"
+			],
+			[
+				"red",
+				"reduceUnderMax"
+			],
+			[
+				"ho",
+				"hobbitsArray"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"ar",
+				"array"
+			],
+			[
+				"ara",
+				"array"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"setsjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inde",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: con",
+				"Snippet: Function"
+			],
+			[
+				"package c",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"note",
+				"Evernote: New empty note"
+			],
+			[
+				"err",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 167.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": true,
+		"side_bar_visible": true,
+		"status_bar_visible": true
+	},
+	"expanded_folders":
+	[
+		"/Users/Jackson/work/web/LiveDota"
+	],
+	"file_history":
+	[
+		"/Users/Jackson/work/web/react/react-demos/demo12/src/server.js",
+		"/Users/Jackson/work/web/react/react-demos/demo11/index.html",
+		"/Users/Jackson/work/web/react/react-demos/demo10/index.html",
+		"/Users/Jackson/work/web/react/react-demos/demo09/index.html",
+		"/Users/Jackson/work/web/react/react-demos/demo06/index.html",
+		"/Users/Jackson/work/web/react/react-demos/demo05/index.html",
+		"/Users/Jackson/work/web/react/react-demos/demo02/index.html",
+		"/Users/Jackson/work/web/react/react-demos/demo01/index.html",
+		"/Users/Jackson/work/web/react/react-demos/demo03/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/jQuerypractice/linkAndImg/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/jQuerypractice/linkAndImg/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/jQuerypractice/linkAndImg/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/index.py",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task37/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task37/common.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task37/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task37/floatdiv.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task37/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/common.js",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/JsFormat/Default (OSX).sublime-keymap",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task32/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task32/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task32/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task32/formfactory.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task31/main.js",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task31/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task31/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task30/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task30/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task30/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task29/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task27/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/arrow/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/arrow/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/arrow/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task29/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task29/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/lagouspider/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/lagouspider/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/lagouspider/spider.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/lagouspider/lagouspider.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/lagouspider/utils.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/lagouspider/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/lagouspider/require.js",
+		"/Users/Jackson/work/web/lagou_spider/gulpfile.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task24/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/__tests__/task26-test.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task27/style.css",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/User/ColorPicker.sublime-settings",
+		"/Users/Jackson/work/web/lagou_spider/spider.js",
+		"/Users/Jackson/work/web/lagou_spider/static/main.js",
+		"/Users/Jackson/work/web/lagou_spider/templates/index.html",
+		"/Users/Jackson/work/web/lagou_spider/static/style.css",
+		"/Users/Jackson/work/web/lagou_spider/server.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/ife.sublime-project",
+		"/Users/Jackson/work/web/lagou_spider/node_modules/express/lib/express.js",
+		"/Users/Jackson/work/web/lagou_spider/README.md",
+		"/Users/Jackson/work/web/lagou_spider/index.py",
+		"/Users/Jackson/work/web/tieba_dig/server.py",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task27/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task26/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task26/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task26/style.css",
+		"/Users/Jackson/weijing/log/05031106.log",
+		"/Users/Jackson/weijing/log/05031617.log",
+		"/Users/Jackson/weijing/log/05031225.log",
+		"/Users/Jackson/weijing/log/05031049.log",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task25/main.js",
+		"/Users/Jackson/weijing/log/05031227.log",
+		"/Users/Jackson/weijing/log/05031442.log",
+		"/Users/Jackson/weijing/log/03211945.log",
+		"/Users/Jackson/weijing/log/03171701.log",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task17/js/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/__tests__/task17-test.js",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/titan/init.rc",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/factory/test/factorytest.cpp",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/factory/tv/whaley/factory/WtvFactoryManager.java",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/apps/FactoryTest/src/android_serialport_api/MainActivity.java",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/factory/FactoryService.cpp",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/apps/FactoryTest/src/android_serialport_api/UsbUpgradeHelper.java",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/factory/IFactoryService.cpp",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/HeliosDLNA/src/org/fourthline/cling/support/model/DIDLObject.java",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/factory/FactoryService.h",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/ClassicTV/src/com/whaley/tv/tvplayer/ui/RootActivity.java",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/apps/ClassicFactory/src/mstar/tvsetting/factory/ui/designmenu/DesignMenuActivity.java",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task22/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task22/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task22/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task21/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task20/js/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task21/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task21/main.js",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/Jackson/work/android/android-sdk-macosx/platform-tools/systrace/systrace_trace_viewer.html",
+		"/Users/Jackson/work/android/android-sdk-macosx/sources/android-15/org/apache/harmony/xml/dom/InnerNodeImpl.java",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task20/index.html",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/ColorPicker/ColorPicker.sublime-settings",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task20/css/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task19/js/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task20/js/makefile",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/carousel/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task19/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task19/css/style.css",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/carousel/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task18/css/style.css",
+		"/Users/Jackson/work/web/learningjavascript/makefile",
+		"/Users/Jackson/work/web/learningjavascript/test.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task18/js/main.js",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task18/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/carousel/style.css",
+		"/Users/Jackson/weijing/log/04131831.log",
+		"/Users/Jackson/weijing/log/04131907.log",
+		"/Users/Jackson/weijing/log/04141039.log",
+		"/Users/Jackson/work/1",
+		"/Users/Jackson/work/web/参考示例/轮播图/demo.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task3/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task14/index.html",
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task13/index.html",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/Users/Jackson/work/web/tie_dig_bae/templates/index.html",
+		"/Users/Jackson/work/web/tie_dig_bae/static/build/mine.css",
+		"/Users/Jackson/work/web/tie_dig_bae/static/build/post.js"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Volumes/data_liuzg/titan-m-938/device/whaley/apps/FactoryTest/src/android_serialport_api",
+			"/Volumes/data_liuzg/titan-m-938/device/whaley/common/factory",
+			"/Volumes/data_liuzg/titan-m-938/device/whaley/apps/FactoryTest",
+			"/Volumes/data_liuzg/titan-m-938/device/whaley/apps/FactoryTest/src/android_serialport_api",
+			"/Users/Jackson/work/web/boost",
+			"/Users/Jackson/work/web/boost/application",
+			"/Users/Jackson/work/web/boost",
+			"/Users/Jackson/work/web/tieba_dig_bae",
+			"/Users/Jackson/work/web/flask_boost/test",
+			"/Users/Jackson/work/python/appidfnxes2biye/jinja2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"floatediv",
+			"    ",
+			"func",
+			"\n",
+			"validateInput",
+			"console",
+			"showHint",
+			"console.log",
+			"validateInput",
+			"request",
+			"promise",
+			"Promise",
+			"promise",
+			"Promise",
+			"$",
+			"check",
+			"Sync",
+			"sync",
+			"Sync",
+			"sync",
+			"html",
+			"Html",
+			"html",
+			"Cityjobquanti",
+			"chargerate",
+			"destoryShip",
+			"index",
+			"destoryShip",
+			"destory",
+			"commmonder",
+			"entity",
+			"destory",
+			"handleCommond",
+			"createShip",
+			"createship",
+			"create",
+			"        \n",
+			"createShip",
+			"recovery",
+			"sh factory/copyDB.sh",
+			"copyDB.sh",
+			"copyDB",
+			"hdcp",
+			"<< MStar >>#",
+			"1613601",
+			"<< MStar >>#",
+			"mmc dd",
+			"install-recovery.sh",
+			"cannot find",
+			"steptiming",
+			"powerrate",
+			"moveDegree",
+			"drawText",
+			"addText",
+			"rotate",
+			"step",
+			"runStep",
+			"enableRun",
+			"enable",
+			"handleCommond",
+			"sendCommond",
+			"shipp",
+			"handleCommond",
+			"ommand",
+			"mmond",
+			"shipUntrustCount",
+			".id",
+			"id",
+			"addTo",
+			"commander",
+			"Commander",
+			"addTo",
+			"enableRun",
+			"Entity",
+			"Commander",
+			"enableRun",
+			"enable",
+			"enableRun",
+			"click",
+			"showtiming",
+			"steptiming",
+			"isstop",
+			"rotate",
+			"addTo",
+			";\n",
+			"log",
+			"console",
+			"this.",
+			"ship1",
+			"drawLine",
+			"initAqiChartData",
+			"cxt",
+			"can",
+			"serial",
+			"sn",
+			"serialn",
+			"setUartOnOff",
+			"uart",
+			"TvFactoryManager",
+			"tvFactoryManager",
+			"TvFactoryManager",
+			"tvFactoryManager",
+			"TvFactoryManager",
+			"tvFactoryManager",
+			"TvFactoryManager",
+			"setUartOnOff",
+			"uart",
+			"sendClassicTVAutoTestData",
+			"macCheck",
+			"macAddr",
+			"mac",
+			"setFactoryProperties",
+			"console",
+			"esn",
+			"cpuid",
+			"cpu",
+			"setBTMacAddr",
+			"MacAddr",
+			"FactoryManager",
+			"setFactoryProperties",
+			"model",
+			"/factory/factory.prop",
+			"service",
+			"factory",
+			"storeProperties",
+			"content",
+			"factoryte",
+			"factorymode"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 133.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Makefile/Make.sublime-build",
+	"project": "livedota.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"rootact",
+				"common/ClassicTV/src/com/whaley/tv/tvplayer/ui/RootActivity.java"
+			],
+			[
+				"baidu",
+				"python/baidu_index/baidu.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/work/web/ife_baiduqianduan/ife.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 889.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 265.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}
