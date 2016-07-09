@@ -1,3 +1,4 @@
+import {log} from '../utils/utils.js';
 const superagent = require('superagent');
 
 export class Spider {
@@ -24,7 +25,7 @@ export class Spider {
                     that.pickInfo(html);
                     //后续处理info信息，返回一个promise
                     that.parseInfo(url);
-                    console.log("finish picking info from " + url);
+                    log("finish picking info from " + url);
                 }
             });
     }
