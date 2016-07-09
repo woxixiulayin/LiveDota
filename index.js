@@ -2,28 +2,26 @@ import {runJobs} from "./server/main.js";
 import {jobs} from "./server/config.js";
 import {log} from "./server/utils/utils.js";
 
-const Koa = require('koa');
-const app = new Koa(); 
+const  Koa = require('koa');
+const  send = require('koa-send');
+const  serve = require('koa-static');
+const  app = new Koa();
 
+app.use(serve((__dirname + "/public")));
 
 app.use(async (ctx, next) => {
-  try {
-    await next();
-    // ctx.body = "hello";
-  } catch (err) {
-    ctx.body = { message: err.message };
-    ctx.status = err.status || 500;
-  }
+  if ('/' === ctx.path)  return send(ctx, "./public/html/index.html");
+  await next();
 });
 
 app.use(async  (ctx, next) => {
-    if (ctx.path === "/") {        
+    if (ctx.path === "/search") {
         await runJobs(jobs)
                 .then(infos => {
                     ctx.body = JSON.stringify(infos);
                 });
     }
+    await next();
 });
-
 
 app.listen(3000);
