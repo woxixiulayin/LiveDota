@@ -22,14 +22,16 @@ class Pandaspider extends Spider {
             let title = $(ele).find("div.video-title").text();
             let img = $(ele).find("img.video-img").attr("data-original");
             let live = new Live(name, nums, title, category, img, website);
-            log(live);
+            infos.push(live);
+            // log(live);
         })
+        return infos;
     }
 }
 
 //以下做测试
-let panda = new Pandaspider();
-let url = 'http://www.panda.tv/cate/dota2';
-panda.parseUrl(url);
+// let panda = new Pandaspider();
+// let url = 'http://www.panda.tv/cate/dota2';
+// panda.parseUrl(url);
 
 export {Pandaspider};

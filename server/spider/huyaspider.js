@@ -22,14 +22,16 @@ class Huyaspider extends Spider {
             let title = $(ele).find("div.all_live_tit a").text();
             let img = $(ele).find("img.pic").attr("src");
             let live = new Live(name, nums, title, category, img, website);
-            log(live);
+            infos.push(live);
+            // log(live);
         })
+        return infos;
     }
 }
 
 //以下做测试
-let huya = new Huyaspider();
-let url = 'http://www.huya.com/g/6';
-huya.parseUrl(url);
+// let huya = new Huyaspider();
+// let url = 'http://www.huya.com/g/6';
+// huya.parseUrl(url);
 
 export {Huyaspider};

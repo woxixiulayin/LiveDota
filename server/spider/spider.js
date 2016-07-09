@@ -9,10 +9,14 @@ export class Spider {
 
     //子类需要复写该方法制定具体的爬取策略
     pickInfo (html) {
-        this.liveinfos[url] = [];
+        let infos = [];
+        /**
+            将获取的结果存入infos中
+        **/
+        return infos;
     }
 
-    parseUrl(url) {
+    parseUrl(url, callback) {
         let that = this;
          superagent.get(url)
             .end( (err, res) => {
@@ -20,31 +24,22 @@ export class Spider {
                     console.log(err);
                 } else {
                     let html = res.text;
+                    let infos = that.pickInfo(html);
                     //使用url作为下标存储html和对应的liveinfo
                     that.htmls[url] = html;
-                    that.pickInfo(html);
-                    //后续处理info信息，返回一个promise
-                    that.parseInfo(url);
-                    log("finish picking info from " + url);
+                    that.liveinfos[url] = infos;
+                    //后续处理这个url下获取到的info信息
+                    if (callback && typeof callback === "function")
+                        {
+                            callback.call(that, that.liveinfos[url]);
+                        }
+                    log(this.constructor.name + " finishs picking infos from " + url);
+                    log("get " + infos.length + "infos!!")
                 }
             });
     }
 
-    //返回promise为了方便写回调（这里主要是存储数据）
-    parseInfo (url) {
-        let that = this;
-        let promise = new Promise( (res, rej) => {
-            if (that.liveinfos[url] instanceof Array && that.liveinfos[url].length !== 0) {
-                resolve(that.liveinfos[url]);
-            } else {
-                throw "no info in " + url;
-            }
-        })
-
-        //加then完成链式编写后续方法
-        return promise;
-    }
 }
 
-// export {Spider};
+export {Spider};
 

@@ -1,0 +1,29 @@
+import {Huyaspider} from "./spider/huyaspider.js";
+import {Pandaspider} from "./spider/pandaspider.js";
+import {Quanminspider} from "./spider/quanminspider.js";
+import {jobs, DEBUG} from "./config.js";
+import {log} from "./utils/utils.js";
+
+let huya = new Huyaspider(),
+    panda = new Pandaspider(),
+    quanmin = new Quanminspider();
+
+let spiders = [huya, panda, quanmin];
+
+let runJobs = function (jobs, callback) {
+
+    spiders.forEach( (spider, index) => {
+        //使用类名作为job的属性名，直接获取要爬取的url
+        let spidername = spider.constructor.name,
+            url = jobs[spidername];
+        spider.parseUrl(url, callback);
+
+    });
+};
+
+//以下做测试
+// runJobs(jobs, infos => {
+//     log("done");
+// })
+
+export {runJobs};

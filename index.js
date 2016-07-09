@@ -1,8 +1,15 @@
+import {runJobs} from "./server/main.js";
+import {jobs} from "./server/config.js";
+import {log} from "./server/utils/utils.js";
+
 const Koa = require('koa');
 const app = new Koa();
 
 app.use(async (ctx, next) => {
   try {
+    runJobs(jobs, infos => {
+        log(infos);
+    });
     await next();
   } catch (err) {
     ctx.body = { message: err.message };

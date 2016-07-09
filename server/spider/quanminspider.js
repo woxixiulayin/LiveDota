@@ -22,14 +22,16 @@ class Quanminspider extends Spider {
             let category = ele.category_name;
             let website = "全民";
             let live = new Live(name, nums, title, category, img, website);
-            log(live);
+            infos.push(live);
+            // log(live);
         });
+        return infos;
     }
 }
 
 //以下做测试
-let quanmin = new Quanminspider();
-let url = 'http://www.quanmin.tv/json/categories/dota2/list.json';
-quanmin.parseUrl(url);
+// let quanmin = new Quanminspider();
+// let url = 'http://www.quanmin.tv/json/categories/dota2/list.json';
+// quanmin.parseUrl(url);
 
 export {Quanminspider};
