@@ -11,17 +11,18 @@ let huya = new Huyaspider(),
 let spiders = [huya, panda, quanmin];
 
 let runJobs = function (jobs, callback) {
-
-    spiders.forEach( (spider, index) => {
+    let promises = []
+    spiders.forEach((spider, index) => {
         //使用类名作为job的属性名，直接获取要爬取的url
         let spidername = spider.constructor.name,
             url = jobs[spidername];
-        spider.parseUrl(url, callback);
-
+        promises.push(spider.parseUrl(url));
     });
+
+    return Promise.all(promises);
 };
 
-//以下做测试
+// 以下做测试
 // runJobs(jobs, infos => {
 //     log("done");
 // })

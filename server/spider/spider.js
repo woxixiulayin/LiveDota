@@ -16,29 +16,28 @@ export class Spider {
         return infos;
     }
 
-    parseUrl(url, callback) {
+    parseUrl(url) {
         let that = this;
-         superagent.get(url)
+        return new Promise( (resolve, reject) => {
+            superagent.get(url)
             .end( (err, res) => {
                 if (err || !res.ok) {
                     console.log(err);
+                    reject(err);
                 } else {
                     let html = res.text;
                     let infos = that.pickInfo(html);
                     //使用url作为下标存储html和对应的liveinfo
                     that.htmls[url] = html;
                     that.liveinfos[url] = infos;
-                    //后续处理这个url下获取到的info信息
-                    if (callback && typeof callback === "function")
-                        {
-                            callback.call(that, that.liveinfos[url]);
-                        }
                     log(this.constructor.name + " finishs picking infos from " + url);
                     log("get " + infos.length + "infos!!")
+                    //后续处理这个url下获取到的info信息
+                    resolve(infos);
                 }
             });
+        });
     }
-
 }
 
 export {Spider};
