@@ -11,17 +11,18 @@ class Huyaspider extends Spider {
 
     //具体的爬取策略
     pickInfo (html) {
-        let infos = [];
-        let parse = $.load(html);
-        let list = parse("li.video-list-item");
-        let category = parse("div.box-hd h3").text();
-        let website = "虎牙";
+        let infos = [],
+            parse = $.load(html),
+            list = parse("li.video-list-item"),
+            category = parse("div.box-hd h3").text(),
+            website = "虎牙";
         list.each((i, ele) => {
-            let name = $(ele).find("i.nick").text();
-            let nums = $(ele).find("i.js-num").text();
-            let title = $(ele).find("div.all_live_tit a").text();
-            let img = $(ele).find("img.pic").attr("src");
-            let live = new Live(name, nums, title, category, img, website);
+            let name = $(ele).find("i.nick").text(),
+                nums = $(ele).find("i.js-num").text(),
+                title = $(ele).find("div.all_live_tit a").text(),
+                link = $(ele).find("a").attr("href"),
+                img = $(ele).find("img.pic").attr("src"),
+                live = new Live(name, nums, title, link, category, img, website);
             infos.push(live);
             // log(live);
         })

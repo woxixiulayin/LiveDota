@@ -3,6 +3,7 @@ import {Spider} from './spider.js';
 import {log} from '../utils/utils.js';
 
 const $ = require("cheerio");
+const prelink = "http://www.panda.tv/";
 
 class Pandaspider extends Spider {
     constructor () {
@@ -11,17 +12,18 @@ class Pandaspider extends Spider {
 
     //具体的爬取策略
     pickInfo (html) {
-        let infos = [];
-        let parse = $.load(html);
-        let list = parse("a.video-list-item-wrap");
-        let category = parse("div.main-header h3").text();
-        let website = "熊猫";
+        let infos = [],
+            parse = $.load(html),
+            list = parse("a.video-list-item-wrap"),
+            category = parse("div.main-header h3").text(),
+            website = "熊猫";
         list.each((i, ele) => {
-            let name = $(ele).find("span.video-nickname").text();
-            let nums = $(ele).find("span.video-number").text();
-            let title = $(ele).find("div.video-title").text();
-            let img = $(ele).find("img.video-img").attr("data-original");
-            let live = new Live(name, nums, title, category, img, website);
+            let name = $(ele).find("span.video-nickname").text(),
+                nums = $(ele).find("span.video-number").text(),
+                title = $(ele).find("div.video-title").text(),
+                link = prelink + $(ele).attr("href"),
+                img = $(ele).find("img.video-img").attr("data-original"),
+                live = new Live(name, nums, title, link, category, img, website);
             infos.push(live);
             // log(live);
         })
