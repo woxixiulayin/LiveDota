@@ -4,6 +4,106 @@
 		"selected_items":
 		[
 			[
+				"serve",
+				"server	(index.js)"
+			],
+			[
+				"brow",
+				"browserSync"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"cons",
+				"const "
+			],
+			[
+				"awi",
+				"await"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"job",
+				"jobpromises"
+			],
+			[
+				"spi",
+				"spidername"
+			],
+			[
+				"info",
+				"infos"
+			],
+			[
+				"live",
+				"liveinfos"
+			],
+			[
+				"huya",
+				"huyaspider	(main.js)"
+			],
+			[
+				"quan",
+				"quanmin"
+			],
+			[
+				"quanm",
+				"quanminspider"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"cat",
+				"category	(models.js)"
+			],
+			[
+				"Li",
+				"LiveDota"
+			],
+			[
+				"parse",
+				"parseUrl	(spider.js)"
+			],
+			[
+				"ex",
+				"export	(models.js)"
+			],
+			[
+				"Live",
+				"LiveDota	(models.js)"
+			],
+			[
+				"html",
+				"htmls"
+			],
+			[
+				"res",
+				"results"
+			],
+			[
+				"thro",
+				"throw	(superagent.js)"
+			],
+			[
+				"er",
+				"error	Event"
+			],
+			[
+				"ne",
+				"next"
+			],
+			[
 				"cur",
 				"current_page"
 			],
@@ -220,10 +320,6 @@
 				"input_name"
 			],
 			[
-				"call",
-				"callback	(spider.js)"
-			],
-			[
 				"get",
 				"getJSON"
 			],
@@ -418,107 +514,107 @@
 			[
 				"ent",
 				"entites"
-			],
-			[
-				"exc",
-				"expect"
-			],
-			[
-				"check",
-				"checkProperty"
-			],
-			[
-				"draw",
-				"drawLine"
-			],
-			[
-				"create",
-				"createElement"
-			],
-			[
-				"conslo",
-				"console.log()"
-			],
-			[
-				"root",
-				"rootdiv"
-			],
-			[
-				"cl",
-				"className"
-			],
-			[
-				"setti",
-				"setTimeout(func, delay)	Window"
-			],
-			[
-				"class",
-				"className	Element"
-			],
-			[
-				"tree",
-				"tree2Dom"
-			],
-			[
-				"lef",
-				"leftnode"
-			],
-			[
-				"left",
-				"leftnode"
-			],
-			[
-				"rig",
-				"rightnode"
-			],
-			[
-				"ri",
-				"rightvalue"
-			],
-			[
-				"cre",
-				"createEle"
-			],
-			[
-				"wid",
-				"width"
-			],
-			[
-				"min-",
-				"min-height"
-			],
-			[
-				"mari",
-				"margin"
-			],
-			[
-				"hobb",
-				"hobbitsArray"
-			],
-			[
-				"red",
-				"reduceUnderMax"
-			],
-			[
-				"ho",
-				"hobbitsArray"
-			],
-			[
-				"arr",
-				"array"
-			],
-			[
-				"ar",
-				"array"
-			],
-			[
-				"ara",
-				"array"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 668,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/html/index.html",
+			"settings":
+			{
+				"buffer_size": 152,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/html/index.html",
+			"settings":
+			{
+				"buffer_size": 150,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/spider/spider.js",
+			"settings":
+			{
+				"buffer_size": 1168,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/spider/pandaspider.js",
+			"settings":
+			{
+				"buffer_size": 1179,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/spider/quanminspider.js",
+			"settings":
+			{
+				"buffer_size": 1097,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/spider/huyaspider.js",
+			"settings":
+			{
+				"buffer_size": 1083,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/utils/utils.js",
+			"settings":
+			{
+				"buffer_size": 404,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/config.js",
+			"settings":
+			{
+				"buffer_size": 229,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/main.js",
+			"settings":
+			{
+				"buffer_size": 776,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/model/models.js",
+			"settings":
+			{
+				"buffer_size": 579,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gulpfile.babel.js",
+			"settings":
+			{
+				"buffer_size": 523,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -559,10 +655,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 354.0,
+		"height": 107.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
 			[
 				"setsjs",
 				"Set Syntax: JavaScript"
@@ -573,10 +673,6 @@
 			],
 			[
 				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"in",
 				"Package Control: Install Package"
 			],
 			[
@@ -632,7 +728,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -653,10 +749,33 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Jackson/work/web/LiveDota"
+		"/Users/Jackson/work/web/LiveDota",
+		"/Users/Jackson/work/web/LiveDota/public",
+		"/Users/Jackson/work/web/LiveDota/public/html",
+		"/Users/Jackson/work/web/LiveDota/server",
+		"/Users/Jackson/work/web/LiveDota/server/model",
+		"/Users/Jackson/work/web/LiveDota/server/spider",
+		"/Users/Jackson/work/web/LiveDota/src",
+		"/Users/Jackson/work/web/LiveDota/src/html",
+		"/Users/Jackson/work/web/LiveDota/src/img"
 	],
 	"file_history":
 	[
+		"/Users/Jackson/work/web/lagou_spider/gulpfile.js",
+		"/Users/Jackson/work/web/LiveDota/public/html/index.html",
+		"/Users/Jackson/work/web/LiveDota/gulpfile.js",
+		"/Users/Jackson/work/web/lagou_spider/package.json",
+		"/Users/Jackson/work/web/LiveDota/public/js/main.js",
+		"/Users/Jackson/work/web/LiveDota/node_modules/superagent/docs/head.html",
+		"/Users/Jackson/work/web/LiveDota/server/spider/quanminspider.js",
+		"/Users/Jackson/work/web/LiveDota/node_modules/superagent/superagent.js",
+		"/Users/Jackson/work/web/LiveDota/server/models.js",
+		"/Users/Jackson/work/web/lagou_spider/lagouspider.js",
+		"/Users/Jackson/work/web/LiveDota/.gitignore",
+		"/Users/Jackson/work/web/LiveDota/.babelrc",
+		"/Users/Jackson/work/web/LiveDota/babelrc",
+		"/Users/Jackson/work/web/LiveDota/server.js",
+		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/JSLint/JSLint.sublime-settings",
 		"/Users/Jackson/work/web/react/react-demos/demo12/src/server.js",
 		"/Users/Jackson/work/web/react/react-demos/demo11/index.html",
 		"/Users/Jackson/work/web/react/react-demos/demo10/index.html",
@@ -705,7 +824,6 @@
 		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/lagouspider/utils.js",
 		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/lagouspider/style.css",
 		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/lagouspider/require.js",
-		"/Users/Jackson/work/web/lagou_spider/gulpfile.js",
 		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task24/index.html",
 		"/Users/Jackson/work/web/ife_baiduqianduan/templates/__tests__/task26-test.js",
 		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task27/style.css",
@@ -770,25 +888,11 @@
 		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task18/css/style.css",
 		"/Users/Jackson/work/web/learningjavascript/makefile",
 		"/Users/Jackson/work/web/learningjavascript/test.js",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task18/js/main.js",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task18/index.html",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/carousel/style.css",
-		"/Users/Jackson/weijing/log/04131831.log",
-		"/Users/Jackson/weijing/log/04131907.log",
-		"/Users/Jackson/weijing/log/04141039.log",
-		"/Users/Jackson/work/1",
-		"/Users/Jackson/work/web/参考示例/轮播图/demo.html",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task3/index.html",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task14/index.html",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task13/index.html",
-		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
-		"/Users/Jackson/work/web/tie_dig_bae/templates/index.html",
-		"/Users/Jackson/work/web/tie_dig_bae/static/build/mine.css",
-		"/Users/Jackson/work/web/tie_dig_bae/static/build/post.js"
+		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task18/js/main.js"
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -812,6 +916,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"let ",
+			";",
+			"let ",
+			"log",
+			"liver",
+			"    ",
+			"export",
 			"floatediv",
 			"    ",
 			"func",
@@ -932,14 +1043,7 @@
 			"MacAddr",
 			"FactoryManager",
 			"setFactoryProperties",
-			"model",
-			"/factory/factory.prop",
-			"service",
-			"factory",
-			"storeProperties",
-			"content",
-			"factoryte",
-			"factorymode"
+			"model"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -957,8 +1061,355 @@
 	"groups":
 	[
 		{
+			"selected": 11,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								666,
+								666
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/html/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/html/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								134,
+								134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "server/spider/spider.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								807,
+								807
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "server/spider/pandaspider.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								789,
+								789
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "server/spider/quanminspider.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1097,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								157
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 71.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "server/spider/huyaspider.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1083,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								720,
+								720
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "server/utils/utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								197,
+								197
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "server/config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40,
+								51
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "server/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 776,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								690,
+								690
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "server/model/models.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								504,
+								504
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "gulpfile.babel.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								105
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -995,7 +1446,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 133.0
+		"height": 211.0
 	},
 	"output.find_results":
 	{
@@ -1033,7 +1484,7 @@
 		[
 			[
 				"",
-				"~/work/web/ife_baiduqianduan/ife.sublime-project"
+				"~/work/web/lagou_spider/lagoupachong.sublime-project"
 			]
 		],
 		"width": 380.0
