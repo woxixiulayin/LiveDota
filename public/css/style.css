@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix {
+    clearfix: both;
+}
+
+.wrap {
+    /*-2 去除上边框与head的距离*/
+}
+
+header {
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 130px;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+header h1 {
+    height: 50px;
+    margin: 20px auto 10px;
+    border: 1px solid white;
+    padding: 4px;
+    width: 180px;
+}
+header h2 {
+    padding: 4px;
+    height: 30px;
+}
+/*img.head-logo  {
+    width: 450px;
+    height: 187px;
+}
+
+img.left {
+    margin-left: 100px; 
+}
+img.right {
+    margin-right: 100px; 
+}*/
+
+.foot {
+    position: fixed;
+    top: 100%;
+    margin-top: -35px;
+    height: 35px;
+    width: 100%;
+    line-height: 35px;
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: 20px;
+}

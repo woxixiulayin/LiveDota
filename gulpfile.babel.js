@@ -7,6 +7,11 @@ gulp.task('html', () => {
         .pipe(gulp.dest('public/html'));
 });
 
+gulp.task('css', () => {
+    gulp.src('src/css/*')
+        .pipe(gulp.dest('public/css/'));
+});
+
 gulp.task('watch', () => {
 
     browserSync.init({
@@ -16,6 +21,7 @@ gulp.task('watch', () => {
     });
 
     gulp.watch('src/html/*.html', ['html']);
+    gulp.watch('src/css/*.css', ['css']);
 
     //浏览器重载
     gulp.watch('public/**', browserSync.reload);
