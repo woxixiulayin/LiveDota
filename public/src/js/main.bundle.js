@@ -54,7 +54,9 @@
 	'use strict';
 
 	$(function () {
-	    $('header h1').html('<p>3</p>');
+	    $.get('/search', function (data) {
+	        console.log(data);
+	    }, 'json');
 	});
 
 /***/ }
