@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
     "browser-sync": "^2.13.0",
     "cheerio": "^0.20.0",
     "gulp": "^3.9.1",

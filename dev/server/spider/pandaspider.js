@@ -1,4 +1,4 @@
-import {Live, LiveDota} from '../model/models.js';
+import {Live, Liveinfos} from '../model/models.js';
 import {Spider} from './spider.js';
 import {log} from '../utils/utils.js';
 
@@ -12,7 +12,8 @@ class Pandaspider extends Spider {
 
     //具体的爬取策略
     pickInfo (html) {
-        let infos = [],
+        let infoarray = [],
+            liveinfos = {},
             parse = $.load(html),
             list = parse("a.video-list-item-wrap"),
             category = parse("div.main-header h3").text(),
@@ -24,10 +25,11 @@ class Pandaspider extends Spider {
                 link = prelink + $(ele).attr("href"),
                 img = $(ele).find("img.video-img").attr("data-original"),
                 live = new Live(name, nums, title, link, category, img, website);
-            infos.push(live);
+                infoarray.push(live);
             // log(live);
         })
-        return infos;
+        liveinfos = new Liveinfos(website, infoarray);
+        return liveinfos;
     }
 }
 

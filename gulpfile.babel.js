@@ -5,13 +5,13 @@ import webpack from 'webpack'
 var webpackconfig = require('./webpack.config.js')
 
 gulp.task('html', () => {
-    gulp.src('src/html/*.html')
-        .pipe(gulp.dest('public/html'));
+    gulp.src('dev/src/html/*.html')
+        .pipe(gulp.dest('public/src/html'));
 });
 
 gulp.task('css', () => {
-    gulp.src('src/css/*')
-        .pipe(gulp.dest('public/css/'));
+    gulp.src('dev/src/css/*')
+        .pipe(gulp.dest('public/src/css/'));
 });
 
 // gulp.task('babel', () => {
@@ -27,6 +27,23 @@ gulp.task('webpack', (callback) => {
     });
 });
 
+gulp.task('server', () => {
+    gulp.src('dev/server/**')
+        .pipe(babel({
+            //支持generators
+            plugins: ['transform-runtime']
+        }))
+        .pipe(gulp.dest('public/server'));
+});
+
+gulp.task('appjs', () => {
+    gulp.src('dev/app.js')
+        .pipe(babel({
+            plugins: ['transform-runtime']
+        }))
+        .pipe(gulp.dest('public'));
+});
+
 gulp.task('watch', () => {
 
     browserSync.init({
@@ -35,9 +52,15 @@ gulp.task('watch', () => {
             proxy: 'localhost:8080'
     });
 
-    gulp.watch('src/html/*.html', ['html']);
-    gulp.watch('src/css/*.css', ['css']);
-    gulp.watch('src/js/*.js', ['webpack']);
+    //监视后端文件改动并babel
+    gulp.watch('dev/server/**', ['server']);
+    //将启动文件转码后放在public目录下
+    gulp.watch('dev/app.js', ['appjs']);
+
+    //监视前端文件改动
+    gulp.watch('dev/src/html/*.html', ['html']);
+    gulp.watch('dev/src/css/*.css', ['css']);
+    gulp.watch('dev/src/js/*.js', ['webpack']);
 
     //浏览器重载
     gulp.watch('public/**', browserSync.reload);

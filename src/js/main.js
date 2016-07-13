@@ -1,3 +1,6 @@
 $(() => {
-    $('header h1').html('<p>3</p>');
+    $.get('/search', (data) => {
+        console.log(data);
+        
+    }, 'json');
 });

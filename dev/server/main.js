@@ -18,9 +18,9 @@ let runJobs = function (jobs, callback) {
             url = jobs[spidername];
         promises.push(spider.parseUrl(url));
     });
-
     return Promise.all(promises);
 };
+
 
 // 以下做测试
 // runJobs(jobs, infos => {

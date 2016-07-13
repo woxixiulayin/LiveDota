@@ -7,10 +7,10 @@ const  send = require('koa-send');
 const  serve = require('koa-static');
 const  app = new Koa();
 
-app.use(serve((__dirname + "/public")));
+app.use(serve((__dirname + "/src")));
 
 app.use(async (ctx, next) => {
-  if ('/' === ctx.path)  return send(ctx, "./public/html/index.html");
+  if ('/' === ctx.path)  return send(ctx, "./src/html/index.html");
   await next();
 });
 

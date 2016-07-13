@@ -49,15 +49,45 @@
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
+	var componets = __webpack_require__(2);
+
 	$(function () {
 	    $.get('/search', function (data) {
+	        var websites = data.map(function (item, i, array) {
+	            return item['website'];
+	        }),
+	            $websites = componets.dom_weblist(websites);
 	        console.log(data);
+	        $("div.livewebs").append($websites);
 	    }, 'json');
 	});
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var dom_weblist = function dom_weblist(websites) {
+	    if (!websites instanceof Array) return false;
+	    var $ul = $("<ul></ul>");
+
+	    websites.forEach(function (ele, i) {
+	        var $li = $("<li><a href=\"#\">" + ele + "</a></li>");
+	        $ul.append($li);
+	    });
+	    return $ul;
+	};
+
+	var dom_liveinfo = function dom_liveinfo(live) {};
+
+	module.exports = {
+	    dom_weblist: dom_weblist
+	};
 
 /***/ }
 /******/ ]);

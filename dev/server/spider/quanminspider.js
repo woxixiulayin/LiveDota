@@ -1,4 +1,4 @@
-import {Live, LiveDota} from '../model/models.js';
+import {Live, Liveinfos} from '../model/models.js';
 import {Spider} from './spider.js';
 import {log} from '../utils/utils.js';
 
@@ -12,9 +12,11 @@ class Quanminspider extends Spider {
 
     //具体的爬取策略，全名TV页面是动态生成的，需要找到数据请求的url来获取json
     pickInfo (html) {
-        let infos = [];
+        let infoarray = [],
+            liveinfos = {},
         //获取到的是json数据，直接转成对象进行处理
-        let list = JSON.parse(html).data;
+            list = JSON.parse(html).data,
+            website = "全民";
         [].forEach.call(list, (ele, i) => {
             let name = ele.nick,
                 nums = ele.view,
@@ -22,12 +24,12 @@ class Quanminspider extends Spider {
                 link = prelink + ele.uid,
                 img = ele.thumb,
                 category = ele.category_name,
-                website = "全民",
                 live = new Live(name, nums, title, link, category, img, website);
-            infos.push(live);
+                infoarray.push(live);
             // log(live);
         });
-        return infos;
+        liveinfos = new Liveinfos(website, infoarray);
+        return liveinfos;
     }
 }
 

@@ -9,11 +9,11 @@ export class Spider {
 
     //子类需要复写该方法制定具体的爬取策略
     pickInfo (html) {
-        let infos = [];
+        let liveinfos = {};
         /**
             将获取的结果存入infos中
         **/
-        return infos;
+        return liveinfos;
     }
 
     parseUrl(url) {
@@ -26,14 +26,14 @@ export class Spider {
                     reject(err);
                 } else {
                     let html = res.text;
-                    let infos = that.pickInfo(html);
+                    let liveinfos = that.pickInfo(html);
                     //使用url作为下标存储html和对应的liveinfo
                     that.htmls[url] = html;
-                    that.liveinfos[url] = infos;
+                    that.liveinfos[url] = liveinfos;
                     log(this.constructor.name + " finishs picking infos from " + url);
-                    log("get " + infos.length + "infos!!")
+                    log("get " + liveinfos.length + "infos!!")
                     //后续处理这个url下获取到的info信息
-                    resolve(infos);
+                    resolve(liveinfos);
                 }
             });
         });
