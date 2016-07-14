@@ -4,6 +4,126 @@
 		"selected_items":
 		[
 			[
+				"get",
+				"getRankinfo"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"taget",
+				"target=\"_blank	(componets.js)"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"magin",
+				"margin-left"
+			],
+			[
+				"rel",
+				"relative"
+			],
+			[
+				"inner",
+				"innerWidth	Window"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"marin",
+				"margin-top"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"style",
+				"list-style"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"cnos",
+				"console.log()"
+			],
+			[
+				"web",
+				"weblist"
+			],
+			[
+				"ins",
+				"instanceof(Object)	Object"
+			],
+			[
+				"info",
+				"infoarray"
+			],
+			[
+				"lve",
+				"liveinfos	(index.html)"
+			],
+			[
+				"Live",
+				"Liveinfos"
+			],
+			[
+				"li",
+				"lives"
+			],
+			[
+				"head",
+				"header	(index.html)"
+			],
+			[
+				"Object",
+				"description-Object.create()"
+			],
+			[
+				"cons",
+				"console.log()"
+			],
+			[
+				"ba",
+				"black"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"clear",
+				"clearfix"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
 				"serve",
 				"server	(index.js)"
 			],
@@ -14,10 +134,6 @@
 			[
 				"req",
 				"require"
-			],
-			[
-				"cons",
-				"const "
 			],
 			[
 				"awi",
@@ -34,10 +150,6 @@
 			[
 				"spi",
 				"spidername"
-			],
-			[
-				"info",
-				"infos"
 			],
 			[
 				"live",
@@ -80,10 +192,6 @@
 				"export	(models.js)"
 			],
 			[
-				"Live",
-				"LiveDota	(models.js)"
-			],
-			[
 				"html",
 				"htmls"
 			],
@@ -124,14 +232,6 @@
 				"max-width"
 			],
 			[
-				"inl",
-				"inline"
-			],
-			[
-				"inli",
-				"inline-block"
-			],
-			[
 				"text-",
 				"text-decoration"
 			],
@@ -140,16 +240,8 @@
 				"img	Tag"
 			],
 			[
-				"func",
-				"function without name"
-			],
-			[
 				"mouseo",
 				"mouseout	Event"
-			],
-			[
-				"li",
-				"link	Tag"
 			],
 			[
 				"client",
@@ -182,10 +274,6 @@
 			[
 				"fla",
 				"floatediv"
-			],
-			[
-				"head",
-				"header	Tag"
 			],
 			[
 				"tran",
@@ -264,10 +352,6 @@
 				"hintText"
 			],
 			[
-				"tex",
-				"textContent	Node"
-			],
-			[
 				"sty",
 				"style"
 			],
@@ -312,16 +396,8 @@
 				"input_password	(index.html)"
 			],
 			[
-				"pad",
-				"padding"
-			],
-			[
 				"inp",
 				"input_name"
-			],
-			[
-				"get",
-				"getJSON"
 			],
 			[
 				"src",
@@ -354,10 +430,6 @@
 			[
 				"border-col",
 				"border-color"
-			],
-			[
-				"style",
-				"stylesheet	(index.html)"
 			],
 			[
 				"requ",
@@ -442,176 +514,67 @@
 			[
 				"com",
 				"commmond"
-			],
-			[
-				"ship",
-				"shipctldiv"
-			],
-			[
-				"creat",
-				"createShip"
-			],
-			[
-				"coma",
-				"commander	(task26-test.js)"
-			],
-			[
-				"sihp",
-				"shipctldiv"
-			],
-			[
-				"btt",
-				"button	(style.css)"
-			],
-			[
-				"createele",
-				"createElement	(task26-test.js)"
-			],
-			[
-				"bo",
-				"border"
-			],
-			[
-				"fill",
-				"fillStyle"
-			],
-			[
-				"addT",
-				"addText"
-			],
-			[
-				"comm",
-				"commmond"
-			],
-			[
-				"des",
-				"destory"
-			],
-			[
-				"S",
-				"Star"
-			],
-			[
-				"C",
-				"Commander"
-			],
-			[
-				"ad",
-				"add"
-			],
-			[
-				"show",
-				"showtimer"
-			],
-			[
-				"ste",
-				"steptiming"
-			],
-			[
-				"iss",
-				"isstop"
-			],
-			[
-				"ent",
-				"entites"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "index.js",
+			"file": "dev/src/html/index.html",
 			"settings":
 			{
-				"buffer_size": 668,
+				"buffer_size": 1262,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/html/index.html",
+			"file": "dev/src/css/style.css",
 			"settings":
 			{
-				"buffer_size": 152,
+				"buffer_size": 4188,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/html/index.html",
+			"file": "dev/src/js/main.js",
 			"settings":
 			{
-				"buffer_size": 150,
+				"buffer_size": 759,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/spider/spider.js",
+			"contents": "var getRankinfo = (liveinfos) => {\n    let lives = [];\n        orderedlives = [];\n\n    liveinfos.forEach( (item, i) => {\n        lives = lives.concat(item.lives);\n    });\n\n    orderedlives = lives.sort( (pre, after) => {\n        return pre - after;\n    });\n};\n\nmodule.exports = {\n    getRankinfo: getRankinfo\n}",
+			"file": "dev/src/js/datahandler.js",
+			"file_size": 310,
+			"file_write_time": 131129783700000000,
 			"settings":
 			{
-				"buffer_size": 1168,
+				"buffer_size": 310,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/spider/pandaspider.js",
+			"file": "dev/src/js/componets.js",
 			"settings":
 			{
-				"buffer_size": 1179,
+				"buffer_size": 1485,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/spider/quanminspider.js",
+			"file": "dev/server/model/models.js",
 			"settings":
 			{
-				"buffer_size": 1097,
+				"buffer_size": 955,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/spider/huyaspider.js",
+			"file": "dev/server/spider/huyaspider.js",
 			"settings":
 			{
-				"buffer_size": 1083,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/utils/utils.js",
-			"settings":
-			{
-				"buffer_size": 404,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/config.js",
-			"settings":
-			{
-				"buffer_size": 229,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/main.js",
-			"settings":
-			{
-				"buffer_size": 776,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/model/models.js",
-			"settings":
-			{
-				"buffer_size": 579,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "gulpfile.babel.js",
-			"settings":
-			{
-				"buffer_size": 523,
+				"buffer_size": 1183,
 				"line_ending": "Unix"
 			}
 		}
@@ -750,29 +713,57 @@
 	"expanded_folders":
 	[
 		"/Users/Jackson/work/web/LiveDota",
-		"/Users/Jackson/work/web/LiveDota/public",
-		"/Users/Jackson/work/web/LiveDota/public/html",
-		"/Users/Jackson/work/web/LiveDota/server",
-		"/Users/Jackson/work/web/LiveDota/server/model",
-		"/Users/Jackson/work/web/LiveDota/server/spider",
-		"/Users/Jackson/work/web/LiveDota/src",
-		"/Users/Jackson/work/web/LiveDota/src/html",
-		"/Users/Jackson/work/web/LiveDota/src/img"
+		"/Users/Jackson/work/web/LiveDota/dev",
+		"/Users/Jackson/work/web/LiveDota/dev/server",
+		"/Users/Jackson/work/web/LiveDota/dev/server/model",
+		"/Users/Jackson/work/web/LiveDota/dev/server/spider",
+		"/Users/Jackson/work/web/LiveDota/dev/src",
+		"/Users/Jackson/work/web/LiveDota/dev/src/css",
+		"/Users/Jackson/work/web/LiveDota/dev/src/html",
+		"/Users/Jackson/work/web/LiveDota/dev/src/img",
+		"/Users/Jackson/work/web/LiveDota/dev/src/js"
 	],
 	"file_history":
 	[
-		"/Users/Jackson/work/web/lagou_spider/gulpfile.js",
+		"/Users/Jackson/work/web/LiveDota/gulpfile.babel.js",
+		"/Users/Jackson/work/web/LiveDota/webpack.config.js",
+		"/Users/Jackson/work/web/LiveDota/dev/server/spider/quanminspider.js",
+		"/Users/Jackson/work/web/LiveDota/dev/server/spider/pandaspider.js",
+		"/Users/Jackson/work/web/LiveDota/dev/server/spider/huyaspider.js",
+		"/Users/Jackson/work/web/LiveDota/dev/server/spider/spider.js",
+		"/Users/Jackson/work/web/LiveDota/dev/app.js",
+		"/Users/Jackson/work/web/LiveDota/dev/server/model/models.js",
+		"/Users/Jackson/work/web/LiveDota/src/html/index.html",
+		"/Users/Jackson/work/web/LiveDota/index.js",
+		"/Users/Jackson/work/web/LiveDota/public/css/style.css",
+		"/Users/Jackson/work/web/LiveDota/dev/src/css/style.css",
+		"/Users/Jackson/work/web/LiveDota/dev/src/html/index.html",
+		"/Users/Jackson/work/web/LiveDota/dev/src/js/main.js",
+		"/Users/Jackson/work/web/LiveDota/dev/server/main.js",
+		"/Users/Jackson/work/web/LiveDota/dev/server/app.js",
+		"/Users/Jackson/work/web/LiveDota/src/js/main.js",
+		"/Users/Jackson/work/web/LiveDota/server/model/models.js",
+		"/Users/Jackson/work/web/LiveDota/server/spider/spider.js",
+		"/Users/Jackson/work/web/LiveDota/server/spider/huyaspider.js",
+		"/Users/Jackson/work/web/LiveDota/server/spider/quanminspider.js",
+		"/Users/Jackson/work/web/LiveDota/server/spider/pandaspider.js",
+		"/Users/Jackson/work/web/LiveDota/.babelrc",
+		"/Users/Jackson/work/web/LiveDota/public/js/main.bundle.js",
 		"/Users/Jackson/work/web/LiveDota/public/html/index.html",
+		"/Users/Jackson/work/web/LiveDota/src/css/style.css",
+		"/Users/Jackson/work/web/LiveDota/server/utils/utils.js",
+		"/Users/Jackson/work/web/LiveDota/server/config.js",
+		"/Users/Jackson/work/web/LiveDota/server/main.js",
+		"/Users/Jackson/work/web/LiveDota/src/img/daota_load2.jpg",
+		"/Users/Jackson/work/web/lagou_spider/gulpfile.js",
 		"/Users/Jackson/work/web/LiveDota/gulpfile.js",
 		"/Users/Jackson/work/web/lagou_spider/package.json",
 		"/Users/Jackson/work/web/LiveDota/public/js/main.js",
 		"/Users/Jackson/work/web/LiveDota/node_modules/superagent/docs/head.html",
-		"/Users/Jackson/work/web/LiveDota/server/spider/quanminspider.js",
 		"/Users/Jackson/work/web/LiveDota/node_modules/superagent/superagent.js",
 		"/Users/Jackson/work/web/LiveDota/server/models.js",
 		"/Users/Jackson/work/web/lagou_spider/lagouspider.js",
 		"/Users/Jackson/work/web/LiveDota/.gitignore",
-		"/Users/Jackson/work/web/LiveDota/.babelrc",
 		"/Users/Jackson/work/web/LiveDota/babelrc",
 		"/Users/Jackson/work/web/LiveDota/server.js",
 		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/JSLint/JSLint.sublime-settings",
@@ -861,34 +852,7 @@
 		"/Volumes/data_liuzg/titan-m-938/device/whaley/apps/FactoryTest/src/android_serialport_api/UsbUpgradeHelper.java",
 		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/factory/IFactoryService.cpp",
 		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/HeliosDLNA/src/org/fourthline/cling/support/model/DIDLObject.java",
-		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/factory/FactoryService.h",
-		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/ClassicTV/src/com/whaley/tv/tvplayer/ui/RootActivity.java",
-		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Volumes/data_liuzg/titan-m-938/device/whaley/apps/ClassicFactory/src/mstar/tvsetting/factory/ui/designmenu/DesignMenuActivity.java",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task22/style.css",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task22/main.js",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task22/index.html",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task21/index.html",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task20/js/main.js",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task21/style.css",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task21/main.js",
-		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
-		"/Users/Jackson/work/android/android-sdk-macosx/platform-tools/systrace/systrace_trace_viewer.html",
-		"/Users/Jackson/work/android/android-sdk-macosx/sources/android-15/org/apache/harmony/xml/dom/InnerNodeImpl.java",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task20/index.html",
-		"/Users/Jackson/Library/Application Support/Sublime Text 3/Packages/ColorPicker/ColorPicker.sublime-settings",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task20/css/style.css",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task19/js/main.js",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task20/js/makefile",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/carousel/main.js",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task19/index.html",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task19/css/style.css",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/example/carousel/index.html",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task18/css/style.css",
-		"/Users/Jackson/work/web/learningjavascript/makefile",
-		"/Users/Jackson/work/web/learningjavascript/test.js",
-		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task18/js/main.js"
+		"/Volumes/data_liuzg/titan-m-938/device/whaley/common/factory/FactoryService.h"
 	],
 	"find":
 	{
@@ -916,6 +880,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"rank_ul",
+			"hover",
+			"shadow",
+			"indent",
+			"nums_img",
+			"a$",
+			":",
+			"path",
+			" left",
+			"35px",
 			"let ",
 			";",
 			"let ",
@@ -1033,22 +1007,12 @@
 			"sendClassicTVAutoTestData",
 			"macCheck",
 			"macAddr",
-			"mac",
-			"setFactoryProperties",
-			"console",
-			"esn",
-			"cpuid",
-			"cpu",
-			"setBTMacAddr",
-			"MacAddr",
-			"FactoryManager",
-			"setFactoryProperties",
-			"model"
+			"mac"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 		],
@@ -1061,29 +1025,31 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.js",
+					"file": "dev/src/html/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 668,
+						"buffer_size": 1262,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								666,
-								666
+								423,
+								423
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1094,279 +1060,50 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/html/index.html",
+					"file": "dev/src/css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 152,
+						"buffer_size": 4188,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								152,
-								152
+								3172,
+								3172
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"spell_check": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "public/html/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 150,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								134,
-								134
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4293.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "server/spider/spider.js",
+					"buffer": 2,
+					"file": "dev/src/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1168,
+						"buffer_size": 759,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								807,
-								807
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "server/spider/pandaspider.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1179,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								789,
-								789
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "server/spider/quanminspider.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1097,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								200,
-								157
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 71.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "server/spider/huyaspider.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1083,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								720,
-								720
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "server/utils/utils.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 404,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								197,
-								197
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "server/config.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 229,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								51
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "server/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 776,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								690,
-								690
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "server/model/models.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 579,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								504,
-								504
+								217,
+								217
 							]
 						],
 						"settings":
@@ -1383,24 +1120,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "gulpfile.babel.js",
+					"buffer": 3,
+					"file": "dev/src/js/datahandler.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 523,
+						"buffer_size": 310,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								105,
-								105
+								256,
+								191
 							]
 						],
 						"settings":
 						{
+							"open_with_edit": true,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -1408,6 +1146,97 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "dev/src/js/componets.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1485,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1341,
+								1341
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 245.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "dev/server/model/models.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								165
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "dev/server/spider/huyaspider.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								647,
+								647
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 47.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -1484,7 +1313,7 @@
 		[
 			[
 				"",
-				"~/work/web/lagou_spider/lagoupachong.sublime-project"
+				"~/work/python/tieba_dig/tibe_dig.sublime-project"
 			]
 		],
 		"width": 380.0

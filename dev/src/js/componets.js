@@ -27,7 +27,25 @@ var $_live = function (live) {
     return $(html);
 }
 
+var $li_rank = function (live) {
+    let html = `
+        <li class="rank-item">
+                <a class="rank-link" href=${live.link} target="_blank">
+                <div class="rank-person">
+                    <span class="rank-name">${live.name}</span>
+                    <span class="rank-nums">${live.nums}</span>
+                </div>
+                <div class="rank-title">${live.title}</div>
+                <div class="rank-website">${live.website}</div>
+                </div>
+                </a>
+            </li>
+    `
+    return $(html);
+}
+
 module.exports = {
     $_weblist: $_weblist,
-    $_live: $_live
+    $_live: $_live,
+    $li_rank: $li_rank
 }

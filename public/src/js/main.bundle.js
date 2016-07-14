@@ -54,12 +54,14 @@
 	"use strict";
 
 	var componets = __webpack_require__(2);
+	var datahandler = __webpack_require__(3);
 
 	var pageWidth = window.innerWidth;
 	var pageHeight = window.innerHeight;
 
 	$(function () {
-	    var $aside_rank = $("aside.rank");
+	    var $aside_rank = $("aside.rank"),
+	        $ul_rank = $aside_rank.find("ul");
 
 	    $.get('/search', function (data) {
 	        var websites = data.map(function (item, i, array) {
@@ -67,16 +69,25 @@
 	        }),
 	            $websites = componets.$_weblist(websites);
 	        console.log(data);
+
+	        //添加左侧网址列表
 	        $("div.livewebs").append($websites);
+	        //添加中间直播页面
 	        data[1].lives.forEach(function (item, i) {
 	            var $live = componets.$_live(item);
 	            $("ul.ul-live-list").append($live);
+	        });
+	        //添加右侧排行榜
+	        var rankInfo = datahandler.getRankinfo(data);
+	        rankInfo.forEach(function (live, i) {
+	            var $li_rank = componets.$li_rank(live);
+	            $ul_rank.append($li_rank);
 	        });
 	    }, 'json');
 
 	    //规划页面布局
 	    (function () {
-	        $aside_rank.css("left", pageWidth - 260 + "px");
+	        $aside_rank.css("left", pageWidth - 270 + "px");
 	    })();
 	});
 
@@ -102,9 +113,42 @@
 	    return $(html);
 	};
 
+	var $li_rank = function $li_rank(live) {
+	    var html = "\n        <li class=\"rank-item\">\n                <a class=\"rank-link\" href=" + live.link + " target=\"_blank\">\n                <div class=\"rank-person\">\n                    <span class=\"rank-name\">" + live.name + "</span>\n                    <span class=\"rank-nums\">" + live.nums + "</span>\n                </div>\n                <div class=\"rank-title\">" + live.title + "</div>\n                <div class=\"rank-website\">" + live.website + "</div>\n                </div>\n                </a>\n            </li>\n    ";
+	    return $(html);
+	};
+
 	module.exports = {
 	    $_weblist: $_weblist,
-	    $_live: $_live
+	    $_live: $_live,
+	    $li_rank: $li_rank
+	};
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var rankNumber = 10;
+	var getRankinfo = function getRankinfo(liveinfos) {
+	    var lives = [],
+	        orderedlives = [];
+
+	    //取出所有直播信息拼成大数组
+	    liveinfos.forEach(function (item, i) {
+	        lives = lives.concat(item.lives);
+	    });
+	    console.log(lives);
+
+	    orderedlives = lives.sort(function (pre, after) {
+	        return after.nums - pre.nums;
+	    });
+	    return orderedlives.slice(0, rankNumber);
+	};
+
+	module.exports = {
+	    getRankinfo: getRankinfo
 	};
 
 /***/ }
