@@ -1,4 +1,4 @@
-var dom_weblist = function (websites) {
+var $_weblist = function (websites) {
     if ( !websites instanceof Array) return false;
     let $ul = $("<ul></ul>");
 
@@ -9,10 +9,24 @@ var dom_weblist = function (websites) {
     return $ul;
 }
 
-var dom_liveinfo = function (live) {
-
+var $_live = function (live) {
+    let html = `
+        <a class="live-item left" href=${live.link} target="_blank">
+                <img class="live-img" src="${live.img}">
+                <div class="live-info">
+                <div class="live-title">${live.title}</div>
+                <div class="live-name-nums">
+                <span class="live-name left">${live.name}</span>
+                <span class="live-nums right">${live.nums}</span>
+                </div>
+                </div>
+                <div class="mask"></div>
+            </a>
+            `;
+    return $(html);
 }
 
 module.exports = {
-    dom_weblist: dom_weblist
+    $_weblist: $_weblist,
+    $_live: $_live
 }

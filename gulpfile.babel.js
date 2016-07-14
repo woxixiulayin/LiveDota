@@ -14,6 +14,11 @@ gulp.task('css', () => {
         .pipe(gulp.dest('public/src/css/'));
 });
 
+gulp.task('img', () => {
+    gulp.src('dev/src/img/*')
+        .pipe(gulp.dest('public/src/img/'));
+});
+
 // gulp.task('babel', () => {
 //     gulp.src('src/js/**')
 //         .pipe(babel())
@@ -60,6 +65,7 @@ gulp.task('watch', () => {
     //监视前端文件改动
     gulp.watch('dev/src/html/*.html', ['html']);
     gulp.watch('dev/src/css/*.css', ['css']);
+    gulp.watch('dev/src/img/*', ['img']);
     gulp.watch('dev/src/js/*.js', ['webpack']);
 
     //浏览器重载

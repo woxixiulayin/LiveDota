@@ -60,9 +60,13 @@
 	        var websites = data.map(function (item, i, array) {
 	            return item['website'];
 	        }),
-	            $websites = componets.dom_weblist(websites);
+	            $websites = componets.$_weblist(websites);
 	        console.log(data);
 	        $("div.livewebs").append($websites);
+	        data[0].lives.forEach(function (item, i) {
+	            var $live = componets.$_live(item);
+	            $("ul.ul-live-list").append($live);
+	        });
 	    }, 'json');
 	});
 
@@ -72,7 +76,7 @@
 
 	"use strict";
 
-	var dom_weblist = function dom_weblist(websites) {
+	var $_weblist = function $_weblist(websites) {
 	    if (!websites instanceof Array) return false;
 	    var $ul = $("<ul></ul>");
 
@@ -83,10 +87,14 @@
 	    return $ul;
 	};
 
-	var dom_liveinfo = function dom_liveinfo(live) {};
+	var $_live = function $_live(live) {
+	    var html = "\n        <a class=\"live-item left\" href=" + live.link + " target=\"_blank\">\n                <img class=\"live-img\" src=\"" + live.img + "\">\n                <div class=\"live-info\">\n                <div class=\"live-title\">" + live.title + "</div>\n                <div class=\"live-name-nums\">\n                <span class=\"live-name left\">" + live.name + "</span>\n                <span class=\"live-nums right\">" + live.nums + "</span>\n                </div>\n                </div>\n                <div class=\"mask\"></div>\n            </a>\n            ";
+	    return $(html);
+	};
 
 	module.exports = {
-	    dom_weblist: dom_weblist
+	    $_weblist: $_weblist,
+	    $_live: $_live
 	};
 
 /***/ }
