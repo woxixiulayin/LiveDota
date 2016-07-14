@@ -11,7 +11,8 @@ var $_weblist = function (websites) {
 
 var $_live = function (live) {
     let html = `
-        <a class="live-item left" href=${live.link} target="_blank">
+        <li class="live-item left">
+        <a class="li-a" href=${live.link} target="_blank">
                 <img class="live-img" src="${live.img}">
                 <div class="live-info">
                 <div class="live-title">${live.title}</div>
@@ -20,9 +21,9 @@ var $_live = function (live) {
                 <span class="live-nums right">${live.nums}</span>
                 </div>
                 </div>
-                <div class="mask"></div>
+            <div class="mask"></div>
             </a>
-            `;
+        </li>`;
     return $(html);
 }
 
