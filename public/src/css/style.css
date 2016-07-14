@@ -95,15 +95,19 @@ div.livewebs ul li:hover {
     background: #EE2C2C;
 }
 div.live-list
-{
-    margin-left: 250px;
-    margin-right: 300px;
-    left: 18%;
-    min-height: 1000px;
+{   
+    position: absolute;
+    margin-left: 200px;
     border: 1px solid black;
     background: #eee;
 }
 
+ul.ul-live-list
+{   
+    position: relative;
+    overflow: hidden;
+    margin-right: 260px;
+}
 li.live-item {
     display: inline-block;
     width: 280px;
@@ -118,11 +122,6 @@ img.live-img
     height: 17 0px;
 }
 
-div.live-chart
-{   
-    margin-right: 300px; 
-    min-height: 1000px;
-}
 a.li-a
 {
     position: relative;
@@ -176,6 +175,43 @@ div.mask
 div.mask:hover
 {
     opacity: .8;
+}
+
+aside.rank
+{
+    position: fixed;
+    top: 150px;
+    left: 100%;
+    width: 230px;
+    height: 500px;
+    background: red;
+    padding: 0;
+}
+
+li.rank-item
+{   
+    position: relative;
+    margin: 5px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+}
+li.rank-item div.rank-nums
+{   
+    display: inline-block;
+}
+li.rank-item div.rank-info
+{   
+    display: inline-block;
+    position: relative;
+}
+li.rank-item div.rank-title
+{
+    float: left;
+}
+li.rank-item div.rank-website
+{
+    float: right;
 }
 footer.foot
 {

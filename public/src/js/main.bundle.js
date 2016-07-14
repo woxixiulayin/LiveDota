@@ -51,11 +51,16 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var componets = __webpack_require__(2);
 
+	var pageWidth = window.innerWidth;
+	var pageHeight = window.innerHeight;
+
 	$(function () {
+	    var $aside_rank = $("aside.rank");
+
 	    $.get('/search', function (data) {
 	        var websites = data.map(function (item, i, array) {
 	            return item['website'];
@@ -63,11 +68,16 @@
 	            $websites = componets.$_weblist(websites);
 	        console.log(data);
 	        $("div.livewebs").append($websites);
-	        data[0].lives.forEach(function (item, i) {
+	        data[1].lives.forEach(function (item, i) {
 	            var $live = componets.$_live(item);
 	            $("ul.ul-live-list").append($live);
 	        });
 	    }, 'json');
+
+	    //规划页面布局
+	    (function () {
+	        $aside_rank.css("left", pageWidth - 260 + "px");
+	    })();
 	});
 
 /***/ },
