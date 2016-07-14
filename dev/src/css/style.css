@@ -22,10 +22,15 @@
 }
 
 header
-{
+{   
+    position: fixed;
+    left:0;
+    top:0;
     height: 50px;
     background: black;
     color: white;
+    width: 100%;
+    z-index: 100;
 }
 
 header h1
@@ -55,13 +60,17 @@ img.right {
 div.content
 {
     position: relative;
+    margin-top: 50px;
 }
 
 div.livewebs
-{
+{   
+    position: fixed;
+    left: 0;
+    top: 50px;
     width: 250px;
+    height: 100%;
     background: #404040;
-    min-height: 1000px;
 }
 
 div.livewebs ul {
@@ -95,17 +104,18 @@ div.live-list
     background: #eee;
 }
 
-div.live-list ul li {
+li.live-item {
     display: inline-block;
-    width: 260px;
+    width: 280px;
     margin: 5px;
     background: white;
+    position: relative;
 }
 
 img.live-img
 {
-    width: 260px;
-    height: 150px;
+    width: 280px;
+    height: 17 0px;
 }
 
 div.live-chart
@@ -113,18 +123,20 @@ div.live-chart
     margin-right: 300px; 
     min-height: 1000px;
 }
-a.live-item
+a.li-a
 {
     position: relative;
+    display: block;
 }
-a.live-item:hover
+li.live-item:hover
 {
     box-shadow: 3px 3px 3px #ccc;
 }
 div.live-title
 {
     color: #555;
-    font-size: 18px;
+    font-size: 13px;
+    font-family: Arial;
     margin-left: 7px;
 }
 div.live-name-nums
@@ -135,11 +147,12 @@ div.live-name-nums
     height: 17px;
 }
 span.live-name
-{   
+{
     text-indent: 20px;
     line-height: 17px;
     background: url("../img/avatar.svg") no-repeat;
     background-size: 15px 15px;
+    font-size: 11px;
 }
 span.live-nums
 {
@@ -147,6 +160,7 @@ span.live-nums
     line-height: 17px;
     background: url("../img/nums_img.svg") no-repeat;
     background-size: 17px 17px;
+    font-size: 11px;
 }
 div.mask
 {
