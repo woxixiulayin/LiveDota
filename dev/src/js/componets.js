@@ -40,7 +40,7 @@ var $li_rank = function (live) {
                 </div>
                 </a>
             </li>
-    `
+    `;
     return $(html);
 }
 
