@@ -2,15 +2,17 @@ import {Huyaspider} from "./spider/huyaspider.js";
 import {Pandaspider} from "./spider/pandaspider.js";
 import {Quanminspider} from "./spider/quanminspider.js";
 import {Zhanqispider} from "./spider/zhanqispider.js";
+import {Douyuspider} from "./spider/douyuspider.js";
 import {jobs, DEBUG} from "./config.js";
 import {log} from "./utils/utils.js";
 
 let huya = new Huyaspider(),
     panda = new Pandaspider(),
     quanmin = new Quanminspider(),
-    zhanqi = new Zhanqispider();
+    zhanqi = new Zhanqispider(),
+    douyu = new Douyuspider();
 
-let spiders = [huya, panda, quanmin, zhanqi];
+let spiders = [huya, panda, quanmin, zhanqi, douyu];
 
 let runJobs = function (jobs, callback) {
     let promises = []
