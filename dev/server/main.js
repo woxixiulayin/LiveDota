@@ -1,14 +1,16 @@
 import {Huyaspider} from "./spider/huyaspider.js";
 import {Pandaspider} from "./spider/pandaspider.js";
 import {Quanminspider} from "./spider/quanminspider.js";
+import {Zhanqispider} from "./spider/zhanqispider.js";
 import {jobs, DEBUG} from "./config.js";
 import {log} from "./utils/utils.js";
 
 let huya = new Huyaspider(),
     panda = new Pandaspider(),
-    quanmin = new Quanminspider();
+    quanmin = new Quanminspider(),
+    zhanqi = new Zhanqispider();
 
-let spiders = [huya, panda, quanmin];
+let spiders = [huya, panda, quanmin, zhanqi];
 
 let runJobs = function (jobs, callback) {
     let promises = []
