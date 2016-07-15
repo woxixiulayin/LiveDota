@@ -43,6 +43,17 @@ var Spider = exports.Spider = function () {
             **/
             return liveinfos;
         }
+
+        //live预处理
+
+    }, {
+        key: 'parseLives',
+        value: function parseLives(lives) {
+            lives.forEach(function (live) {
+                var indexWan = live.nums.indexOf("万");
+                live.nums = indexWan != -1 ? live.nums.substr(0, indexWan) * 10000 : live.nums;
+            });
+        }
     }, {
         key: 'parseUrl',
         value: function parseUrl(url) {
@@ -57,6 +68,8 @@ var Spider = exports.Spider = function () {
                     } else {
                         var html = res.text;
                         var liveinfos = that.pickInfo(html);
+                        //liveinfo 预处理
+                        _this.parseLives(liveinfos.lives);
                         //使用url作为下标存储html和对应的liveinfo
                         that.htmls[url] = html;
                         that.liveinfos[url] = liveinfos;

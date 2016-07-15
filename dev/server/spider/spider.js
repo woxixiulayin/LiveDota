@@ -16,6 +16,13 @@ export class Spider {
         return liveinfos;
     }
 
+    //live预处理
+    parseLives (lives) {
+        lives.forEach( live => {
+            let indexWan = live.nums.indexOf("万");
+            live.nums = indexWan != -1 ? live.nums.substr(0, indexWan) * 10000 : live.nums;
+        });
+    }
     parseUrl(url) {
         let that = this;
         return new Promise( (resolve, reject) => {
@@ -27,6 +34,8 @@ export class Spider {
                 } else {
                     let html = res.text;
                     let liveinfos = that.pickInfo(html);
+                    //liveinfo 预处理
+                    this.parseLives(liveinfos.lives);
                     //使用url作为下标存储html和对应的liveinfo
                     that.htmls[url] = html;
                     that.liveinfos[url] = liveinfos;

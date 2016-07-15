@@ -12,9 +12,20 @@ var getRankinfo = (liveinfos) => {
     orderedlives = lives.sort( (pre, after) => {
         return after.nums - pre.nums;
     });
-    return orderedlives.slice(0, rankNumber);
+    orderedlives = orderedlives.slice(0, rankNumber);
+    orderedlives.forEach( live => {
+        parseLive(live);
+    });
+
+    return orderedlives;
+};
+
+var parseLive = live => {
+        let nums = live.nums;
+        live.nums = nums > 10000 ? (nums/10000).toFixed(1) + "万" : nums;
 };
 
 module.exports = {
-    getRankinfo: getRankinfo
+    getRankinfo: getRankinfo,
+    parseLive: parseLive
 }

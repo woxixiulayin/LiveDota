@@ -12,6 +12,7 @@ $(() => {
     let fullfillLives = lives => {
         $("ul.ul-live-list").empty();
         lives.forEach( (item, i) => {
+            datahandler.parseLive(item);
             let $live = componets.$_live(item);
             $("ul.ul-live-list").append($live);
         });
@@ -21,8 +22,11 @@ $(() => {
         let websites = data.map((item, i, array) => {
                 return item['website'];
             }),
-            $websites = componets.$_weblist(websites);
-            console.log(data)
+            $websites = componets.$_weblist(websites),
+            
+            //从未经处理的live信息获得rank数据
+            rankInfo = datahandler.getRankinfo(data);
+            // console.log(data)
 
         //添加左侧网址列表
         $("div.livewebs").empty().append($websites);
@@ -44,7 +48,6 @@ $(() => {
         $websites.find("a:first").click();
 
         //添加右侧排行榜
-        let rankInfo = datahandler.getRankinfo(data);
         $ul_rank.empty();
         rankInfo.forEach( (live, i) => {
             let $li_rank = componets.$li_rank(live);

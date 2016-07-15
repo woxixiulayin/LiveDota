@@ -67,6 +67,7 @@
 	    var fullfillLives = function fullfillLives(lives) {
 	        $("ul.ul-live-list").empty();
 	        lives.forEach(function (item, i) {
+	            datahandler.parseLive(item);
 	            var $live = componets.$_live(item);
 	            $("ul.ul-live-list").append($live);
 	        });
@@ -76,8 +77,12 @@
 	        var websites = data.map(function (item, i, array) {
 	            return item['website'];
 	        }),
-	            $websites = componets.$_weblist(websites);
-	        console.log(data);
+	            $websites = componets.$_weblist(websites),
+
+
+	        //从未经处理的live信息获得rank数据
+	        rankInfo = datahandler.getRankinfo(data);
+	        // console.log(data)
 
 	        //添加左侧网址列表
 	        $("div.livewebs").empty().append($websites);
@@ -99,7 +104,6 @@
 	        $websites.find("a:first").click();
 
 	        //添加右侧排行榜
-	        var rankInfo = datahandler.getRankinfo(data);
 	        $ul_rank.empty();
 	        rankInfo.forEach(function (live, i) {
 	            var $li_rank = componets.$li_rank(live);
@@ -167,11 +171,22 @@
 	    orderedlives = lives.sort(function (pre, after) {
 	        return after.nums - pre.nums;
 	    });
-	    return orderedlives.slice(0, rankNumber);
+	    orderedlives = orderedlives.slice(0, rankNumber);
+	    orderedlives.forEach(function (live) {
+	        parseLive(live);
+	    });
+
+	    return orderedlives;
+	};
+
+	var parseLive = function parseLive(live) {
+	    var nums = live.nums;
+	    live.nums = nums > 10000 ? (nums / 10000).toFixed(1) + "万" : nums;
 	};
 
 	module.exports = {
-	    getRankinfo: getRankinfo
+	    getRankinfo: getRankinfo,
+	    parseLive: parseLive
 	};
 
 /***/ }
