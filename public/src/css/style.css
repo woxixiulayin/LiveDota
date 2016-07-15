@@ -98,8 +98,8 @@ div.live-list
 {   
     position: absolute;
     margin-left: 200px;
-    border: 1px solid black;
     background: #f8f8f8;
+    margin-top: 20px;
 }
 
 ul.ul-live-list
