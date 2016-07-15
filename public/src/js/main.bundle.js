@@ -63,6 +63,15 @@
 	    var $aside_rank = $("aside.rank"),
 	        $ul_rank = $aside_rank.find("ul");
 
+	    //直播信息填充函数
+	    var fullfillLives = function fullfillLives(lives) {
+	        $("ul.ul-live-list").empty();
+	        lives.forEach(function (item, i) {
+	            var $live = componets.$_live(item);
+	            $("ul.ul-live-list").append($live);
+	        });
+	    };
+
 	    $.get('/search', function (data) {
 	        var websites = data.map(function (item, i, array) {
 	            return item['website'];
@@ -71,25 +80,39 @@
 	        console.log(data);
 
 	        //添加左侧网址列表
-	        $("div.livewebs").append($websites);
-	        //添加中间直播页面
-	        data[1].lives.forEach(function (item, i) {
-	            var $live = componets.$_live(item);
-	            $("ul.ul-live-list").append($live);
+	        $("div.livewebs").empty().append($websites);
+	        $websites.click(function (e) {
+	            if (e.target.tagName === "A") {
+	                $(this).find("li").removeClass("checked");
+	                $(e.target).parent("li").addClass("checked");
+
+	                //显示中间直播list
+	                for (var i = 0, len = data.length; i < len; i++) {
+	                    if (data[i].website === $(e.target).text()) {
+	                        fullfillLives(data[i].lives);
+	                    }
+	                }
+	            }
 	        });
+
+	        //显示默认直播网站lives
+	        $websites.find("a:first").click();
+
 	        //添加右侧排行榜
 	        var rankInfo = datahandler.getRankinfo(data);
+	        $ul_rank.empty();
 	        rankInfo.forEach(function (live, i) {
 	            var $li_rank = componets.$li_rank(live);
 	            $ul_rank.append($li_rank);
 	        });
-	    }, 'json');
+	    }.bind(this), 'json');
 
 	    //规划页面布局
 	    (function () {
-	        $aside_rank.css("left", pageWidth - 270 + "px");
+	        //排行版从右侧滑出
+	        $aside_rank.animate({ left: pageWidth - 270 + "px" }, 1300);
 	    })();
-	});
+	}.bind(undefined));
 
 /***/ },
 /* 2 */

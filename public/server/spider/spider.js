@@ -60,8 +60,8 @@ var Spider = exports.Spider = function () {
                         //使用url作为下标存储html和对应的liveinfo
                         that.htmls[url] = html;
                         that.liveinfos[url] = liveinfos;
-                        (0, _utils.log)(_this.constructor.name + " finishs picking infos from " + url);
-                        (0, _utils.log)("get " + liveinfos.length + "infos!!");
+                        (0, _utils.log)(_this.constructor.name + " finishs picking lives from " + url);
+                        (0, _utils.log)("get " + liveinfos.lives.length + " lives!!");
                         //后续处理这个url下获取到的info信息
                         resolve(liveinfos);
                     }

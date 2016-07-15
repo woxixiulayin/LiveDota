@@ -30,8 +30,8 @@ export class Spider {
                     //使用url作为下标存储html和对应的liveinfo
                     that.htmls[url] = html;
                     that.liveinfos[url] = liveinfos;
-                    log(this.constructor.name + " finishs picking infos from " + url);
-                    log("get " + liveinfos.length + "infos!!")
+                    log(this.constructor.name + " finishs picking lives from " + url);
+                    log("get " + liveinfos.lives.length + " lives!!")
                     //后续处理这个url下获取到的info信息
                     resolve(liveinfos);
                 }

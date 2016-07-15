@@ -65,7 +65,7 @@ div.livewebs
     position: fixed;
     left: 0;
     top: 50px;
-    width: 250px;
+    width: 200px;
     height: 100%;
     background: #404040;
 }
@@ -88,9 +88,12 @@ div.livewebs ul li a {
     color: white;
 }
 
-div.livewebs ul li:hover {
+div.livewebs ul li:hover,
+div.livewebs ul li.checked
+{
     background: #EE2C2C;
 }
+
 div.live-list
 {   
     position: absolute;
