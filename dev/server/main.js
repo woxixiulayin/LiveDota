@@ -12,7 +12,7 @@ let huya = new Huyaspider(),
     zhanqi = new Zhanqispider(),
     douyu = new Douyuspider();
 
-let spiders = [huya, panda, quanmin, zhanqi, douyu];
+let spiders = [panda, zhanqi, douyu, huya, quanmin];
 
 let runJobs = function (jobs, callback) {
     let promises = []

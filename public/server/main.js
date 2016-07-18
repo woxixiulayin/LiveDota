@@ -31,7 +31,7 @@ var huya = new _huyaspider.Huyaspider(),
     zhanqi = new _zhanqispider.Zhanqispider(),
     douyu = new _douyuspider.Douyuspider();
 
-var spiders = [huya, panda, quanmin, zhanqi, douyu];
+var spiders = [panda, zhanqi, douyu, huya, quanmin];
 
 var runJobs = function runJobs(jobs, callback) {
     var promises = [];
