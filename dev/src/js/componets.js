@@ -6,6 +6,9 @@ var $_weblist = websites => {
         let $li = $(`<li><a href="#">${ele}</a></li>`);
         $ul.append($li);
     });
+    $ul.append($(`
+                 <button class='btn-refresh'></button>
+                 `));
     return $ul;
 }
 

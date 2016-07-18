@@ -97,6 +97,10 @@
 	                        fullfillLives(data[i].lives);
 	                    }
 	                }
+	            } else if (e.target.tagName === "BUTTON") {
+	                //Ajax获取数据
+	                $.get('/search', main, 'json');
+	                $(e.target).blur();
 	            }
 	        });
 
@@ -135,6 +139,7 @@
 	        var $li = $("<li><a href=\"#\">" + ele + "</a></li>");
 	        $ul.append($li);
 	    });
+	    $ul.append($("\n                 <button class='btn-refresh'></button>\n                 "));
 	    return $ul;
 	};
 

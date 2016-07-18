@@ -41,6 +41,10 @@ $(() => {
                         fullfillLives(data[i].lives);
                     }
                 }
+            } else if (e.target.tagName === "BUTTON") {
+                //Ajax获取数据
+                $.get('/search', main, 'json');
+                $(e.target).blur();
             }
         });
 
