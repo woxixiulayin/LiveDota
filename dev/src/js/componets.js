@@ -1,4 +1,4 @@
-var $_weblist = function (websites) {
+var $_weblist = websites => {
     if ( !websites instanceof Array) return false;
     let $ul = $("<ul></ul>");
 
@@ -9,7 +9,7 @@ var $_weblist = function (websites) {
     return $ul;
 }
 
-var $_live = function (live) {
+var $_live = live => {
     let html = `
         <li class="live-item left">
         <a class="li-a" href=${live.link} target="_blank">
@@ -27,7 +27,7 @@ var $_live = function (live) {
     return $(html);
 }
 
-var $li_rank = function (live) {
+var $li_rank = live => {
     let html = `
         <li class="rank-item">
                 <a class="rank-link" href=${live.link} target="_blank">
@@ -42,7 +42,7 @@ var $li_rank = function (live) {
             </li>
     `;
     return $(html);
-}
+};
 
 module.exports = {
     $_weblist: $_weblist,

@@ -67,4 +67,5 @@ $(() => {
             $aside_rank.animate({left:pageWidth - 270 + "px"}, 1300);
     })();
 
+
 });

@@ -268,16 +268,3 @@ li.rank-item:before
     margin-top: 5px;
     background: #ccc;
 }
-footer.foot
-{
-    position: fixed;
-    top: 100%;
-    margin-top: -35px;
-    height: 35px;
-    width: 100%;
-    line-height: 35px;
-    text-align: center;
-    background: black;
-    color: white;
-    font-size: 20px;
-}
