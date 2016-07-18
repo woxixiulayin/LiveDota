@@ -18,8 +18,8 @@ $(() => {
         });
     };
 
-    $.get('/search', (data) => {
-        let websites = data.map((item, i, array) => {
+    let main = data => {
+            let websites = data.map((item, i, array) => {
                 return item['website'];
             }),
             $websites = componets.$_weblist(websites),
@@ -54,8 +54,12 @@ $(() => {
             $ul_rank.append($li_rank);
         });
 
-    }, 'json');
+    };
 
+
+
+    //Ajax获取数据
+    $.get('/search', main, 'json');
 
     //规划页面布局
     (() => {

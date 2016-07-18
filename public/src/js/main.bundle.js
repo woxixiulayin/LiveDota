@@ -73,7 +73,7 @@
 	        });
 	    };
 
-	    $.get('/search', function (data) {
+	    var main = function (data) {
 	        var websites = data.map(function (item, i, array) {
 	            return item['website'];
 	        }),
@@ -109,7 +109,10 @@
 	            var $li_rank = componets.$li_rank(live);
 	            $ul_rank.append($li_rank);
 	        });
-	    }.bind(this), 'json');
+	    }.bind(this);
+
+	    //Ajax获取数据
+	    $.get('/search', main, 'json');
 
 	    //规划页面布局
 	    (function () {
