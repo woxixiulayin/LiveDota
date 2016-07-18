@@ -102,7 +102,6 @@ div.live-list
     position: absolute;
     margin-left: 200px;
     background: #f8f8f8;
-    margin-top: 20px;
 }
 
 ul.ul-live-list
@@ -110,6 +109,7 @@ ul.ul-live-list
     position: relative;
     overflow: hidden;
     margin-right: 260px;
+    margin-top: 20px;
 }
 li.live-item {
     display: inline-block;
