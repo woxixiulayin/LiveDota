@@ -531,7 +531,7 @@
 			"file": "dev/src/css/style.css",
 			"settings":
 			{
-				"buffer_size": 4307,
+				"buffer_size": 4297,
 				"line_ending": "Unix"
 			}
 		},
@@ -798,16 +798,9 @@
 	"expanded_folders":
 	[
 		"/Users/Jackson/work/web/LiveDota",
-		"/Users/Jackson/work/web/LiveDota/dev",
-		"/Users/Jackson/work/web/LiveDota/dev/server/model",
-		"/Users/Jackson/work/web/LiveDota/dev/server/spider",
-		"/Users/Jackson/work/web/LiveDota/dev/src",
 		"/Users/Jackson/work/web/LiveDota/dev/src/css",
 		"/Users/Jackson/work/web/LiveDota/dev/src/html",
-		"/Users/Jackson/work/web/LiveDota/dev/src/img",
 		"/Users/Jackson/work/web/LiveDota/dev/src/js",
-		"/Users/Jackson/work/web/LiveDota/public",
-		"/Users/Jackson/work/web/LiveDota/public/server/utils",
 		"/Users/Jackson/work/web/LiveDota/public/src",
 		"/Users/Jackson/work/web/LiveDota/public/src/js"
 	],
@@ -969,6 +962,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hidden",
+			"title",
 			"hover",
 			"Zhanqi",
 			"zhanqi",
@@ -1094,9 +1089,7 @@
 			"TvFactoryManager",
 			"tvFactoryManager",
 			"TvFactoryManager",
-			"tvFactoryManager",
-			"TvFactoryManager",
-			"setUartOnOff"
+			"tvFactoryManager"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1114,7 +1107,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1153,15 +1146,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4307,
+						"buffer_size": 4297,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2636,
-								2636
+								1752,
+								1752
 							]
 						],
 						"settings":
@@ -1172,10 +1165,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3499.0,
+						"translation.y": 2402.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1296,7 +1289,7 @@
 						"translation.y": 578.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1324,7 +1317,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1728,7 +1721,7 @@
 		[
 			[
 				"",
-				"~/work/web/lagou_spider/lagoupachong.sublime-project"
+				"~/work/python/tieba_dig/tibe_dig.sublime-project"
 			]
 		],
 		"width": 380.0
