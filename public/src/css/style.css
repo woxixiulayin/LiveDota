@@ -82,12 +82,12 @@ div.livewebs
     background-size: 30px 30px;
 }
 
-div.livewebs ul {
+.livewebs ul {
     margin: 20px 0;
     text-align: center;
 }
 
-div.livewebs ul li
+.livewebs ul li
 {
     margin: 10px auto;
     width: 100px;
@@ -97,19 +97,19 @@ div.livewebs ul li
     border: 1px solid #ccc;
     border-radius: 10px;
 }
-div.livewebs ul li a {
+.livewebs a {
     display: block;
     color: white;
     width: 100%;
 }
 
-div.livewebs ul li:hover,
-div.livewebs ul li.checked
+.livewebs li:hover,
+.livewebs li.checked
 {
     background: #EE2C2C;
 }
 
-div.live-list
+.live-list
 {   
     position: absolute;
     margin-left: 200px;
@@ -126,7 +126,8 @@ ul.ul-live-list
 li.live-item {
     display: inline-block;
     width: 280px;
-    margin: 0 5px 5px;
+    height: 220px;
+    margin: 0 5px 10px;
     background: white;
     position: relative;
 }
