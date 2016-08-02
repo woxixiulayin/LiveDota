@@ -29,11 +29,14 @@ header
     width: 100%;
     z-index: 100;
 }
-
+.top
+{
+    width: 1000px;
+    margin-left: 200px;
+}
 header h1
 {   
     display: inline;
-    margin-left: 250px;
     font-size: 30px;
     line-height: 50px;
 }
@@ -42,17 +45,26 @@ header h2 {
     margin-left: 30px;
     font-size: 20px;
 }
-/*img.head-logo  {
-    width: 450px;
-    height: 187px;
+
+header a
+{   
+    position: absolute;
+    left: 100%;
+    top:20px;
+    margin-left: -200px;
+    font-size: 16px;
+}
+header a:link,
+header a:visited
+{
+    color: orange;
+}
+header a:hover,
+header a:active
+{
+    color: yellow;
 }
 
-img.left {
-    margin-left: 100px; 
-}
-img.right {
-    margin-right: 100px; 
-}*/
 
 div.content
 {
