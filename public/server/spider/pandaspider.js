@@ -34,7 +34,7 @@ var _utils = require('../utils/utils.js');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var $ = require("cheerio");
-var prelink = "http://www.panda.tv/";
+var prelink = "http://www.panda.tv";
 
 var Pandaspider = function (_Spider) {
     (0, _inherits3.default)(Pandaspider, _Spider);

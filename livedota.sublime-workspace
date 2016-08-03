@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"marg",
+				"margin"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
 				"tag",
 				"tagName"
 			],
@@ -70,10 +78,6 @@
 			[
 				"taget",
 				"target=\"_blank	(componets.js)"
-			],
-			[
-				"mar",
-				"margin-top"
 			],
 			[
 				"inl",
@@ -510,10 +514,6 @@
 			[
 				"inde",
 				"indexs"
-			],
-			[
-				"shp",
-				"ships"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "dev/src/html/index.html",
 			"settings":
 			{
-				"buffer_size": 768,
+				"buffer_size": 870,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "dev/src/css/style.css",
 			"settings":
 			{
-				"buffer_size": 4297,
+				"buffer_size": 4413,
 				"line_ending": "Unix"
 			}
 		},
@@ -584,14 +584,6 @@
 			}
 		},
 		{
-			"file": "/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/server.js",
-			"settings":
-			{
-				"buffer_size": 2932,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"contents": "Searching 13000 files for \"preinstall\" (regex)\n\n/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/gulp-webpack/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/lib/normalize.js:\n   25    if (data.scripts && \n   26        data.scripts.install === \"node-gyp rebuild\" && \n   27:       !data.scripts.preinstall) {\n   28      data.gypfile = true\n   29    }\n\n1 match in 1 file\n",
 			"settings":
 			{
@@ -599,30 +591,6 @@
 				"line_ending": "Unix",
 				"name": "Find Results",
 				"scratch": true
-			}
-		},
-		{
-			"file": "/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/.npminstall/babel-runtime/6.11.6/babel-runtime/core-js/json/stringify.js",
-			"settings":
-			{
-				"buffer_size": 95,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/package.json",
-			"settings":
-			{
-				"buffer_size": 324,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 341,
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -832,22 +800,25 @@
 	"expanded_folders":
 	[
 		"/Users/Jackson/work/web/LiveDota",
-		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c",
-		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/.bin",
-		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/babel-runtime/core-js",
-		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/babel-runtime/helpers",
-		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/babel-runtime/node_modules",
-		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/babel-runtime/regenerator"
+		"/Users/Jackson/work/web/LiveDota/dev",
+		"/Users/Jackson/work/web/LiveDota/dev/server",
+		"/Users/Jackson/work/web/LiveDota/dev/src",
+		"/Users/Jackson/work/web/LiveDota/dev/src/css",
+		"/Users/Jackson/work/web/LiveDota/dev/src/html",
+		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c"
 	],
 	"file_history":
 	[
+		"/Users/Jackson/work/web/LiveDota/README.md",
+		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/package.json",
+		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/.npminstall/babel-runtime/6.11.6/babel-runtime/core-js/json/stringify.js",
+		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/server.js",
 		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/npm-debug.log",
 		"/Users/Jackson/work/web/LiveDota/package.json",
 		"/Users/Jackson/work/web/LiveDota/node_modules/babel-preset-es2015/package.json",
 		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/.bin/webpack",
 		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/babel-cli/lib/babel/dir.js",
 		"/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/app.js",
-		"/Users/Jackson/work/web/LiveDota/README.md",
 		"/Users/Jackson/work/web/LiveDota/gulpfile.babel.js",
 		"/Users/Jackson/work/web/LiveDota/dev/server/spider/zhanqispider.js",
 		"/Users/Jackson/work/web/LiveDota/public/server/main.js",
@@ -965,10 +936,7 @@
 		"/Users/Jackson/weijing/log/05031225.log",
 		"/Users/Jackson/weijing/log/05031049.log",
 		"/Users/Jackson/work/web/ife_baiduqianduan/templates/task25/main.js",
-		"/Users/Jackson/weijing/log/05031227.log",
-		"/Users/Jackson/weijing/log/05031442.log",
-		"/Users/Jackson/weijing/log/03211945.log",
-		"/Users/Jackson/weijing/log/03171701.log"
+		"/Users/Jackson/weijing/log/05031227.log"
 	],
 	"find":
 	{
@@ -999,6 +967,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hover",
 			"preinstall",
 			"preomstall",
 			"live",
@@ -1125,8 +1094,7 @@
 			"serial",
 			"sn",
 			"serialn",
-			"setUartOnOff",
-			"uart"
+			"setUartOnOff"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1144,7 +1112,7 @@
 	"groups":
 	[
 		{
-			"selected": 12,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -1153,15 +1121,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 768,
+						"buffer_size": 870,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								473,
-								473
+								260,
+								260
 							]
 						],
 						"settings":
@@ -1174,7 +1142,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1183,15 +1151,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4297,
+						"buffer_size": 4413,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1752,
-								1752
+								735,
+								735
 							]
 						],
 						"settings":
@@ -1202,10 +1170,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2402.0,
+						"translation.y": 435.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1236,7 +1204,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1252,8 +1220,8 @@
 						"selection":
 						[
 							[
-								50,
-								50
+								157,
+								158
 							]
 						],
 						"settings":
@@ -1266,7 +1234,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1296,7 +1264,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -1384,41 +1352,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2932,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								32,
-								39
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
 					"semi_transient": false,
 					"settings":
 					{
@@ -1462,97 +1400,11 @@
 						"translation.y": 214.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/node_modules/.npminstall/babel-runtime/6.11.6/babel-runtime/core-js/json/stringify.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 95,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								27,
-								20
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "/Users/Jackson/work/web/livedota_bae/appid8f08cgs82c/package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 324,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								324,
-								324
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 341,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								341,
-								341
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
+					"buffer": 9,
 					"file": "public/app.js",
 					"semi_transient": false,
 					"settings":
@@ -1578,11 +1430,11 @@
 						"translation.y": 1060.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 10,
 					"file": ".babelrc",
 					"semi_transient": false,
 					"settings":
@@ -1606,11 +1458,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 11,
 					"file": "dev/src/js/datahandler.js",
 					"semi_transient": false,
 					"settings":
@@ -1641,7 +1493,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 12,
 					"file": "dev/src/js/componets.js",
 					"semi_transient": false,
 					"settings":
@@ -1672,7 +1524,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 13,
 					"file": "public/src/js/main.bundle.js",
 					"semi_transient": false,
 					"settings":
@@ -1697,11 +1549,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 14,
 					"file": "dev/server/model/models.js",
 					"semi_transient": false,
 					"settings":
@@ -1727,11 +1579,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 15,
 					"file": "dev/server/spider/spider.js",
 					"semi_transient": false,
 					"settings":
@@ -1757,11 +1609,11 @@
 						"translation.y": 228.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 16,
 					"file": "dev/server/config.js",
 					"semi_transient": false,
 					"settings":
@@ -1785,11 +1637,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 17,
 					"file": "dev/server/spider/huyaspider.js",
 					"semi_transient": false,
 					"settings":
@@ -1815,7 +1667,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 15,
 					"type": "text"
 				}
 			]

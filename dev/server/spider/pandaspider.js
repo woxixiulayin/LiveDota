@@ -3,7 +3,7 @@ import {Spider} from './spider.js';
 import {log} from '../utils/utils.js';
 
 const $ = require("cheerio");
-const prelink = "http://www.panda.tv/";
+const prelink = "http://www.panda.tv";
 
 class Pandaspider extends Spider {
     constructor () {
