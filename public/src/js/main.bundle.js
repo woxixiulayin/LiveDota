@@ -56,20 +56,26 @@
 	var componets = __webpack_require__(2);
 	var datahandler = __webpack_require__(3);
 
-	var pageWidth = window.innerWidth;
-	var pageHeight = window.innerHeight;
-
+	var pageWidth = window.screen.width;
+	// var pageHeight = window.innerHeight;
+	// console.log(pageWidth);
 	$(function () {
 	    var $aside_rank = $("aside.rank"),
-	        $ul_rank = $aside_rank.find("ul");
+	        $ul_rank = $aside_rank.find("ul"),
+	        $ul_live = $("ul.ul-live-list");
+
+	    //live ul居中
+	    var liveul_margin = (pageWidth - 500 - Math.floor((pageWidth - 500) / 290) * 290) / 2 - 10 + "px";
+	    console.log(liveul_margin);
+	    $ul_live.css("margin-left", liveul_margin);
 
 	    //直播信息填充函数
 	    var fullfillLives = function fullfillLives(lives) {
-	        $("ul.ul-live-list").empty();
+	        $ul_live.empty();
 	        lives.forEach(function (item, i) {
 	            datahandler.parseLive(item);
 	            var $live = componets.$li_live(item);
-	            $("ul.ul-live-list").append($live);
+	            $ul_live.append($live);
 	        });
 	    };
 

@@ -1,20 +1,26 @@
 var componets = require("./componets.js");
 var datahandler = require("./datahandler.js");
 
-var pageWidth = window.innerWidth;
-var pageHeight = window.innerHeight;
-
+var pageWidth = window.screen.width;
+// var pageHeight = window.innerHeight;
+// console.log(pageWidth);
 $(() => {
     let $aside_rank = $("aside.rank"),
-        $ul_rank = $aside_rank.find("ul");
+        $ul_rank = $aside_rank.find("ul"),
+        $ul_live = $("ul.ul-live-list");
     
-        //直播信息填充函数
+    //live ul居中
+    let liveul_margin = ((pageWidth - 500) - Math.floor((pageWidth - 500)/290)*290)/2 - 10 + "px";
+        console.log(liveul_margin);
+        $ul_live.css("margin-left", liveul_margin);
+
+    //直播信息填充函数
     let fullfillLives = lives => {
-        $("ul.ul-live-list").empty();
+        $ul_live.empty();
         lives.forEach( (item, i) => {
             datahandler.parseLive(item);
             let $live = componets.$li_live(item);
-            $("ul.ul-live-list").append($live);
+            $ul_live.append($live);
         });
     };
 
