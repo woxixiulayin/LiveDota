@@ -85,7 +85,7 @@
 	        // console.log(data)
 
 	        //添加左侧网址列表
-	        $("div.livewebs").empty().append($websites);
+	        $(".left-wrap").empty().append($websites);
 	        $websites.click(function (e) {
 	            if (e.target.tagName === "A") {
 	                $(this).find("li").removeClass("checked");
@@ -134,12 +134,12 @@
 	var $_weblist = function $_weblist(websites) {
 	    if (!websites instanceof Array) return false;
 	    var $ul = $("<ul></ul>");
-
+	    $ul.addClass("websites");
 	    websites.forEach(function (ele, i) {
 	        var $li = $("<li><a href=\"#\">" + ele + "</a></li>");
+	        $li.addClass("website-item");
 	        $ul.append($li);
 	    });
-	    $ul.append($("\n                 <button class='btn-refresh'></button>\n                 "));
 	    return $ul;
 	};
 

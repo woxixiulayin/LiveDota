@@ -29,7 +29,7 @@ $(() => {
             // console.log(data)
 
         //添加左侧网址列表
-        $("div.livewebs").empty().append($websites);
+        $(".left-wrap").empty().append($websites);
         $websites.click(function (e) {
             if(e.target.tagName === "A") {
                 $(this).find("li").removeClass("checked");

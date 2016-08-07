@@ -1,14 +1,12 @@
 var $_weblist = websites => {
     if ( !websites instanceof Array) return false;
     let $ul = $("<ul></ul>");
-
+    $ul.addClass("websites");
     websites.forEach( (ele, i) => {
         let $li = $(`<li><a href="#">${ele}</a></li>`);
+        $li.addClass("website-item");
         $ul.append($li);
     });
-    $ul.append($(`
-                 <button class='btn-refresh'></button>
-                 `));
     return $ul;
 }
 
