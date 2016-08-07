@@ -1,4 +1,4 @@
-var $_weblist = websites => {
+var $ul_weblist = websites => {
     if ( !websites instanceof Array) return false;
     let $ul = $("<ul></ul>");
     $ul.addClass("websites");
@@ -10,7 +10,11 @@ var $_weblist = websites => {
     return $ul;
 }
 
-var $_live = live => {
+var $btn_refresh = () => {
+    return $("<button></button>").addClass("btn-refresh");
+};
+
+var $li_live = live => {
     let html = `
         <li class="live-item left">
         <a class="li-a" href=${live.link} target="_blank">
@@ -46,7 +50,8 @@ var $li_rank = live => {
 };
 
 module.exports = {
-    $_weblist: $_weblist,
-    $_live: $_live,
+    $ul_weblist: $ul_weblist,
+    $btn_refresh: $btn_refresh,
+    $li_live: $li_live,
     $li_rank: $li_rank
 }

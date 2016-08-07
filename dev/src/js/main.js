@@ -13,7 +13,7 @@ $(() => {
         $("ul.ul-live-list").empty();
         lives.forEach( (item, i) => {
             datahandler.parseLive(item);
-            let $live = componets.$_live(item);
+            let $live = componets.$li_live(item);
             $("ul.ul-live-list").append($live);
         });
     };
@@ -22,15 +22,19 @@ $(() => {
             let websites = data.map((item, i, array) => {
                 return item['website'];
             }),
-            $websites = componets.$_weblist(websites),
+            $websites = componets.$ul_weblist(websites),
             
             //从未经处理的live信息获得rank数据
             rankInfo = datahandler.getRankinfo(data);
             // console.log(data)
 
-        //添加左侧网址列表
-        $(".left-wrap").empty().append($websites);
-        $websites.click(function (e) {
+        //更新左侧网址列表
+        $(".left-wrap").empty()
+            .append($websites)
+            .append(componets.$btn_refresh());
+
+        //点击直播网站事件
+        $(".left-wrap").click(function (e) {
             if(e.target.tagName === "A") {
                 $(this).find("li").removeClass("checked");
                 $(e.target).parent("li").addClass("checked");

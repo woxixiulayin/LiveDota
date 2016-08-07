@@ -68,7 +68,7 @@
 	        $("ul.ul-live-list").empty();
 	        lives.forEach(function (item, i) {
 	            datahandler.parseLive(item);
-	            var $live = componets.$_live(item);
+	            var $live = componets.$li_live(item);
 	            $("ul.ul-live-list").append($live);
 	        });
 	    };
@@ -77,16 +77,18 @@
 	        var websites = data.map(function (item, i, array) {
 	            return item['website'];
 	        }),
-	            $websites = componets.$_weblist(websites),
+	            $websites = componets.$ul_weblist(websites),
 
 
 	        //从未经处理的live信息获得rank数据
 	        rankInfo = datahandler.getRankinfo(data);
 	        // console.log(data)
 
-	        //添加左侧网址列表
-	        $(".left-wrap").empty().append($websites);
-	        $websites.click(function (e) {
+	        //更新左侧网址列表
+	        $(".left-wrap").empty().append($websites).append(componets.$btn_refresh());
+
+	        //点击直播网站事件
+	        $(".left-wrap").click(function (e) {
 	            if (e.target.tagName === "A") {
 	                $(this).find("li").removeClass("checked");
 	                $(e.target).parent("li").addClass("checked");
@@ -131,7 +133,7 @@
 
 	"use strict";
 
-	var $_weblist = function $_weblist(websites) {
+	var $ul_weblist = function $ul_weblist(websites) {
 	    if (!websites instanceof Array) return false;
 	    var $ul = $("<ul></ul>");
 	    $ul.addClass("websites");
@@ -143,7 +145,11 @@
 	    return $ul;
 	};
 
-	var $_live = function $_live(live) {
+	var $btn_refresh = function $btn_refresh() {
+	    return $("<button></button>").addClass("btn-refresh");
+	};
+
+	var $li_live = function $li_live(live) {
 	    var html = "\n        <li class=\"live-item left\">\n        <a class=\"li-a\" href=" + live.link + " target=\"_blank\">\n                <img class=\"live-img\" src=\"" + live.img + "\">\n                <div class=\"live-info\">\n                <div class=\"live-title\">" + live.title + "</div>\n                <div class=\"live-name-nums\">\n                <span class=\"live-name left\">" + live.name + "</span>\n                <span class=\"live-nums right\">" + live.nums + "</span>\n                </div>\n                </div>\n            <div class=\"mask\"></div>\n            </a>\n        </li>";
 	    return $(html);
 	};
@@ -154,8 +160,9 @@
 	};
 
 	module.exports = {
-	    $_weblist: $_weblist,
-	    $_live: $_live,
+	    $ul_weblist: $ul_weblist,
+	    $btn_refresh: $btn_refresh,
+	    $li_live: $li_live,
 	    $li_rank: $li_rank
 	};
 

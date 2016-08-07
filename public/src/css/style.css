@@ -81,10 +81,11 @@ h2 {
 }
 
 .btn-refresh
-{
+{   
+    display: block;
     width: 40px;
     height: 40px;
-    margin-top: 10px auto;
+    margin: 10px auto;
     border-radius: 5px;
     border: none;
     background: #ccc;
