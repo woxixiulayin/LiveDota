@@ -61,7 +61,6 @@ $(() => {
             let $li_rank = componets.$li_rank(live);
             $ul_rank.append($li_rank);
         });
-
     };
 
 
@@ -69,11 +68,11 @@ $(() => {
     //Ajax获取数据
     $.get('/search', main, 'json');
 
-    //规划页面布局
-    (() => {
-            //排行版从右侧滑出
-            $aside_rank.animate({left:pageWidth - 270 + "px"}, 1300);
-    })();
+    // //显示右面数据
+    // (() => {
+    //         //排行版从右侧滑出
+    //         $aside_rank.animate({left:pageWidth - 270 + "px"}, 1300);
+    // })();
 
 
 });

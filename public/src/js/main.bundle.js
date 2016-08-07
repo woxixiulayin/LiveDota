@@ -120,11 +120,11 @@
 	    //Ajax获取数据
 	    $.get('/search', main, 'json');
 
-	    //规划页面布局
-	    (function () {
-	        //排行版从右侧滑出
-	        $aside_rank.animate({ left: pageWidth - 270 + "px" }, 1300);
-	    })();
+	    // //显示右面数据
+	    // (() => {
+	    //         //排行版从右侧滑出
+	    //         $aside_rank.animate({left:pageWidth - 270 + "px"}, 1300);
+	    // })();
 	}.bind(undefined));
 
 /***/ },

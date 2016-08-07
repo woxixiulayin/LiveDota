@@ -1,4 +1,4 @@
-/重置样式*/
+/*重置样式*/
 body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
 li, dl, dt, dd, form, a, fieldset, input, th, td
 {margin: 0; padding: 0; border: 0; outline: none;}
@@ -60,24 +60,26 @@ h2 {
     color: yellow;
 }
 
+body
+{
+    background-image: url(../img/wrap_bg.png);
+}
+
 .content
 {
     position: relative;
-    width: 100%;
-    margin:20px auto;
     margin-top: 50px;
+    width: 100%;
 }
 
 .left-wrap
 {   
     position: fixed;
     left: 0;
-    top: 50px;
+    top: 70px;
     width: 200px;
     height: 100%;
-    background: url(../img/wrap_bg.png);
-    padding-top: 20px;
-    /*background: rgb(21,22,26);*/
+    background: transparent;
 }
 
 .btn-refresh
@@ -102,8 +104,8 @@ h2 {
 
 .website-item
 {
-    margin: 10px auto;
-    width: 120px;
+    margin: 0 auto 20px;
+    width: 129px;
     font-size: 18px;
 }
 .left-wrap a {
@@ -119,79 +121,91 @@ h2 {
 
 .live-list
 {   
-    position: absolute;
-    margin-left: 200px;
-    /*background: #f8f8f8;*/
-    background: url(../img/wrap_bg.png)
+    margin: 0 301px 0 201px;
+    padding-top: 20px;
+    background: transparent;
+    border-left: solid 1px rgb(51,51,51);
+    border-right: solid 1px rgb(51,51,51);
+    text-align: center;
 }
 
-ul.ul-live-list
+.ul-live-list
 {   
     position: relative;
     overflow: hidden;
-    margin-right: 260px;
-    margin-top: 20px;
 }
-li.live-item {
+
+.live-item
+{
     display: inline-block;
-    width: 280px;
-    height: 220px;
     margin: 0 5px 10px;
     background: transparent;
     position: relative;
+    padding: 10px; 
+    border: 1px solid rgb(51,51,51);
+    text-align: left;
 }
 
-img.live-img
-{
-    width: 280px;
-    height: 165px;
+.live-item:hover
+{   
+    border-color: rgb(0,192,255);
+    box-shadow: 0 0 10px rgb(0,192,255);
 }
 
-a.li-a
+
+
+.li-a
 {
     position: relative;
+    width: 260px;
+    height: 210px;
     display: block;
     color: #555;
 }
-a.li-a:hover
+
+.li-a:hover
 {
-    color: red;
+    color: rgb(0,192,255);
 }
-li.live-item:hover
+.live-img
+
 {
-    box-shadow: 3px 3px 3px #ccc;
+    width: 260px;
+    height: 165px;
 }
-div.live-title
+
+.live-title
 {
     font-size: 13px;
     font-family: Arial;
-    margin-left: 7px;
+    padding-left: .25em;
+    color: #ccc;
 }
-div.live-name-nums
+.live-name-nums
 {   
     color: #888;
-    font-size: 17px;
-    padding: 8px;
-    height: 17px;
+    font-size: 11px;
+    line-height: 2.5em;
     position: relative;
+    overflow: hidden;
 }
-span.live-name
-{
-    text-indent: 20px;
-    line-height: 17px;
-    background: url("../img/avatar.svg") no-repeat;
-    background-size: 15px 15px;
-    font-size: 11px;
-}
-span.live-nums
+.live-name
 {   
-    text-indent: 20px;
-    line-height: 17px;
-    background: url("../img/nums_img.svg") no-repeat;
-    background-size: 17px 17px;
-    font-size: 11px;
+    float:left;
+    padding-left: 2em;
+    width: 17em;
+    background: url("../img/avatar.svg") no-repeat left;
+    background-size: 15px 15px;
 }
-div.mask
+.live-nums
+{   
+    float:right;
+    padding-left: 2em;
+    /*line-height: 2.5em;*/
+    background: url("../img/avatars.svg") no-repeat left;
+    background-size: 15px 15px;
+}
+.mask
 {
     position: absolute;
     width: 100%;
@@ -202,34 +216,29 @@ div.mask
     background: url('../img/play.svg') no-repeat 50% 25%;
     background-size: 70px 70px;
 }
-div.mask:hover
+.mask:hover
 {
     opacity: .8;
 }
 
-aside.rank
+.rank
 {
     position: fixed;
     top: 70px;
     left: 100%;
-    width: 250px;
-    height: 750px;
-    background: white;
-    padding: 0;
-    border: 1px solid #ccc;
-    overflow: scroll;
+    margin-left: -300px;
+    width: 300px;
 }
-aside.rank h3
+.rank h3
 {   
     margin-top: 5px;
     text-align: center;
 }
-aside.rank ul
+.rank ul
 {   
-    margin-top: 5px;
-    margin-left: 5px;
+    margin: 0 auto;
 }
-li.rank-item
+.rank-item
 {   
     position: relative;
     width: 225px;
