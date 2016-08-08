@@ -37,23 +37,22 @@ var $ul_rank = lives => {
 
     lives.forEach((live, index) => {
         let html = `
-        <li class="rank-item">
+        <li class="rank-item-wrap">
                 <a class="rank-link" href=${live.link} target="_blank">
-                <div class="rank-person">
+                <div class="rank-item">
                     <span class="rank-name">${live.name}</span>
                     <span class="rank-nums">${live.nums}</span>
                 </div>
-                <div class="rank-title">${live.title}</div>
-                <div class="rank-website">${live.website}</div>
                 </div>
                 </a>
             </li>
         `,
         $li_rank = $(html);
-        
+                // <div class="rank-title">${live.title}</div>
+                // <div class="rank-website">${live.website}</div>
         $ul.append($li_rank);
     });
-        
+
     return $ul;
 };
 

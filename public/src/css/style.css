@@ -230,6 +230,7 @@ body
     left: 100%;
     margin-left: -300px;
     width: 299px;
+    height: 100%;
     border-left: solid 1px rgb(51,51,51);
     /*background: white;*/
 }
@@ -245,9 +246,48 @@ body
 
 .live-rank
 {   
-    margin: 0 auto;
-    width: 230px;
+    margin: 20px auto;
+    width: 240px;
+    color: #ccc;
 }
+
+.rank-item-wrap
+{
+    border-bottom: 1px solid #333;
+}
+
+.rank-link
+{   
+    display: block;
+    color: #ccc;
+}
+
+.rank-item
+{   
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.rank-item:hover
+{
+    color: rgb(0,192,255);;
+}
+
+.rank-name
+{
+    float:left;
+    width: 12em;
+    overflow: hidden;
+}
+.rank-nums
+{
+    float: right;
+}
+
 /*.rank-item
 {   
     position: relative;

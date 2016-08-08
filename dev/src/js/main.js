@@ -62,9 +62,7 @@ $(() => {
         $websites.find("a:first").click();
 
         //添加右侧排行榜
-        $(".right-wrap")
-            .remove(".live-rank")
-            .append(componets.$ul_rank(rankInfo));
+        $(".right-wrap").find("ul").replaceWith(componets.$ul_rank(rankInfo));
     };
 
     //Ajax获取数据

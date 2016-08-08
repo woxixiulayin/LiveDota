@@ -116,7 +116,7 @@
 	        $websites.find("a:first").click();
 
 	        //添加右侧排行榜
-	        $(".right-wrap").remove(".live-rank").append(componets.$ul_rank(rankInfo));
+	        $(".right-wrap").find("ul").replaceWith(componets.$ul_rank(rankInfo));
 	    }.bind(this);
 
 	    //Ajax获取数据
@@ -154,9 +154,10 @@
 	    var $ul = $("<ul></ul>").addClass("live-rank");
 
 	    lives.forEach(function (live, index) {
-	        var html = "\n        <li class=\"rank-item\">\n                <a class=\"rank-link\" href=" + live.link + " target=\"_blank\">\n                <div class=\"rank-person\">\n                    <span class=\"rank-name\">" + live.name + "</span>\n                    <span class=\"rank-nums\">" + live.nums + "</span>\n                </div>\n                <div class=\"rank-title\">" + live.title + "</div>\n                <div class=\"rank-website\">" + live.website + "</div>\n                </div>\n                </a>\n            </li>\n        ",
+	        var html = "\n        <li class=\"rank-item-wrap\">\n                <a class=\"rank-link\" href=" + live.link + " target=\"_blank\">\n                <div class=\"rank-item\">\n                    <span class=\"rank-name\">" + live.name + "</span>\n                    <span class=\"rank-nums\">" + live.nums + "</span>\n                </div>\n                </div>\n                </a>\n            </li>\n        ",
 	            $li_rank = $(html);
-
+	        // <div class="rank-title">${live.title}</div>
+	        // <div class="rank-website">${live.website}</div>
 	        $ul.append($li_rank);
 	    });
 
