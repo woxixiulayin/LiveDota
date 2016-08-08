@@ -154,10 +154,17 @@
 	    var $ul = $("<ul></ul>").addClass("live-rank");
 
 	    lives.forEach(function (live, index) {
-	        var html = "\n        <li class=\"rank-item-wrap\">\n                <a class=\"rank-link\" href=" + live.link + " target=\"_blank\">\n                <div class=\"rank-item\">\n                    <span class=\"rank-name\">" + live.name + "</span>\n                    <span class=\"rank-nums\">" + live.nums + "</span>\n                </div>\n                </div>\n                </a>\n            </li>\n        ",
-	            $li_rank = $(html);
-	        // <div class="rank-title">${live.title}</div>
-	        // <div class="rank-website">${live.website}</div>
+	        var html = "\n        <li class=\"rank-item-wrap\">\n                <a class=\"rank-link\" href=" + live.link + " target=\"_blank\">\n                <div class=\"rank-item\">\n                    <span class=\"rank-name\">" + live.name + "</span>\n                    <span class=\"rank-nums\">" + live.nums + "</span>\n                    <span class=\"rank-website\">" + live.website + "</span>\n                </div>\n                <div class=\"rank-i-img-wrap\">\n                <img src=\"" + live.img + "\" class=\"rank-img\" display=\"none\">\n                </div>\n                </div>\n                </a>\n            </li>\n        ",
+	            $li_rank = $(html).hover(function (e) {
+	            $ul.find(".rank-i-img-wrap").stop().hide();
+	            $(e.currentTarget).find(".rank-i-img-wrap").stop().fadeIn(500);
+	        }, function (e) {
+	            $ul.find(".rank-i-img-wrap").stop().hide();
+	            $(e.currentTarget).find(".rank-i-img-wrap").stop().fadeOut(500);
+	        });
+
+	        $li_rank.find(".rank-i-img-wrap").hide();
+
 	        $ul.append($li_rank);
 	    });
 

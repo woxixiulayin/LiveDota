@@ -42,14 +42,26 @@ var $ul_rank = lives => {
                 <div class="rank-item">
                     <span class="rank-name">${live.name}</span>
                     <span class="rank-nums">${live.nums}</span>
+                    <span class="rank-website">${live.website}</span>
+                </div>
+                <div class="rank-i-img-wrap">
+                <img src="${live.img}" class="rank-img" display="none">
                 </div>
                 </div>
                 </a>
             </li>
         `,
-        $li_rank = $(html);
-                // <div class="rank-title">${live.title}</div>
-                // <div class="rank-website">${live.website}</div>
+        $li_rank = $(html)
+            .hover((e)=>{
+                $ul.find(".rank-i-img-wrap").stop().hide();
+                $(e.currentTarget).find(".rank-i-img-wrap").stop().fadeIn(500);
+            }, (e)=>{
+                $ul.find(".rank-i-img-wrap").stop().hide();
+                $(e.currentTarget).find(".rank-i-img-wrap").stop().fadeOut(500);
+            });
+
+        $li_rank.find(".rank-i-img-wrap").hide();
+
         $ul.append($li_rank);
     });
 
