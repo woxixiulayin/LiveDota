@@ -79,7 +79,8 @@
 	        });
 	    };
 
-	    var main = function (data) {
+	    //显示页面内容
+	    var show = function (data) {
 	        var websites = data.map(function (item, i, array) {
 	            return item['website'];
 	        }),
@@ -107,7 +108,7 @@
 	                }
 	            } else if (e.target.tagName === "BUTTON") {
 	                //Ajax获取数据
-	                $.get('/search', main, 'json');
+	                $.get('/search', show, 'json');
 	                $(e.target).blur();
 	            }
 	        });
@@ -124,13 +125,7 @@
 	    }.bind(this);
 
 	    //Ajax获取数据
-	    $.get('/search', main, 'json');
-
-	    // //显示右面数据
-	    // (() => {
-	    //         //排行版从右侧滑出
-	    //         $aside_rank.animate({left:pageWidth - 270 + "px"}, 1300);
-	    // })();
+	    $.get('/search', show, 'json');
 	}.bind(undefined));
 
 /***/ },

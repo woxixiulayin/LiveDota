@@ -24,7 +24,8 @@ $(() => {
         });
     };
 
-    let main = data => {
+    //显示页面内容
+    let show = data => {
             let websites = data.map((item, i, array) => {
                 return item['website'];
             }),
@@ -53,7 +54,7 @@ $(() => {
                 }
             } else if (e.target.tagName === "BUTTON") {
                 //Ajax获取数据
-                $.get('/search', main, 'json');
+                $.get('/search', show, 'json');
                 $(e.target).blur();
             }
         });
@@ -69,16 +70,8 @@ $(() => {
         });
     };
 
-
-
     //Ajax获取数据
-    $.get('/search', main, 'json');
-
-    // //显示右面数据
-    // (() => {
-    //         //排行版从右侧滑出
-    //         $aside_rank.animate({left:pageWidth - 270 + "px"}, 1300);
-    // })();
+    $.get('/search', show, 'json');
 
 
 });
