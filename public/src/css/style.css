@@ -297,12 +297,19 @@ body
     z-index: 100px;
 }
 
-.rank-i-img-wrap
+.img-div
 {
     position: absolute;
     left: -19.5em;
+    width: 19.5em;
     top: -4.67em;
     z-index: 100;
+}
+
+.rank-i-img-wrap
+{   
+    position: relative;
+    display: inline-block;
     border:1px solid rgb(0,192,255);
     box-shadow: 0 0 10px rgb(0,192,255);
 }

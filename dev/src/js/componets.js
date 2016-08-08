@@ -44,10 +44,11 @@ var $ul_rank = lives => {
                     <span class="rank-nums">${live.nums}</span>
                     <span class="rank-website">${live.website}</span>
                 </div>
-                <div class="rank-i-img-wrap">
-                <img src="${live.img}" class="rank-img" display="none">
-                </div>
-                </div>
+                    <div class="img-div">
+                        <div class="rank-i-img-wrap">
+                            <img src="${live.img}" class="rank-img" display="none">
+                        </div>
+                    </div>
                 </a>
             </li>
         `,
