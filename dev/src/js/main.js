@@ -5,9 +5,8 @@ var pageWidth = window.screen.width;
 // var pageHeight = window.innerHeight;
 // console.log(pageWidth);
 $(() => {
-    let $aside_rank = $("aside.rank"),
-        $ul_rank = $aside_rank.find("ul"),
-        $ul_live = $("ul.ul-live-list");
+    let $aside_rank = $(".right-wrap"),
+        $ul_live = $(".ul-live-list");
     
     //live ul居中
     let liveul_margin = ((pageWidth - 500) - Math.floor((pageWidth - 500)/290)*290)/2 - 10 + "px";
@@ -63,11 +62,9 @@ $(() => {
         $websites.find("a:first").click();
 
         //添加右侧排行榜
-        $ul_rank.empty();
-        rankInfo.forEach( (live, i) => {
-            let $li_rank = componets.$li_rank(live);
-            $ul_rank.append($li_rank);
-        });
+        $(".right-wrap")
+            .remove(".live-rank")
+            .append(componets.$ul_rank(rankInfo));
     };
 
     //Ajax获取数据

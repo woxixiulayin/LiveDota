@@ -32,8 +32,11 @@ var $li_live = live => {
     return $(html);
 }
 
-var $li_rank = live => {
-    let html = `
+var $ul_rank = lives => {
+    let $ul = $("<ul></ul>").addClass("live-rank");
+
+    lives.forEach((live, index) => {
+        let html = `
         <li class="rank-item">
                 <a class="rank-link" href=${live.link} target="_blank">
                 <div class="rank-person">
@@ -45,13 +48,18 @@ var $li_rank = live => {
                 </div>
                 </a>
             </li>
-    `;
-    return $(html);
+        `,
+        $li_rank = $(html);
+        
+        $ul.append($li_rank);
+    });
+        
+    return $ul;
 };
 
 module.exports = {
     $ul_weblist: $ul_weblist,
     $btn_refresh: $btn_refresh,
     $li_live: $li_live,
-    $li_rank: $li_rank
+    $ul_rank: $ul_rank
 }

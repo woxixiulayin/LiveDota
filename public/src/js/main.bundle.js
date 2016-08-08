@@ -60,9 +60,8 @@
 	// var pageHeight = window.innerHeight;
 	// console.log(pageWidth);
 	$(function () {
-	    var $aside_rank = $("aside.rank"),
-	        $ul_rank = $aside_rank.find("ul"),
-	        $ul_live = $("ul.ul-live-list");
+	    var $aside_rank = $(".right-wrap"),
+	        $ul_live = $(".ul-live-list");
 
 	    //live ul居中
 	    var liveul_margin = (pageWidth - 500 - Math.floor((pageWidth - 500) / 290) * 290) / 2 - 10 + "px";
@@ -117,11 +116,7 @@
 	        $websites.find("a:first").click();
 
 	        //添加右侧排行榜
-	        $ul_rank.empty();
-	        rankInfo.forEach(function (live, i) {
-	            var $li_rank = componets.$li_rank(live);
-	            $ul_rank.append($li_rank);
-	        });
+	        $(".right-wrap").remove(".live-rank").append(componets.$ul_rank(rankInfo));
 	    }.bind(this);
 
 	    //Ajax获取数据
@@ -155,16 +150,24 @@
 	    return $(html);
 	};
 
-	var $li_rank = function $li_rank(live) {
-	    var html = "\n        <li class=\"rank-item\">\n                <a class=\"rank-link\" href=" + live.link + " target=\"_blank\">\n                <div class=\"rank-person\">\n                    <span class=\"rank-name\">" + live.name + "</span>\n                    <span class=\"rank-nums\">" + live.nums + "</span>\n                </div>\n                <div class=\"rank-title\">" + live.title + "</div>\n                <div class=\"rank-website\">" + live.website + "</div>\n                </div>\n                </a>\n            </li>\n    ";
-	    return $(html);
+	var $ul_rank = function $ul_rank(lives) {
+	    var $ul = $("<ul></ul>").addClass("live-rank");
+
+	    lives.forEach(function (live, index) {
+	        var html = "\n        <li class=\"rank-item\">\n                <a class=\"rank-link\" href=" + live.link + " target=\"_blank\">\n                <div class=\"rank-person\">\n                    <span class=\"rank-name\">" + live.name + "</span>\n                    <span class=\"rank-nums\">" + live.nums + "</span>\n                </div>\n                <div class=\"rank-title\">" + live.title + "</div>\n                <div class=\"rank-website\">" + live.website + "</div>\n                </div>\n                </a>\n            </li>\n        ",
+	            $li_rank = $(html);
+
+	        $ul.append($li_rank);
+	    });
+
+	    return $ul;
 	};
 
 	module.exports = {
 	    $ul_weblist: $ul_weblist,
 	    $btn_refresh: $btn_refresh,
 	    $li_live: $li_live,
-	    $li_rank: $li_rank
+	    $ul_rank: $ul_rank
 	};
 
 /***/ },

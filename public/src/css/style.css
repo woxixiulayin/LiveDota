@@ -223,48 +223,54 @@ body
     opacity: .8;
 }
 
-.rank
+.right-wrap
 {
     position: fixed;
-    top: 70px;
+    top: 50px;
     left: 100%;
     margin-left: -300px;
     width: 299px;
     border-left: solid 1px rgb(51,51,51);
     /*background: white;*/
 }
-.rank h3
+
+.head-rank
 {   
-    margin-top: 5px;
+    margin-top: 20px;
     text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0,192,255);
 }
-.rank ul
+
+.live-rank
 {   
     margin: 0 auto;
+    width: 230px;
 }
-.rank-item
+/*.rank-item
 {   
     position: relative;
     width: 225px;
     margin: 5px auto;
     overflow: hidden;
 }
-li.rank-item a.rank-link
+.rank-item .rank-link
 {   
     display: block;
     color: black;
 }
-li.rank-item a.rank-link:hover
+.rank-item .rank-link:hover
 {
     color:red;
 }
-li.rank-item div.rank-person
+.rank-item .rank-person
 {
     color: #555;
     font-size: 13px;
     margin-top: 5px;
 }
-li.rank-item span.rank-nums
+.rank-item .rank-nums
 {   
     float: right;
     width: 75px;
@@ -273,7 +279,7 @@ li.rank-item span.rank-nums
     background: url("../img/nums_img.svg") no-repeat;
     background-size: 17px 17px;
 }
-li.rank-item span.rank-name
+.rank-item .rank-name
 {   
     display: inline-block;
     width: 135px;
@@ -282,11 +288,11 @@ li.rank-item span.rank-name
     background: url("../img/avatar.svg") no-repeat 0 2px;
     background-size: 15px 15px;
 }
-li.rank-item div.rank-title
+.rank-item .rank-title
 {
     font-size: 14px;
 }
-li.rank-item div.rank-website
+.rank-item .rank-website
 {
     text-indent: 20px;
     font-size: 13px;
@@ -294,7 +300,7 @@ li.rank-item div.rank-website
     background: url("../img/website.svg") no-repeat 0 50%;
     background-size: 13px 13px;
 }
-li.rank-item:before
+.rank-item:before
 {
     display: block;
     content: "";
@@ -302,4 +308,4 @@ li.rank-item:before
     width: 100%;
     margin-top: 5px;
     background: #ccc;
-}
+}*/
