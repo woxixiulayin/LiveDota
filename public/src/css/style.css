@@ -87,28 +87,32 @@ body
 .btn-refresh
 {   
     display: block;
-    width: 40px;
-    height: 40px;
-    margin: 10px auto;
-    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    line-height: 25px;
+    margin: 40px auto 0px;
+    width: 130px;
     border: none;
-    background: #ccc;
-    background: url("../img/refresh.svg") no-repeat center;
-    background-size: 30px 30px;
+    background: transparent;
 }
 
+.btn-refresh:hover
+{
+    background: rgb(28,211,136);
+}
 .websites
 {
     margin: 20px auto;
     text-align: center;
+    width: 130px;
     padding: 0;
+    font-size: 18px;
+    line-height: 25px;
 }
 
 .website-item
 {
     margin: 0 auto 20px;
-    width: 129px;
-    font-size: 18px;
 }
 .left-wrap a {
     display: block;

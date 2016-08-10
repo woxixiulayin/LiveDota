@@ -2,11 +2,11 @@ var componets = require("./componets.js");
 var datahandler = require("./datahandler.js");
 
 var pageWidth = window.screen.width;
-// var pageHeight = window.innerHeight;
-// console.log(pageWidth);
+
 $(() => {
     let $aside_rank = $(".right-wrap"),
         $ul_live = $(".ul-live-list");
+
     
     //live ul居中
     let liveul_margin = ((pageWidth - 500) - Math.floor((pageWidth - 500)/290)*290)/2 - 10 + "px";
@@ -39,7 +39,7 @@ $(() => {
             .append($websites)
             .append(componets.$btn_refresh());
 
-        //点击直播网站事件
+        //网址和刷新按钮的事件委托
         $(".left-wrap").click(function (e) {
             if(e.target.tagName === "A") {
                 $(this).find("li").removeClass("checked");

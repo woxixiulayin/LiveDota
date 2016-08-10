@@ -11,7 +11,7 @@ var $ul_weblist = websites => {
 }
 
 var $btn_refresh = () => {
-    return $("<button></button>").addClass("btn-refresh");
+    return $("<button>刷新</button>").addClass("btn-refresh");
 };
 
 var $li_live = live => {

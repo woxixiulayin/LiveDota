@@ -57,8 +57,7 @@
 	var datahandler = __webpack_require__(3);
 
 	var pageWidth = window.screen.width;
-	// var pageHeight = window.innerHeight;
-	// console.log(pageWidth);
+
 	$(function () {
 	    var $aside_rank = $(".right-wrap"),
 	        $ul_live = $(".ul-live-list");
@@ -93,7 +92,7 @@
 	        //更新左侧网址列表
 	        $(".left-wrap").empty().append($websites).append(componets.$btn_refresh());
 
-	        //点击直播网站事件
+	        //网址和刷新按钮的事件委托
 	        $(".left-wrap").click(function (e) {
 	            if (e.target.tagName === "A") {
 	                $(this).find("li").removeClass("checked");
@@ -142,7 +141,7 @@
 	};
 
 	var $btn_refresh = function $btn_refresh() {
-	    return $("<button></button>").addClass("btn-refresh");
+	    return $("<button>刷新</button>").addClass("btn-refresh");
 	};
 
 	var $li_live = function $li_live(live) {
