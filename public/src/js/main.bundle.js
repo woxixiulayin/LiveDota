@@ -60,11 +60,12 @@
 
 	$(function () {
 	    var $aside_rank = $(".right-wrap"),
-	        $ul_live = $(".ul-live-list");
+	        $ul_live = $(".ul-live-list"),
+	        liveinfos = [],
+	        checkNum = 0;
 
 	    //live ul居中
 	    var liveul_margin = (pageWidth - 500 - Math.floor((pageWidth - 500) / 290) * 290) / 2 - 10 + "px";
-	    console.log(liveul_margin);
 	    $ul_live.css("margin-left", liveul_margin);
 
 	    //直播信息填充函数
@@ -77,49 +78,56 @@
 	        });
 	    };
 
-	    //显示页面内容
-	    var show = function (data) {
+	    //页面显示主函数，参数data为后端返回的json数据
+	    var show = function show(data) {
 	        var websites = data.map(function (item, i, array) {
 	            return item['website'];
 	        }),
-	            $websites = componets.$ul_weblist(websites),
 
+	        //创建左侧websites ul组件
+	        $websites = componets.$ul_weblist(websites),
 
 	        //从未经处理的live信息获得rank数据
 	        rankInfo = datahandler.getRankinfo(data);
-	        // console.log(data)
 
 	        //更新左侧网址列表
-	        $(".left-wrap").empty().append($websites).append(componets.$btn_refresh());
-
-	        //网址和刷新按钮的事件委托
-	        $(".left-wrap").click(function (e) {
-	            if (e.target.tagName === "A") {
-	                $(this).find("li").removeClass("checked");
-	                $(e.target).parent("li").addClass("checked");
-
-	                //显示中间直播list
-	                for (var i = 0, len = data.length; i < len; i++) {
-	                    if (data[i].website === $(e.target).text()) {
-	                        fullfillLives(data[i].lives);
-	                    }
-	                }
-	            } else if (e.target.tagName === "BUTTON") {
-	                //Ajax获取数据
-	                $.get('/search', show, 'json');
-	                $(e.target).blur();
-	            }
-	        });
+	        $(".left-wrap ul").replaceWith($websites);
 
 	        //显示默认直播网站lives
-	        $websites.find("a:first").click();
+	        $(".left-wrap").find("a:eq(" + checkNum + ")").click();
 
-	        //添加右侧排行榜
+	        //更新右侧排行榜
 	        $(".right-wrap").find("ul").replaceWith(componets.$ul_rank(rankInfo));
-	    }.bind(this);
+	    };
 
-	    //Ajax获取数据
-	    $.get('/search', show, 'json');
+	    var getNewData = function getNewData() {
+	        $.get('/search', function (data) {
+	            liveinfos = data;
+	            show(liveinfos);
+	        }, 'json');
+	    };
+
+	    //网址和刷新(重新获取数据)按钮的事件委托
+	    $(".left-wrap").click(function (e) {
+	        if (e.target.tagName === "A") {
+	            $(this).find("li").removeClass("checked");
+	            $(e.target).parent("li").addClass("checked");
+
+	            liveinfos.forEach(function (info, i) {
+	                if (info.website === $(e.target).text()) {
+	                    checkNum = i;
+	                    fullfillLives(info.lives);
+	                }
+	            });
+	        } else if (e.target.tagName === "BUTTON") {
+	            //获取新数据
+	            getNewData();
+	            $(e.target).blur();
+	        }
+	    });
+
+	    //refresh获取数据click
+	    getNewData();
 	}.bind(undefined));
 
 /***/ },
@@ -138,10 +146,6 @@
 	        $ul.append($li);
 	    });
 	    return $ul;
-	};
-
-	var $btn_refresh = function $btn_refresh() {
-	    return $("<button>刷新</button>").addClass("btn-refresh");
 	};
 
 	var $li_live = function $li_live(live) {
@@ -172,7 +176,6 @@
 
 	module.exports = {
 	    $ul_weblist: $ul_weblist,
-	    $btn_refresh: $btn_refresh,
 	    $li_live: $li_live,
 	    $ul_rank: $ul_rank
 	};

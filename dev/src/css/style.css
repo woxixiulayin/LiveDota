@@ -88,16 +88,17 @@ body
 {   
     display: block;
     font-size: 18px;
-    color: white;
+    color: orange;
     line-height: 25px;
-    margin: 40px auto 0px;
+    margin: 0 auto;
     width: 130px;
     border: none;
     background: transparent;
 }
 
 .btn-refresh:hover
-{
+{   
+    color: white;
     background: rgb(28,211,136);
 }
 .websites

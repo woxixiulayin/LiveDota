@@ -10,10 +10,6 @@ var $ul_weblist = websites => {
     return $ul;
 }
 
-var $btn_refresh = () => {
-    return $("<button>刷新</button>").addClass("btn-refresh");
-};
-
 var $li_live = live => {
     let html = `
         <li class="live-item left">
@@ -71,7 +67,6 @@ var $ul_rank = lives => {
 
 module.exports = {
     $ul_weblist: $ul_weblist,
-    $btn_refresh: $btn_refresh,
     $li_live: $li_live,
     $ul_rank: $ul_rank
 }
