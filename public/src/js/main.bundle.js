@@ -109,6 +109,7 @@
 
 	    //网址和刷新(重新获取数据)按钮的事件委托
 	    $(".left-wrap").click(function (e) {
+	        //更新显示内容
 	        if (e.target.tagName === "A") {
 	            $(this).find("li").removeClass("checked");
 	            $(e.target).parent("li").addClass("checked");
@@ -119,10 +120,19 @@
 	                    fullfillLives(info.lives);
 	                }
 	            });
+	            //刷新动作
 	        } else if (e.target.tagName === "BUTTON") {
-	            //获取新数据
-	            getNewData();
 	            $(e.target).blur();
+	            if (this.disabled && this.disabled == true) {
+	                return false;
+	            }
+	            //获取新数据,定义5秒内不能再刷新
+	            getNewData();
+	            this.disabled = true;
+	            var that = this;
+	            setTimeout(function () {
+	                this.disabled = false;
+	            }.bind(this), 5000);
 	        }
 	    });
 
@@ -195,7 +205,6 @@
 	    liveinfos.forEach(function (item, i) {
 	        lives = lives.concat(item.lives);
 	    });
-	    console.log(lives);
 
 	    orderedlives = lives.sort(function (pre, after) {
 	        return after.nums - pre.nums;

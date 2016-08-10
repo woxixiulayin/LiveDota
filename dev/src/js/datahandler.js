@@ -7,7 +7,7 @@ var getRankinfo = (liveinfos) => {
     liveinfos.forEach( (item, i) => {
         lives = lives.concat(item.lives);
     });
-    console.log(lives);
+
 
     orderedlives = lives.sort( (pre, after) => {
         return after.nums - pre.nums;
