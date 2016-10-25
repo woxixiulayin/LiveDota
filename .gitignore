@@ -1,3 +1,8 @@
 /node_modules/*
 livedota.sublime-project
 livedota.sublime-workspace
+typings*
+*.json
+public/
+
+

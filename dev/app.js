@@ -10,7 +10,7 @@ const  app = new Koa();
 app.use(serve((__dirname + "/src")));
 
 app.use(async (ctx, next) => {
-  if ('/' === ctx.path)  return send(ctx, "./src/html/index.html");
+  if (ctx.path === '/')  return send(ctx, "./src/html/index.html");
   await next();
 });
 

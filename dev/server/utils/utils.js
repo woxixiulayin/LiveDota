@@ -13,4 +13,7 @@ var log = function (str) {
     }
 }
 
-export {log};
+function getRootPath() {
+    return "/Users/Jackson/work/web/LiveDota/";
+}
+export {log, getRootPath};
