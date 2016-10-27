@@ -1,11 +1,11 @@
 import {Live, Liveinfos} from '../model/models.js';
-import {Spider} from './spider.js';
+import Spider from './spider.js';
 import {log} from '../utils/utils.js';
 
 const $ = require("cheerio");
 const prelink = "http://www.quanmin.tv/v/";
 
-class Quanminspider extends Spider {
+export default class Quanminspider extends Spider {
     constructor () {
         super();
     }
@@ -37,5 +37,3 @@ class Quanminspider extends Spider {
 // let quanmin = new Quanminspider();
 // let url = 'http://www.quanmin.tv/json/categories/dota2/list.json';
 // quanmin.parseUrl(url);
-
-export {Quanminspider};

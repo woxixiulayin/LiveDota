@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.log = undefined;
+exports.getRootPath = exports.log = undefined;
 
 var _config = require('../config.js');
 
@@ -20,4 +20,8 @@ var log = function log(str) {
     }
 };
 
+function getRootPath() {
+    return "/Users/Jackson/work/web/LiveDota/";
+}
 exports.log = log;
+exports.getRootPath = getRootPath;

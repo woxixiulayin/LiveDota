@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Douyuspider = undefined;
 
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
@@ -41,7 +40,7 @@ var Douyuspider = function (_Spider) {
 
     function Douyuspider() {
         (0, _classCallCheck3.default)(this, Douyuspider);
-        return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Douyuspider).call(this));
+        return (0, _possibleConstructorReturn3.default)(this, (Douyuspider.__proto__ || (0, _getPrototypeOf2.default)(Douyuspider)).call(this));
     }
 
     //具体的爬取策略
@@ -65,7 +64,6 @@ var Douyuspider = function (_Spider) {
                     img = $(ele).find("span.imgbox img").attr("data-original"),
                     live = new _models.Live(name, nums, title, link, category, img, website);
                 infoarray.push(live);
-                // log(live);
             });
             liveinfos = new _models.Liveinfos(website, infoarray);
             return liveinfos;
@@ -79,4 +77,5 @@ var Douyuspider = function (_Spider) {
 // let url = 'www.douyu.com/directory/game/DOTA2';
 // spider.parseUrl(url);
 
-exports.Douyuspider = Douyuspider;
+
+exports.default = Douyuspider;

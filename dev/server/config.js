@@ -1,11 +1,44 @@
 const DEBUG = true;
 
 const jobs = {
-    Pandaspider: "http://www.panda.tv/cate/dota2",
+    Pandaspider: "",
     Quanminspider: "http://www.quanmin.tv/json/categories/dota2/list.json",
-    Huyaspider: "http://www.huya.com/g/6",
-    Zhanqispider: "www.zhanqi.tv/games/dota2",
-    Douyuspider: "www.douyu.com/directory/game/DOTA2"
+    Huyaspider: "",
+    Zhanqispider: "",
+    Douyuspider: "https://www.douyu.com/directory/game/LOL"
 }
 
-export {DEBUG, jobs};
+const sitesMap = {
+    "全民": {
+        "spider": 'quanmin',
+        "gameUrls": {
+            "dota": "http://www.quanmin.tv/json/categories/dota2/list.json"
+        }
+    },
+    "熊猫": {
+        "spider": 'panda',
+        "gameUrls": {
+            "dota": "http://www.panda.tv/cate/dota2"
+        }
+    },
+    "战旗": {
+        "spider": 'zhanqi',
+        "gameUrls": {
+            "dota": "www.zhanqi.tv/games/dota2"
+        }
+    },
+    "斗鱼": {
+        "spider": 'douyu',
+        "gameUrls": {
+            "dota": "https://www.douyu.com/directory/game/LOL"
+        }
+    },
+    "虎牙": {
+        "spider": 'huya',
+        "gameUrls": {
+            "dota": "http://www.huya.com/g/6"
+        }
+    }
+}
+export default sitesMap;
+export { DEBUG, jobs };

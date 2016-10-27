@@ -1,10 +1,10 @@
 import {Live, Liveinfos} from '../model/models.js';
-import {Spider} from './spider.js';
+import Spider from './spider.js';
 import {log} from '../utils/utils.js';
 
 const $ = require("cheerio");
 
-class Huyaspider extends Spider {
+export default class Huyaspider extends Spider {
     constructor () {
         super();
     }
@@ -36,5 +36,3 @@ class Huyaspider extends Spider {
 // let huya = new Huyaspider();
 // let url = 'http://www.huya.com/g/6';
 // huya.parseUrl(url);
-
-export {Huyaspider};

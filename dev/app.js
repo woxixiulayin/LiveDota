@@ -1,4 +1,4 @@
-import {runJobs} from "./server/main.js";
+import {runJobs} from "./server/spider-manager.js";
 import {jobs} from "./server/config.js";
 import {log} from "./server/utils/utils.js";
 

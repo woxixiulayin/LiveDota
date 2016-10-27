@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Quanminspider = undefined;
 
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
@@ -41,7 +40,7 @@ var Quanminspider = function (_Spider) {
 
     function Quanminspider() {
         (0, _classCallCheck3.default)(this, Quanminspider);
-        return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Quanminspider).call(this));
+        return (0, _possibleConstructorReturn3.default)(this, (Quanminspider.__proto__ || (0, _getPrototypeOf2.default)(Quanminspider)).call(this));
     }
 
     //具体的爬取策略，全名TV页面是动态生成的，需要找到数据请求的url来获取json
@@ -79,4 +78,5 @@ var Quanminspider = function (_Spider) {
 // let url = 'http://www.quanmin.tv/json/categories/dota2/list.json';
 // quanmin.parseUrl(url);
 
-exports.Quanminspider = Quanminspider;
+
+exports.default = Quanminspider;

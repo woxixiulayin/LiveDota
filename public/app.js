@@ -12,7 +12,7 @@ var _asyncToGenerator2 = require("babel-runtime/helpers/asyncToGenerator");
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
-var _main = require("./server/main.js");
+var _spiderManager = require("./server/spider-manager.js");
 
 var _config = require("./server/config.js");
 
@@ -69,7 +69,7 @@ app.use(function () {
                         }
 
                         _context2.next = 3;
-                        return (0, _main.runJobs)(_config.jobs).then(function (infos) {
+                        return (0, _spiderManager.runJobs)(_config.jobs).then(function (infos) {
                             ctx.body = (0, _stringify2.default)(infos);
                         });
 

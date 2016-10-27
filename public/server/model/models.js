@@ -59,7 +59,7 @@ var LiveDota = function (_Live) {
     function LiveDota(name, nums, title, category, img, website) {
         (0, _classCallCheck3.default)(this, LiveDota);
 
-        var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(LiveDota).call(this, name, nums, title, link, category, img, website));
+        var _this = (0, _possibleConstructorReturn3.default)(this, (LiveDota.__proto__ || (0, _getPrototypeOf2.default)(LiveDota)).call(this, name, nums, title, link, category, img, website));
 
         _this.category = "Dota";
         return _this;

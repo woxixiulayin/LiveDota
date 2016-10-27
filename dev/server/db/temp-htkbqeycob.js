@@ -25,4 +25,12 @@ var liveSchema = new Schema({
 
 var liveModel = mongoose.model('live', liveSchema);
 
-export { db, liveModel, mongoose };
+new Promise( (resolve, reject) => {
+		liveModel.find({ name: "被遗忘的NaFaSh" }, (err, live) => {
+			if (err) return reject(err);
+			resolve(live);
+		})
+	}).then( live => {
+		// expect(live.name).toBe('被遗忘的NaFaSh');
+		console.log(live);
+	})

@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Huyaspider = undefined;
 
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
@@ -40,7 +39,7 @@ var Huyaspider = function (_Spider) {
 
     function Huyaspider() {
         (0, _classCallCheck3.default)(this, Huyaspider);
-        return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Huyaspider).call(this));
+        return (0, _possibleConstructorReturn3.default)(this, (Huyaspider.__proto__ || (0, _getPrototypeOf2.default)(Huyaspider)).call(this));
     }
 
     //具体的爬取策略
@@ -77,4 +76,5 @@ var Huyaspider = function (_Spider) {
 // let url = 'http://www.huya.com/g/6';
 // huya.parseUrl(url);
 
-exports.Huyaspider = Huyaspider;
+
+exports.default = Huyaspider;

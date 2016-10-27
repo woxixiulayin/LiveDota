@@ -1,11 +1,11 @@
 import {Live, Liveinfos} from '../model/models.js';
-import {Spider} from './spider.js';
+import Spider from './spider.js';
 import {log} from '../utils/utils.js';
 
 const $ = require("cheerio");
 const prelink = "http://www.douyu.com";
 
-class Douyuspider extends Spider {
+export default class Douyuspider extends Spider {
     constructor () {
         super();
     }
@@ -27,7 +27,6 @@ class Douyuspider extends Spider {
                 img = $(ele).find("span.imgbox img").attr("data-original"),
                 live = new Live(name, nums, title, link, category, img, website);
                 infoarray.push(live);
-            // log(live);
         })
         liveinfos = new Liveinfos(website, infoarray);
         return liveinfos;
@@ -38,5 +37,3 @@ class Douyuspider extends Spider {
 // let spider = new Douyuspider();
 // let url = 'www.douyu.com/directory/game/DOTA2';
 // spider.parseUrl(url);
-
-export {Douyuspider};

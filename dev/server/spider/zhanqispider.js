@@ -1,11 +1,11 @@
 import {Live, Liveinfos} from '../model/models.js';
-import {Spider} from './spider.js';
+import Spider from './spider.js';
 import {log} from '../utils/utils.js';
 
 const $ = require("cheerio");
 const prelink = "http://www.zhanqi.tv/";
 
-class Zhanqispider extends Spider {
+export default class Zhanqispider extends Spider {
     constructor () {
         super();
     }
@@ -37,5 +37,3 @@ class Zhanqispider extends Spider {
 // let spider = new Zhanqispider();
 // let url = 'www.zhanqi.tv/games/dota2';
 // panda.parseUrl(url);
-
-export {Zhanqispider};

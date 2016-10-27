@@ -1,7 +1,7 @@
 import {log} from '../utils/utils.js';
 const superagent = require('superagent');
 
-export class Spider {
+export default class Spider {
     constructor () {
         this.htmls = {};
         this.liveinfos = {};
@@ -39,8 +39,6 @@ export class Spider {
                     //使用url作为下标存储html和对应的liveinfo
                     that.htmls[url] = html;
                     that.liveinfos[url] = liveinfos;
-                    log(this.constructor.name + " finishs picking lives from " + url);
-                    log("get " + liveinfos.lives.length + " lives!!")
                     //后续处理这个url下获取到的info信息
                     resolve(liveinfos);
                 }
@@ -49,5 +47,4 @@ export class Spider {
     }
 }
 
-export {Spider};
 

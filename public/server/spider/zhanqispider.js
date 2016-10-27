@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Zhanqispider = undefined;
 
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
@@ -41,7 +40,7 @@ var Zhanqispider = function (_Spider) {
 
     function Zhanqispider() {
         (0, _classCallCheck3.default)(this, Zhanqispider);
-        return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Zhanqispider).call(this));
+        return (0, _possibleConstructorReturn3.default)(this, (Zhanqispider.__proto__ || (0, _getPrototypeOf2.default)(Zhanqispider)).call(this));
     }
 
     //具体的爬取策略
@@ -78,4 +77,5 @@ var Zhanqispider = function (_Spider) {
 // let url = 'www.zhanqi.tv/games/dota2';
 // panda.parseUrl(url);
 
-exports.Zhanqispider = Zhanqispider;
+
+exports.default = Zhanqispider;
