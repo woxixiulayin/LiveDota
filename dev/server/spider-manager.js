@@ -25,7 +25,7 @@ let huya = new Huyaspider(),
 
 let spiders = [panda, zhanqi, douyu, huya, quanmin];
 
-let runJobs = function (jobs, callback) {
+export let runJobs = function (jobs, callback) {
     let promises = []
     spiders.forEach((spider, index) => {
         //使用类名作为job的属性名，直接获取要爬取的url
@@ -36,28 +36,43 @@ let runJobs = function (jobs, callback) {
     return Promise.all(promises);
 };
 
-function getUrlByParams (site, category) {
+
+export let getUrlByParams =  (site, category) => {
     return sitesMap[site] && sitesMap[site].gameUrls[category];
 }
 
-function createSpiderByParams (site) {
-    let _spidername = sitesMap[site].spider || null;
+export let createSpiderByParams = (site, category) => {
+    let Spider = sitesMap[site] && sitesMap[site].spider;
 
-    if (!sitesMap) {
+    if (!Spider) {
         log(`no spider for ${site}`);
         return;
     }
-    let _Spider = spiderMap.get(_spidername);
-    return new _Spider();
+    return new Spider();
 }
 
-function getLivesByParams (site, category) {
-
+export let getLivesByParams = async  (site, category) => {
+    let url = getUrlByParams(site, category),
+        spider = createSpiderByParams(site, category),
+        lives = await spider.parseUrl(url);
+    return lives;
 }
 
+export let getAllLivesBycategory = async (category) => {
+    let allLive = {};
+    if (typeof category !== 'string') return; 
+    category = category.toLowerCase();
+    allLive.category = category;
+    allLive.lives = [];
+    var lives = _.keys(sitesMap).map(async site => {
+        return getLivesByParams(site, category);
+    });
+    return Promise.all(lives).then( lives => {
+        allLive.lives = lives;
+        return allLive
+    });
+}
 // 以下做测试
 // runJobs(jobs, infos => {
 //     log("done");
 // })
-
-export {getUrlByParams, runJobs, createSpiderByParams};
