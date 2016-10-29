@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outFile": "./public/dist",
+        "sourceMap": true,
+        "target": "es6",
+        "allowJs": true,
+        "moduleResolution": "node"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
