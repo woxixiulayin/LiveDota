@@ -7,9 +7,11 @@
 // title:"单排模式！"
 // website:"虎牙"
 
+import {liveModel} from '../db/schema';
+
 //直播信息
-class Live {
-    constructor (name, nums, title, link, category, img, website) {        
+export class Live{
+    constructor (name, nums, title, link, category, img, website) {
         this.name = name || '';
         this.nums = nums || '';
         this.title = title || '';
@@ -17,20 +19,17 @@ class Live {
         this.category = category || '';
         this.img = img || '';
         this.website = website || '';
+        this._live = new liveModel({name, nums, title, link, category, img, website});
+    }
+
+    async save () {
+        await this._live.save();
     }
 }
 
-class Liveinfos {
+export class Liveinfos {
     constructor (website, lives) {
         this.website = website;
         this.lives = lives;
     }
 }
-class LiveDota extends Live {
-        constructor (name, nums, title, category, img, website) {
-            super(name, nums, title, link, category, img, website);
-            this.category = "Dota";
-        }
-}
-
-export {Live, Liveinfos}
