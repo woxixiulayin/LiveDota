@@ -7,25 +7,21 @@
 // title:"单排模式！"
 // website:"虎牙"
 
-import {liveModel} from '../db/schema';
+import {mongoose} from '../db/db';
+import {log} from '../utils/utils';
 
 //直播信息
-export class Live{
-    constructor (name, nums, title, link, category, img, website) {
-        this.name = name || '';
-        this.nums = nums || '';
-        this.title = title || '';
-        this.link = link || '';
-        this.category = category || '';
-        this.img = img || '';
-        this.website = website || '';
-        this._live = new liveModel({name, nums, title, link, category, img, website});
-    }
+var liveSchema = mongoose.Schema({
+    name: {type:String, unique:true},
+    nums: Number,
+    title: String,
+    link: String,
+    category: String,
+    img: String,
+    website: String
+});
 
-    async save () {
-        await this._live.save();
-    }
-}
+export var Live = mongoose.model('Live', liveSchema);
 
 export class Liveinfos {
     constructor (website, lives) {

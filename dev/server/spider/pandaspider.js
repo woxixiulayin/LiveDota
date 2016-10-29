@@ -24,7 +24,7 @@ export default class Pandaspider extends Spider {
                 title = $(ele).find("div.video-title").text(),
                 link = prelink + $(ele).attr("href"),
                 img = $(ele).find("img.video-img").attr("data-original"),
-                live = new Live(name, nums, title, link, category, img, website);
+                live = new Live({name, nums, title, link, category, img, website});
                 infoarray.push(live);
             // log(live);
         })

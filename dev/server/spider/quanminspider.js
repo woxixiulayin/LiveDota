@@ -24,7 +24,7 @@ export default class Quanminspider extends Spider {
                 link = prelink + ele.uid,
                 img = ele.thumb,
                 category = ele.category_name,
-                live = new Live(name, nums, title, link, category, img, website);
+                live = new Live({name, nums, title, link, category, img, website});
                 infoarray.push(live);
             // log(live);
         });

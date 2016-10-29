@@ -11,18 +11,5 @@ db.on("error", err => {
     console.log(err);
 });
 
-var Schema = mongoose.Schema;
-
-var liveSchema = new Schema({
-    name: String,
-    nums: Number,
-    title: String,
-    link: String,
-    category: String,
-    img: String,
-    website: String
-});
-
-var liveModel = mongoose.model('live', liveSchema);
-
-export { db, liveModel, mongoose };
+export default db;
+export { mongoose };

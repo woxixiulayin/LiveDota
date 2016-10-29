@@ -23,7 +23,7 @@ export default class Huyaspider extends Spider {
                 title = $(ele).find("div.all_live_tit a").text(),
                 link = $(ele).find("a").attr("href"),
                 img = $(ele).find("img.pic").attr("src"),
-                live = new Live(name, nums, title, link, category, img, website);
+                live = new Live({name, nums, title, link, category, img, website});
                 infoarray.push(live);
             // log(live);
         })

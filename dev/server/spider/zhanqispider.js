@@ -24,7 +24,7 @@ export default class Zhanqispider extends Spider {
                 title = $(ele).find("span.name").text(),
                 link = prelink + $(ele).attr("href"),
                 img = $(ele).find("div.imgBox img").attr("src"),
-                live = new Live(name, nums, title, link, category, img, website);
+                live = new Live({name, nums, title, link, category, img, website});
                 infoarray.push(live);
             // log(live);
         })

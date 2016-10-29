@@ -25,7 +25,7 @@ export default class Douyuspider extends Spider {
                 title = $(ele).find("h3").text(),
                 link = prelink + $(ele).attr("href"),
                 img = $(ele).find("span.imgbox img").attr("data-original"),
-                live = new Live(name, nums, title, link, category, img, website);
+                live = new Live({name, nums, title, link, category, img, website});
                 infoarray.push(live);
         })
         liveinfos = new Liveinfos(website, infoarray);
