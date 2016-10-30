@@ -37,15 +37,12 @@ it('test remove and save Live', async () => {
 })
 
 it('get lives from db by', async () => {
-    let lives = await getLivesByParams('斗鱼', 'dota');
-    // console.log('99999999999999');
-    // console.log(lives);
+    let lives = await getLivesByParams('熊猫', 'dota');
     let  db_lives = await Promise.all(lives.lives.map( async live => {
         return await live.findAndUpdate();
     }));
-    // let dotaLives = await Live.getAllLivesByCategory('dota');
+    let dotaLives = await Live.getAllLivesByCategory('dota');
     expect(db_lives.length).toBeGreaterThan(10);
-    // console.log(db_lives);
     db_lives.map(live => {
         expect(live.category).toBe('dota');
     })
