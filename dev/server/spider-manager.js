@@ -56,9 +56,8 @@ export let getLivesByParams = async  (site, category) => {
         spider = createSpiderByParams(site, category),
         lives = await spider.parseUrl(url);
         //重新定义每个live的类别
-        lives.lives.forEach(live => {
+        await lives.lives.map(live => {
             live.category = category;
-            live.site = site;
         });
         return lives;
 };

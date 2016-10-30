@@ -16,8 +16,14 @@ export default class Spider {
         return liveinfos;
     }
 
+    transWan (nums) {
+    if (typeof nums === 'number') return;
+    let indexWan = String(nums).indexOf("万");
+    return indexWan != -1 ? nums.substr(0, indexWan) * 10000 : nums;
+    }
     //live预处理
     parseLives (lives) {
+        // lives.map()
     }
     parseUrl(url) {
         let that = this;

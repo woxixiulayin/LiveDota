@@ -24,17 +24,10 @@ var liveSchema = mongoose.Schema({
     timestamps: true
 });
 
-function transWan (nums) {
-    if (typeof nums === 'number') return;
-    let indexWan = String(nums).indexOf("万");
-    return indexWan != -1 ? nums.substr(0, indexWan) * 10000 : nums;
-};
-
 var LiveModel = mongoose.model('Live', liveSchema);
 export class Live extends LiveModel {
     constructor (params) {
         super(params);
-        this.params = params;
     }
 
     static async isExistByName(name) {
@@ -52,8 +45,14 @@ export class Live extends LiveModel {
 
     async findAndUpdate () {
         try {
-            let res = await LiveModel.findOneAndUpdate({name: this.name},this.params, {upsert: true, overwrite: false}).exec();
-            return res ? res : this;
+            let res =  await LiveModel.findOneAndUpdate({name: this.name},{
+                nums: this.nums,
+                img: this.img,
+                title: this.title,
+                category: this.category
+            }).exec();
+            if (!res) res = await this.save();
+            return res;
         } catch (e) {
             console.log(e);
         }
