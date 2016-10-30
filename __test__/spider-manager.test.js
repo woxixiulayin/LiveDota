@@ -29,11 +29,11 @@ describe('test dev/server/spider-manajer.js', () => {
         let lives = await spiderManager.getLivesByParams('虎牙', 'dota');
         expect(lives).toBeTruthy();
         expect(lives.website).toBe('虎牙');
-        expect(lives.lives.length).toBeGreaterThan(1);
+        expect(lives.lives.length).toBeGreaterThan(5);
     })
 
-
-    it('test getAllLivesBycategory',  () => {
+    //not use
+    it.skip('test getAllLivesBycategory',  () => {
         let allLives;
         return spiderManager.getAllLivesBycategory('dota')
             .then(lives => {

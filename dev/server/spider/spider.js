@@ -18,10 +18,6 @@ export default class Spider {
 
     //live预处理
     parseLives (lives) {
-        lives.forEach( live => {
-            let indexWan = ('' + live.nums).indexOf("万");
-            live.nums = indexWan != -1 ? live.nums.substr(0, indexWan) * 10000 : live.nums;
-        });
     }
     parseUrl(url) {
         let that = this;

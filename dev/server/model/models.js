@@ -13,15 +13,52 @@ import {log} from '../utils/utils';
 //直播信息
 var liveSchema = mongoose.Schema({
     name: {type:String, unique:true},
-    nums: Number,
+    nums: String,
     title: String,
     link: String,
     category: String,
     img: String,
     website: String
+},
+{
+    timestamps: true
 });
 
-export var Live = mongoose.model('Live', liveSchema);
+function transWan (nums) {
+    if (typeof nums === 'number') return;
+    let indexWan = String(nums).indexOf("万");
+    return indexWan != -1 ? nums.substr(0, indexWan) * 10000 : nums;
+};
+
+var LiveModel = mongoose.model('Live', liveSchema);
+export class Live extends LiveModel {
+    constructor (params) {
+        super(params);
+        this.params = params;
+    }
+
+    static async isExistByName(name) {
+        let res = await super.find({name}).exec();
+        return res.length && res[0].name === name ? true : false;
+    }
+
+    static async getAllLivesByCategory (category) {
+        return await super.find({category}).exec();
+    }
+
+    static async getLivesByCategoryAndSite (category, site) {
+        return await super.find({category, site}).exec();
+    }
+
+    async findAndUpdate () {
+        try {
+            let res = await LiveModel.findOneAndUpdate({name: this.name},this.params, {upsert: true, overwrite: false}).exec();
+            return res ? res : this;
+        } catch (e) {
+            console.log(e);
+        }
+    }
+}
 
 export class Liveinfos {
     constructor (website, lives) {

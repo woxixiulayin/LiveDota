@@ -8,7 +8,6 @@ import sitesMap from './config.js';
 import {log} from "./utils/utils.js";
 import _ from 'lodash';
 
-
 let spiderMap = new Map([
     ['huya', Huyaspider],
     ['quanmin', Quanminspider],
@@ -39,7 +38,7 @@ export let runJobs = function (jobs, callback) {
 
 export let getUrlByParams =  (site, category) => {
     return sitesMap[site] && sitesMap[site].gameUrls[category];
-}
+};
 
 export let createSpiderByParams = (site, category) => {
     let Spider = sitesMap[site] && sitesMap[site].spider;
@@ -49,29 +48,37 @@ export let createSpiderByParams = (site, category) => {
         return;
     }
     return new Spider();
-}
+};
 
+//return {website, lives:[]}
 export let getLivesByParams = async  (site, category) => {
     let url = getUrlByParams(site, category),
         spider = createSpiderByParams(site, category),
         lives = await spider.parseUrl(url);
-    return lives;
-}
+        //重新定义每个live的类别
+        lives.lives.forEach(live => {
+            live.category = category;
+            live.site = site;
+        });
+        return lives;
+};
 
+
+//return {category, live:[]}
 export let getAllLivesBycategory = async (category) => {
     let allLive = {};
     if (typeof category !== 'string') return; 
     category = category.toLowerCase();
     allLive.category = category;
     allLive.lives = [];
-    var lives = _.keys(sitesMap).map(async site => {
+    var lives = _.keys(sitesMap).map(site => {
         return getLivesByParams(site, category);
     });
     return Promise.all(lives).then( lives => {
         allLive.lives = lives;
         return allLive
     });
-}
+};
 // 以下做测试
 // runJobs(jobs, infos => {
 //     log("done");

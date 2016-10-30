@@ -1,5 +1,14 @@
-import { db, liveModel, mongoose } from "../dev/server/db/schema";
+import 'jest';
+// jest.enableAutomock();
+import mongoose  from "mongoose";
 import {Live} from "../dev/server/model/models";
+import {getLivesByParams} from "../dev/server/spider-manager.js"
+import fs from 'fs';
+
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+global.Promise = require.requireActual('promise');
+// await mongoose.connection.close();
+// mongoose.connect("mongodb://localhost/livedota");
 
 let mockdata = {
         "name": "被遗忘的NaFaSh",
@@ -12,20 +21,32 @@ let mockdata = {
     };
 
 it('make sure db is connected', () => {
-    // console.log(11);
-    var live = new liveModel(mockdata);
-    // live.save();
-    return new Promise( (resolve, reject) => {
-        liveModel.findOne({ name: "被遗忘的NaFaSh" }, (err, live) => {
-            if (err) return reject(err);
-            resolve(live);
-        })
-    }).then( live => {
-        expect(live.name).toBe('被遗忘的NaFaSh');
-        // live.remove();
-    })
+    expect(mongoose.connection.readyState).toBe(2);
 });
 
-it('test Live class', () => {
-    let live = new Live();
+it('test remove and save Live', async () => {
+     let res ;
+    await Live.remove({name: "被遗忘的NaFaSh"}).exec();
+    res = await Live.isExistByName('被遗忘的NaFaSh');
+    expect(res).toBe(false);
+    let live = new Live(mockdata);
+    let _live = await live.findAndUpdate();
+    res = await Live.isExistByName('被遗忘的NaFaSh');
+    expect(res).toBe(true);
+    await Live.remove({name: "被遗忘的NaFaSh"}).exec();
+})
+
+it('get lives from db by', async () => {
+    let lives = await getLivesByParams('斗鱼', 'dota');
+    // console.log('99999999999999');
+    // console.log(lives);
+    let  db_lives = await Promise.all(lives.lives.map( async live => {
+        return await live.findAndUpdate();
+    }));
+    // let dotaLives = await Live.getAllLivesByCategory('dota');
+    expect(db_lives.length).toBeGreaterThan(10);
+    // console.log(db_lives);
+    db_lives.map(live => {
+        expect(live.category).toBe('dota');
+    })
 })

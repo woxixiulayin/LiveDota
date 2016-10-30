@@ -1,3 +1,4 @@
+//@flow
 import {runJobs} from "./server/spider-manager.js";
 import {jobs} from "./server/config.js";
 import {log} from "./server/utils/utils.js";
