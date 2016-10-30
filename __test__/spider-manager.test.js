@@ -1,4 +1,5 @@
 import jest from 'jest';
+import {mongoose} from '../dev/server/db/db';
 import sitesMap from '../dev/server/config';
 import _ from 'lodash';
 import * as spiderManager from '../dev/server/spider-manager';
@@ -6,7 +7,7 @@ import Huyaspider from "../dev/server/spider/huyaspider";
 import Douyuspider from "../dev/server/spider/douyuspider";
 
 describe('test dev/server/spider-manajer.js', () => {
-    beforeEach(function (done) {
+    beforeEach(async function (done) {
         jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
         setTimeout(function () {
             console.log(`inside default timeout`);
