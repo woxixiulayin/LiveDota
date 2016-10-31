@@ -16,35 +16,37 @@ const jobs = {
 
 const sitesMap = {
     "全民": {
-        "spider": Quanminspider,
+        "spiderName": "Quanminspider",
         "gameUrls": {
             "dota": "http://www.quanmin.tv/json/categories/dota2/list.json"
         }
     },
     "熊猫": {
-        "spider": Pandaspider,
+        "spiderName": "Pandaspider",
         "gameUrls": {
             "dota": "http://www.panda.tv/cate/dota2"
         }
     },
     "战旗": {
-        "spider": Zhanqispider,
+        "spiderName": "Zhanqispider",
         "gameUrls": {
             "dota": "www.zhanqi.tv/games/dota2"
         }
     },
-    "斗鱼": {
-        "spider": Douyuspider,
-        "gameUrls": {
-            "dota": "https://www.douyu.com/directory/game/LOL"
-        }
-    },
     "虎牙": {
-        "spider": Huyaspider,
+        "spiderName": "Huyaspider",
         "gameUrls": {
             "dota": "http://www.huya.com/g/6"
         }
+    },
+    "斗鱼": {
+        "spiderName": "Douyuspider",
+        "gameUrls": {
+            "dota": "https://www.douyu.com/directory/game/LOL"
+        }
     }
 }
+export var outDateTime = 2 * 60;
+export var categories = ['dota', 'lol', 'hearthstone'];
 export default sitesMap;
 export { DEBUG, jobs };
