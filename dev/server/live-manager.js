@@ -58,6 +58,8 @@ var giveLiveListTag = (lives, category) => {
     }, {})
 };
 
+
+//get live from net
 //return lives: []
 var getLivesFromNetBycategory = async category => {
     let lives;
@@ -69,6 +71,7 @@ var getLivesFromNetBycategory = async category => {
 }
 
 //return lives: []
+//get live from db or net
 export async function getAllLivesByCategory (category) {
     let lives = {};
     if (categories.indexOf(category) === -1) {
@@ -78,11 +81,11 @@ export async function getAllLivesByCategory (category) {
         try {
             workList.addWork(category);
             lives = await getLivesFromNetBycategory(category);
-            log(lives)
-            await Promise.all(lives.lives.map(async live => {
-                return await live.save();
+            await Promise.all(lives.map(async live => {
+                return live.findAndUpdate();
             }));
             workList.deleteWork(category);
+            console.log('get live from net');
         }
         catch (e) {
             console.log(e);
@@ -90,6 +93,7 @@ export async function getAllLivesByCategory (category) {
     } else {
         try {
             lives = await Live.getAllLivesByCategory(category);
+            console.log('get live from db');
         } catch (e) {
             console.log(e);
         }
