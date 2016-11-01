@@ -1,10 +1,10 @@
 import jest from 'jest';
-import {mongoose} from '../dev/server/db/db';
+import { mongoose } from '../dev/server/db/db';
 import sitesMap from '../dev/server/config';
 import _ from 'lodash';
 import * as spiderManager from '../dev/server/spider-manager';
-import Huyaspider from "../dev/server/spider/huyaspider";
 import Douyuspider from "../dev/server/spider/douyuspider";
+import Huyaspider from "../dev/server/spider/huyaspider";
 
 describe('test dev/server/spider-manajer.js', () => {
     beforeEach(async function (done) {
@@ -28,19 +28,15 @@ describe('test dev/server/spider-manajer.js', () => {
     it('test getLivesByParams', async () => {
         let lives = await spiderManager.getLivesByParams('虎牙', 'dota');
         expect(lives).toBeTruthy();
-        expect(lives.website).toBe('虎牙');
-        expect(lives.lives.length).toBeGreaterThan(5);
+        expect(lives.length).toBeGreaterThan(1);
+        expect(lives[1].website).toBe('虎牙');
     })
 
-    //not use
-    it.skip('test getAllLivesBycategory',  () => {
-        let allLives;
-        return spiderManager.getAllLivesBycategory('dota')
-            .then(lives => {
-                allLives = lives;
-                expect(allLives).toBeTruthy();
-                expect(allLives.category).toBe('dota');
-                expect(allLives.lives.length).toBe(_.keys(sitesMap).length);
-            });
+    it('test spider getAllLivesBycategory', async () => {
+        let lives =  await spiderManager.getAllLivesBycategory('dota');
+        expect(lives).toBeTruthy();
+        expect(lives.length).toBeGreaterThan(5);
+        expect(lives[0].category).toBe('dota');
+        expect(+lives[0].nums).toBeGreaterThan(1);
     })
 })

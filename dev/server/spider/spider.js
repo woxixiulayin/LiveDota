@@ -21,10 +21,6 @@ export default class Spider {
     let indexWan = String(nums).indexOf("万");
     return indexWan != -1 ? nums.substr(0, indexWan) * 10000 : nums;
     }
-    //live预处理
-    parseLives (lives) {
-        // lives.map()
-    }
     parseUrl(url) {
         let that = this;
         return new Promise( (resolve, reject) => {
@@ -35,14 +31,8 @@ export default class Spider {
                     reject(err);
                 } else {
                     let html = res.text;
-                    let liveinfos = that.pickInfo(html);
-                    //liveinfo 预处理
-                    this.parseLives(liveinfos.lives);
-                    //使用url作为下标存储html和对应的liveinfo
-                    that.htmls[url] = html;
-                    that.liveinfos[url] = liveinfos;
-                    //后续处理这个url下获取到的info信息
-                    resolve(liveinfos);
+                    let lives = that.pickInfo(html);
+                    resolve(lives);
                 }
             });
         });

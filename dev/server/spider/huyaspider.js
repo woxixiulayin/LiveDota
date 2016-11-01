@@ -11,8 +11,7 @@ export default class Huyaspider extends Spider {
 
     //具体的爬取策略
     pickInfo (html) {
-        let infoarray = [],
-            liveinfos = {},
+        let lives = [],
             parse = $.load(html),
             list = parse("li.video-list-item"),
             category = parse("div.box-hd h3").text(),
@@ -24,11 +23,9 @@ export default class Huyaspider extends Spider {
                 link = $(ele).find("a").attr("href"),
                 img = $(ele).find("img.pic").attr("src"),
                 live = new Live({name, nums, title, link, category, img, website});
-                infoarray.push(live);
-            // log(live);
+                lives.push(live);
         })
-        liveinfos = new Liveinfos(website, infoarray);
-        return liveinfos;
+        return lives;
     }
 }
 

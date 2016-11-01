@@ -1,4 +1,4 @@
-import {Live, Liveinfos} from '../model/models.js';
+import {Live} from '../model/models.js';
 import Spider from './spider.js';
 import {log} from '../utils/utils.js';
 
@@ -12,8 +12,7 @@ export default class Douyuspider extends Spider {
 
     //具体的爬取策略
     pickInfo (html) {
-        let infoarray = [],
-            liveinfos = {},
+        let lives = [],
             parse = $.load(html),
             list = parse("#live-list-contentbox li a"),
             category = parse("div.mainbody div.real-title").text(),
@@ -26,10 +25,9 @@ export default class Douyuspider extends Spider {
                 link = prelink + $(ele).attr("href"),
                 img = $(ele).find("span.imgbox img").attr("data-original"),
                 live = new Live({name, nums, title, link, category, img, website});
-                infoarray.push(live);
+                lives.push(live);
         })
-        liveinfos = new Liveinfos(website, infoarray);
-        return liveinfos;
+        return lives;
     }
 }
 

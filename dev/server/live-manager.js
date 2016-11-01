@@ -42,22 +42,57 @@ export var isCategoryOutOfDate = category => {
     if (!_.keys(categories).indexOf(category)) return;
     res = new Date() - categoryUpdateTime[category] > outDateTime; 
     return res;
-} 
+}
 
-var getLivesFromNetBycategory = async function (category) {
+//@param lives: []
+//return {category, lives:[{website, lives:[]}]}
+var giveLiveListTag = (lives, category) => {
+    let _lives = {};
+    assert(lives instanceof Array);
+    if (categories.indexOf(category) === -1) {
+        throw new Error(`no ${category} in categories`);
+    };
+    _lives.category = category;
+    _lvies.lives = lives.reduce((lives, live) => {
+        return live
+    }, {})
+};
+
+//return lives: []
+var getLivesFromNetBycategory = async category => {
     let lives;
-    workList.addWork(category);
+    if (categories.indexOf(category) === -1) {
+        throw new Error(`no ${category} in categories`);
+    };
     lives = await spiderManager.getAllLivesBycategory(category);
-    workList.deleteWork(category);
     return lives;
 }
-//{category, lives: Live[]}
+
+//return lives: []
 export async function getAllLivesByCategory (category) {
     let lives = {};
+    if (categories.indexOf(category) === -1) {
+        throw new Error(`no ${category} in categories`);
+    };
     if (isCategoryOutOfDate(category) && !workList.isWorkExist(category)) {
-        lives = await getLivesFromNetBycategory(category);
+        try {
+            workList.addWork(category);
+            lives = await getLivesFromNetBycategory(category);
+            log(lives)
+            await Promise.all(lives.lives.map(async live => {
+                return await live.save();
+            }));
+            workList.deleteWork(category);
+        }
+        catch (e) {
+            console.log(e);
+        }
     } else {
-        lives = await Live.getAllLivesByCategory(category);
+        try {
+            lives = await Live.getAllLivesByCategory(category);
+        } catch (e) {
+            console.log(e);
+        }
     }
     return lives;
 }
