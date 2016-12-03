@@ -4,5 +4,7 @@ livedota.sublime-workspace
 typings*
 *.json
 public/
+coverage/*
+public/*
 
 

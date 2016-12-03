@@ -1,0 +1,4 @@
+[include]
+./dev
+[ignore]
+.*/node_modules/.*
