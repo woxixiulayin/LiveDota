@@ -18,7 +18,7 @@ export default class Huyaspider extends Spider {
             website = "虎牙";
         list.each((i, ele) => {
             let name = $(ele).find("i.nick").text(),
-                nums = +$(ele).find("i.js-num").text(),
+                nums = this.transWan($(ele).find("i.js-num").text()),
                 title = $(ele).find("div.all_live_tit a").text(),
                 link = $(ele).find("a").attr("href"),
                 img = $(ele).find("img.pic").attr("src"),

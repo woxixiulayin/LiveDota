@@ -26,8 +26,8 @@ describe('test live-manager', () => {
     })
     it('test live-maneger getLives rank', async () => {
         let lives = [];
-        lives = await getLives('dota', 'rank', 3000);
-        // expect(lives.length).toBeGreaterThan(5);
+        lives = await getLives('dota', 'rank');
+        expect(lives.length).toBeGreaterThan(5);
         console.log(lives);
     })
 })

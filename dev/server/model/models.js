@@ -9,7 +9,7 @@
 
 import {mongoose} from '../db/db';
 import {log} from '../utils/utils';
-import {types, rankNum} from '../config';
+import {types, rankNum, sitesMap} from '../config';
 
 //直播信息
 var liveSchema = mongoose.Schema({
@@ -30,7 +30,7 @@ export class Live extends LiveModel {
     constructor (params) {
         super(params);
     }
-
+    
     static async isExistByName(name) {
         let res = await super.find({name}).exec();
         return res.length && res[0].name === name ? true : false;
@@ -46,17 +46,14 @@ export class Live extends LiveModel {
         if (types.indexOf(type) === -1) {
             throw new Error(`${type} is not search type`);
         }
-        switch(type) {
-            case 'all': query = {"category":category};
-            break;
-            case 'rank': query = {"category":category};
-                        limit = rankNum;
-                        sort = {"nums": -1};
-            break;
-            //默认type按网址寻找
-            default: 
-                query = {"category":category, "website": type};
-            break;
+        if (type === 'all') {
+            query = {"category":category};
+        } else if (type === 'rank') {
+            query = {"category":category};
+            limit = rankNum;
+            sort = {"nums": -1};
+        } else if (sitesMap.keys.indexOf(type) !== -1) {
+            query = {"category":category, "website": type};
         }
         try {
             lives = await super.find(query).sort(sort).limit(limit).exec();
@@ -70,7 +67,7 @@ export class Live extends LiveModel {
     async findAndUpdate () {
         try {
             let res =  await LiveModel.findOneAndUpdate({name: this.name},{
-                nums: this.nums,
+                nums: Number(this.nums),
                 img: this.img,
                 title: this.title,
                 category: this.category
@@ -79,6 +76,7 @@ export class Live extends LiveModel {
             if (!res) res = await this.save();
             return res;
         } catch (e) {
+            console.log(this);
             console.log(e);
         }
     }

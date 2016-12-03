@@ -17,9 +17,9 @@ export default class Spider {
     }
 
     transWan (nums) {
-    if (typeof nums === 'number') return;
+    if (typeof nums === 'number') return nums;
     let indexWan = String(nums).indexOf("万");
-    return indexWan != -1 ? nums.substr(0, indexWan) * 10000 : nums;
+    return indexWan != -1 ? nums.substr(0, indexWan) * 10000 : +nums;
     }
     parseUrl(url) {
         let that = this;

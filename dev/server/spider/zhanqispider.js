@@ -19,7 +19,7 @@ export default class Zhanqispider extends Spider {
             website = "战旗";
         list.each((i, ele) => {
             let name = $(ele).find("span.anchor").text(),
-                nums = $(ele).find("div.meat span.views span.dv").text(),
+                nums = this.transWan($(ele).find("div.meat span.views span.dv").text()),
                 title = $(ele).find("span.name").text(),
                 link = prelink + $(ele).attr("href"),
                 img = $(ele).find("div.imgBox img").attr("src"),
