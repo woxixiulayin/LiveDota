@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Spider = undefined;
 
 var _promise = require('babel-runtime/core-js/promise');
 
@@ -23,7 +22,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var superagent = require('superagent');
 
-var Spider = exports.Spider = function () {
+var Spider = function () {
     function Spider() {
         (0, _classCallCheck3.default)(this, Spider);
 
@@ -43,22 +42,16 @@ var Spider = exports.Spider = function () {
             **/
             return liveinfos;
         }
-
-        //live预处理
-
     }, {
-        key: 'parseLives',
-        value: function parseLives(lives) {
-            lives.forEach(function (live) {
-                var indexWan = live.nums.indexOf("万");
-                live.nums = indexWan != -1 ? live.nums.substr(0, indexWan) * 10000 : live.nums;
-            });
+        key: 'transWan',
+        value: function transWan(nums) {
+            if (typeof nums === 'number') return nums;
+            var indexWan = String(nums).indexOf("万");
+            return indexWan != -1 ? nums.substr(0, indexWan) * 10000 : +nums;
         }
     }, {
         key: 'parseUrl',
         value: function parseUrl(url) {
-            var _this = this;
-
             var that = this;
             return new _promise2.default(function (resolve, reject) {
                 superagent.get(url).end(function (err, res) {
@@ -67,14 +60,8 @@ var Spider = exports.Spider = function () {
                         reject(err);
                     } else {
                         var html = res.text;
-                        var liveinfos = that.pickInfo(html);
-                        //liveinfo 预处理
-                        _this.parseLives(liveinfos.lives);
-                        //使用url作为下标存储html和对应的liveinfo
-                        that.htmls[url] = html;
-                        that.liveinfos[url] = liveinfos;
-                        //后续处理这个url下获取到的info信息
-                        resolve(liveinfos);
+                        var lives = that.pickInfo(html);
+                        resolve(lives);
                     }
                 });
             });
@@ -83,4 +70,4 @@ var Spider = exports.Spider = function () {
     return Spider;
 }();
 
-exports.Spider = Spider;
+exports.default = Spider;

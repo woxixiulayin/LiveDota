@@ -1,5 +1,5 @@
 import * as Spiders from "./spider/spiderindex";
-import sitesMap, { jobs, DEBUG, categories} from "./config.js";
+import {sitesMap, jobs, DEBUG, categories} from "./config.js";
 import { log } from "./utils/utils.js";
 import _ from 'lodash';
 import 'babel-polyfill'

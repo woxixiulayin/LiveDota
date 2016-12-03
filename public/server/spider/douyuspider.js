@@ -28,6 +28,8 @@ var _models = require('../model/models.js');
 
 var _spider = require('./spider.js');
 
+var _spider2 = _interopRequireDefault(_spider);
+
 var _utils = require('../utils/utils.js');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -49,8 +51,9 @@ var Douyuspider = function (_Spider) {
     (0, _createClass3.default)(Douyuspider, [{
         key: 'pickInfo',
         value: function pickInfo(html) {
-            var infoarray = [],
-                liveinfos = {},
+            var _this2 = this;
+
+            var lives = [],
                 parse = $.load(html),
                 list = parse("#live-list-contentbox li a"),
                 category = parse("div.mainbody div.real-title").text(),
@@ -58,19 +61,18 @@ var Douyuspider = function (_Spider) {
 
             list.each(function (i, ele) {
                 var name = $(ele).find("div.mes span.dy-name").text(),
-                    nums = $(ele).find("div.mes span.dy-num").text(),
+                    nums = _this2.transWan($(ele).find("div.mes span.dy-num").text()),
                     title = $(ele).find("h3").text(),
                     link = prelink + $(ele).attr("href"),
                     img = $(ele).find("span.imgbox img").attr("data-original"),
-                    live = new _models.Live(name, nums, title, link, category, img, website);
-                infoarray.push(live);
+                    live = new _models.Live({ name: name, nums: nums, title: title, link: link, category: category, img: img, website: website });
+                lives.push(live);
             });
-            liveinfos = new _models.Liveinfos(website, infoarray);
-            return liveinfos;
+            return lives;
         }
     }]);
     return Douyuspider;
-}(_spider.Spider);
+}(_spider2.default);
 
 //以下做测试
 // let spider = new Douyuspider();

@@ -28,6 +28,8 @@ var _models = require('../model/models.js');
 
 var _spider = require('./spider.js');
 
+var _spider2 = _interopRequireDefault(_spider);
+
 var _utils = require('../utils/utils.js');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -49,29 +51,27 @@ var Quanminspider = function (_Spider) {
     (0, _createClass3.default)(Quanminspider, [{
         key: 'pickInfo',
         value: function pickInfo(html) {
-            var infoarray = [],
-                liveinfos = {},
+            var _this2 = this;
 
-            //获取到的是json数据，直接转成对象进行处理
-            list = JSON.parse(html).data,
+            var lives = [],
+                list = JSON.parse(html).data,
                 website = "全民";
             [].forEach.call(list, function (ele, i) {
                 var name = ele.nick,
-                    nums = ele.view,
+                    nums = _this2.transWan(ele.view),
                     title = ele.title,
                     link = prelink + ele.uid,
                     img = ele.thumb,
                     category = ele.category_name,
-                    live = new _models.Live(name, nums, title, link, category, img, website);
-                infoarray.push(live);
+                    live = new _models.Live({ name: name, nums: nums, title: title, link: link, category: category, img: img, website: website });
+                lives.push(live);
                 // log(live);
             });
-            liveinfos = new _models.Liveinfos(website, infoarray);
-            return liveinfos;
+            return lives;
         }
     }]);
     return Quanminspider;
-}(_spider.Spider);
+}(_spider2.default);
 
 //以下做测试
 // let quanmin = new Quanminspider();

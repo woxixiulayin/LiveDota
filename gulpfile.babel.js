@@ -25,12 +25,12 @@ gulp.task('img', () => {
 //         .pipe(gulp.dest('public/js/'));
 // });
 
-gulp.task('webpack', (callback) => {
-    var myconfig = Object.create(webpackconfig);
-    webpack(myconfig, (err, stats) => {
-        callback();
-    });
-});
+// gulp.task('webpack', (callback) => {
+//     var myconfig = Object.create(webpackconfig);
+//     webpack(myconfig, (err, stats) => {
+//         callback();
+//     });
+// });
 
 gulp.task('server', () => {
     gulp.src('dev/server/**')
@@ -72,4 +72,4 @@ gulp.task('watch', () => {
     gulp.watch('public/**', browserSync.reload);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['server', 'appjs', 'watch']);

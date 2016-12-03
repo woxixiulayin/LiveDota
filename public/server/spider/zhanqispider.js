@@ -28,6 +28,8 @@ var _models = require('../model/models.js');
 
 var _spider = require('./spider.js');
 
+var _spider2 = _interopRequireDefault(_spider);
+
 var _utils = require('../utils/utils.js');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -49,28 +51,28 @@ var Zhanqispider = function (_Spider) {
     (0, _createClass3.default)(Zhanqispider, [{
         key: 'pickInfo',
         value: function pickInfo(html) {
-            var infoarray = [],
-                liveinfos = {},
+            var _this2 = this;
+
+            var lives = [],
                 parse = $.load(html),
                 list = parse("a.js-jump-link"),
                 category = list.find("span.game-name").text(),
                 website = "战旗";
             list.each(function (i, ele) {
                 var name = $(ele).find("span.anchor").text(),
-                    nums = $(ele).find("div.meat span.views span.dv").text(),
+                    nums = _this2.transWan($(ele).find("div.meat span.views span.dv").text()),
                     title = $(ele).find("span.name").text(),
                     link = prelink + $(ele).attr("href"),
                     img = $(ele).find("div.imgBox img").attr("src"),
-                    live = new _models.Live(name, nums, title, link, category, img, website);
-                infoarray.push(live);
+                    live = new _models.Live({ name: name, nums: nums, title: title, link: link, category: category, img: img, website: website });
+                lives.push(live);
                 // log(live);
             });
-            liveinfos = new _models.Liveinfos(website, infoarray);
-            return liveinfos;
+            return lives;
         }
     }]);
     return Zhanqispider;
-}(_spider.Spider);
+}(_spider2.default);
 
 //以下做测试
 // let spider = new Zhanqispider();

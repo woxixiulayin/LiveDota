@@ -28,6 +28,8 @@ var _models = require('../model/models.js');
 
 var _spider = require('./spider.js');
 
+var _spider2 = _interopRequireDefault(_spider);
+
 var _utils = require('../utils/utils.js');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -49,28 +51,28 @@ var Pandaspider = function (_Spider) {
     (0, _createClass3.default)(Pandaspider, [{
         key: 'pickInfo',
         value: function pickInfo(html) {
-            var infoarray = [],
-                liveinfos = {},
+            var _this2 = this;
+
+            var lives = [],
                 parse = $.load(html),
                 list = parse("a.video-list-item-wrap"),
                 category = parse("div.main-header h3").text(),
                 website = "熊猫";
             list.each(function (i, ele) {
                 var name = $(ele).find("span.video-nickname").text(),
-                    nums = $(ele).find("span.video-number").text(),
+                    nums = _this2.transWan($(ele).find("span.video-number").text()),
                     title = $(ele).find("div.video-title").text(),
                     link = prelink + $(ele).attr("href"),
                     img = $(ele).find("img.video-img").attr("data-original"),
-                    live = new _models.Live(name, nums, title, link, category, img, website);
-                infoarray.push(live);
+                    live = new _models.Live({ name: name, nums: nums, title: title, link: link, category: category, img: img, website: website });
+                lives.push(live);
                 // log(live);
             });
-            liveinfos = new _models.Liveinfos(website, infoarray);
-            return liveinfos;
+            return lives;
         }
     }]);
     return Pandaspider;
-}(_spider.Spider);
+}(_spider2.default);
 
 //以下做测试
 // let panda = new Pandaspider();

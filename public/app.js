@@ -18,6 +18,8 @@ var _config = require("./server/config.js");
 
 var _utils = require("./server/utils/utils.js");
 
+var _liveManager = require("./server/live-manager");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Koa = require('koa');
@@ -59,25 +61,25 @@ app.use(function () {
 
 app.use(function () {
     var _ref2 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2(ctx, next) {
+        var res;
         return _regenerator2.default.wrap(function _callee2$(_context2) {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
-                        if (!(ctx.path === "/search")) {
-                            _context2.next = 3;
-                            break;
-                        }
-
+                        res = void 0;
                         _context2.next = 3;
-                        return (0, _spiderManager.runJobs)(_config.jobs).then(function (infos) {
-                            ctx.body = (0, _stringify2.default)(infos);
-                        });
+                        return (0, _liveManager.getLives)('dota', '斗鱼');
 
                     case 3:
-                        _context2.next = 5;
+                        res = _context2.sent;
+
+                        if (ctx.path === "/search") {
+                            ctx.body = (0, _stringify2.default)(res);
+                        }
+                        _context2.next = 7;
                         return next();
 
-                    case 5:
+                    case 7:
                     case "end":
                         return _context2.stop();
                 }

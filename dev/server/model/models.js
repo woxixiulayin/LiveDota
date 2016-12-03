@@ -25,12 +25,13 @@ var liveSchema = mongoose.Schema({
     timestamps: true
 });
 
+
 var LiveModel = mongoose.model('Live', liveSchema);
 export class Live extends LiveModel {
     constructor (params) {
         super(params);
     }
-    
+
     static async isExistByName(name) {
         let res = await super.find({name}).exec();
         return res.length && res[0].name === name ? true : false;
@@ -52,7 +53,7 @@ export class Live extends LiveModel {
             query = {"category":category};
             limit = rankNum;
             sort = {"nums": -1};
-        } else if (sitesMap.keys.indexOf(type) !== -1) {
+        } else if (Object.keys(sitesMap).indexOf(type) !== -1) {
             query = {"category":category, "website": type};
         }
         try {

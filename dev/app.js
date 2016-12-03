@@ -2,6 +2,7 @@
 import {runJobs} from "./server/spider-manager.js";
 import {jobs} from "./server/config.js";
 import {log} from "./server/utils/utils.js";
+import {getLives} from "./server/live-manager";
 
 const  Koa = require('koa');
 const  send = require('koa-send');
@@ -16,13 +17,13 @@ app.use(async (ctx, next) => {
 });
 
 app.use(async  (ctx, next) => {
+    let res;
+    res= await getLives('dota', '斗鱼');
     if (ctx.path === "/search") {
-        await runJobs(jobs)
-                .then(infos => {
-                    ctx.body = JSON.stringify(infos);
-                });
+        ctx.body = JSON.stringify(res);
     }
     await next();
 });
+
 
 app.listen(8080);

@@ -9,7 +9,7 @@ const jobs = {
     Douyuspider: "https://www.douyu.com/directory/game/LOL"
 }
 
-const sitesMap = {
+export const sitesMap = {
     "全民": {
         "spiderName": "Quanminspider",
         "gameUrls": {
@@ -43,7 +43,6 @@ const sitesMap = {
 }
 export var outDateTime = 2 * 60;
 export var categories = ['dota', 'lol', 'hearthstone'];
-export default sitesMap;
 export { DEBUG, jobs };
 export var types = _.keys(sitesMap).concat(['rank', 'all']);
 export var rankNum = 10;
