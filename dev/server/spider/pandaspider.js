@@ -19,7 +19,7 @@ export default class Pandaspider extends Spider {
             website = "熊猫";
         list.each((i, ele) => {
             let name = $(ele).find("span.video-nickname").text(),
-                nums = $(ele).find("span.video-number").text(),
+                nums = +$(ele).find("span.video-number").text(),
                 title = $(ele).find("div.video-title").text(),
                 link = prelink + $(ele).attr("href"),
                 img = $(ele).find("img.video-img").attr("data-original"),

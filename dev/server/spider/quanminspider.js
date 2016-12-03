@@ -17,7 +17,7 @@ export default class Quanminspider extends Spider {
             website = "全民";
         [].forEach.call(list, (ele, i) => {
             let name = ele.nick,
-                nums = ele.view,
+                nums = +ele.view,
                 title = ele.title,
                 link = prelink + ele.uid,
                 img = ele.thumb,

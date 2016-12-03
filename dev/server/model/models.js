@@ -9,12 +9,12 @@
 
 import {mongoose} from '../db/db';
 import {log} from '../utils/utils';
-import {types} from '../config';
-import _ from 'lodash';
+import {types, rankNum} from '../config';
+
 //直播信息
 var liveSchema = mongoose.Schema({
     name: {type:String, unique:true},
-    nums: String,
+    nums: Number,
     title: String,
     link: String,
     category: String,
@@ -40,17 +40,29 @@ export class Live extends LiveModel {
         return await super.find({category}).exec();
     }
 
-    static async getLivesByCategoryAndType (category, type) {
-        let lives = [];
+    static async getLivesByCategoryAndType (category='none', type = 'all', limit = 100, sort = {}) {
+        let lives = [], query = {};
         console.log(`get lives from db`);
-        if (_.findIndex(type) === -1) {
+        if (types.indexOf(type) === -1) {
             throw new Error(`${type} is not search type`);
         }
         switch(type) {
-            //默认寻找type为网站
-            default: 
-                lives = await super.find({"category":category, "website": type}).exec();
+            case 'all': query = {"category":category};
             break;
+            case 'rank': query = {"category":category};
+                        limit = rankNum;
+                        sort = {"nums": -1};
+            break;
+            //默认type按网址寻找
+            default: 
+                query = {"category":category, "website": type};
+            break;
+        }
+        try {
+            lives = await super.find(query).sort(sort).limit(limit).exec();
+            return lives;
+        } catch (e) {
+            console.log(e.stack);
         }
         return lives;
     }
@@ -63,6 +75,7 @@ export class Live extends LiveModel {
                 title: this.title,
                 category: this.category
             }).exec();
+            // console.log(res);
             if (!res) res = await this.save();
             return res;
         } catch (e) {

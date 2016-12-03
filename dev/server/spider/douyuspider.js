@@ -20,7 +20,7 @@ export default class Douyuspider extends Spider {
 
         list.each((i, ele) => {
             let name = $(ele).find("div.mes span.dy-name").text(),
-                nums = $(ele).find("div.mes span.dy-num").text(),
+                nums = +$(ele).find("div.mes span.dy-num").text(),
                 title = $(ele).find("h3").text(),
                 link = prelink + $(ele).attr("href"),
                 img = $(ele).find("span.imgbox img").attr("data-original"),

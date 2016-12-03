@@ -77,7 +77,7 @@ var getLivesFromNetBycategory = async category => {
  * param: category
  * param: type
  */
-export async function getLives(category, type) {
+export async function getLives(category = "none", type = "all", limit = 100, sort = {}) {
     let lives = [];
     if (categories.indexOf(category) === -1) {
         throw new Error(`no ${category} in categories`);
@@ -97,6 +97,6 @@ export async function getLives(category, type) {
             return [];
         }
     }
-    lives = await Live.getLivesByCategoryAndType(category, type);
+    lives = await Live.getLivesByCategoryAndType(category, type, limit, sort);
     return lives;
 }

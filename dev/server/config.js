@@ -46,3 +46,4 @@ export var categories = ['dota', 'lol', 'hearthstone'];
 export default sitesMap;
 export { DEBUG, jobs };
 export var types = _.keys(sitesMap).concat(['rank', 'all']);
+export var rankNum = 10;
