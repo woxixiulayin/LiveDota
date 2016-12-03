@@ -38,7 +38,7 @@ it('test remove and save Live', async () => {
 
 it('get lives from db by', async () => {
     let lives = await getLivesByParams('熊猫', 'dota');
-    let  db_lives = await Promise.all(lives.lives.map( async live => {
+    let  db_lives = await Promise.all(lives.map( async live => {
         return await live.findAndUpdate();
     }));
     let dotaLives = await Live.getAllLivesByCategory('dota');
