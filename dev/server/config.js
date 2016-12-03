@@ -1,9 +1,4 @@
-import Quanminspider from "./spider/quanminspider.js";
-import Huyaspider from "./spider/huyaspider.js";
-import Zhanqispider from "./spider/zhanqispider.js";
-import Douyuspider from "./spider/douyuspider.js";
-import Pandaspider from "./spider/pandaspider.js";
-
+import _ from 'lodash'
 const DEBUG = true;
 
 const jobs = {
@@ -50,3 +45,4 @@ export var outDateTime = 2 * 60;
 export var categories = ['dota', 'lol', 'hearthstone'];
 export default sitesMap;
 export { DEBUG, jobs };
+export var types = _.keys(sitesMap).concat(['rank', 'all']);

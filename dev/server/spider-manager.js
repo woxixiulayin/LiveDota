@@ -65,17 +65,17 @@ export let getLivesByParams = async (site, category) => {
 
 //return lives: []
 export var getAllLivesBycategory = async (category) => {
-    let lives=[], sitelives = [];
+    let lives,siteLives=[];
     if (categories.indexOf(category) === -1) {
         throw new Error(`no ${category} in categories`);
     };
-    sitelives = await Promise.all(_.keys(sitesMap).map( site => {
+    siteLives = await Promise.all(_.keys(sitesMap).map( site => {
         return getLivesByParams(site, category);
     }));
-    if (!sitelives || sitelives.length < 1) return [];
-    lives = sitelives.reduce((live, item) => {
+    if (!siteLives || siteLives.length < 1) return [];
+    lives = siteLives.reduce((live, item) => {
         return live.concat(item);
-    }, [])
+    }, []);
     return lives;
 };
 

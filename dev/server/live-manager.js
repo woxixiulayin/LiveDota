@@ -1,6 +1,7 @@
+//@flow
 import * as spiderManager from './spider-manager';
 import {Live} from './model/models';
-import {outDateTime, categories} from './config';
+import {outDateTime, categories, types} from './config';
 import {log} from './utils/utils';
 import _ from 'lodash';
 
@@ -13,14 +14,15 @@ export const categoryUpdateTime = ( () => {
 })();
 categoryUpdateTime.update = (category) => {
     categoryUpdateTime[category] = new Date();
-} 
-const workList = (() => {
+}
+
+export const workList = (() => {
     let list = [];
     return {
         //@param work: category 
         //@return boolean
         isWorkExist(work) {
-            return list.indexOf(work) === -1 ? false : true;
+            return list.indexOf(work) !== -1;
         },
         addWork(work) {
             if (this.isWorkExist(work)) return;
@@ -38,7 +40,7 @@ const workList = (() => {
 
 
 export var isCategoryOutOfDate = category => {
-    let res
+    let res;
     if (!_.keys(categories).indexOf(category)) return;
     res = new Date() - categoryUpdateTime[category] > outDateTime; 
     return res;
@@ -53,7 +55,7 @@ var giveLiveListTag = (lives, category) => {
         throw new Error(`no ${category} in categories`);
     };
     _lives.category = category;
-    _lvies.lives = lives.reduce((lives, live) => {
+    _lives.lives = lives.reduce((lives, live) => {
         return live
     }, {})
 };
@@ -70,35 +72,31 @@ var getLivesFromNetBycategory = async category => {
     return lives;
 }
 
-//return lives: []
-//get live from db or net
-export async function getAllLivesByCategory (category) {
-    let lives = {};
+/**
+ * return: lives:[]
+ * param: category
+ * param: type
+ */
+export async function getLives(category, type) {
+    let lives = [];
     if (categories.indexOf(category) === -1) {
         throw new Error(`no ${category} in categories`);
     };
     if (isCategoryOutOfDate(category) && !workList.isWorkExist(category)) {
         try {
+            console.log(`get lives from net`);
             workList.addWork(category);
             lives = await getLivesFromNetBycategory(category);
             await Promise.all(lives.map(async live => {
+                //save lives
                 return live.findAndUpdate();
             }));
             workList.deleteWork(category);
-            console.log('get live from net');
-        }
-        catch (e) {
-            console.log(e);
-        }
-    } else {
-        try {
-            lives = await Live.getAllLivesByCategory(category);
-            console.log('get live from db');
         } catch (e) {
-            console.log(e);
+            console.log(e.stack);
+            return [];
         }
     }
+    lives = await Live.getLivesByCategoryAndType(category, type);
     return lives;
 }
-
-

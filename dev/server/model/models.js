@@ -9,7 +9,8 @@
 
 import {mongoose} from '../db/db';
 import {log} from '../utils/utils';
-
+import {types} from '../config';
+import _ from 'lodash';
 //直播信息
 var liveSchema = mongoose.Schema({
     name: {type:String, unique:true},
@@ -39,8 +40,19 @@ export class Live extends LiveModel {
         return await super.find({category}).exec();
     }
 
-    static async getLivesByCategoryAndSite (category, site) {
-        return await super.find({category, site}).exec();
+    static async getLivesByCategoryAndType (category, type) {
+        let lives = [];
+        console.log(`get lives from db`);
+        if (_.findIndex(type) === -1) {
+            throw new Error(`${type} is not search type`);
+        }
+        switch(type) {
+            //默认寻找type为网站
+            default: 
+                lives = await super.find({"category":category, "website": type}).exec();
+            break;
+        }
+        return lives;
     }
 
     async findAndUpdate () {
