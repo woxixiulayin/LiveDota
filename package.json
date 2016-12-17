@@ -30,7 +30,9 @@
     "babel-runtime": "^6.18.0",
     "browser-sync": "^2.13.0",
     "cheerio": "^0.20.0",
+    "css-loader": "^0.26.1",
     "eslint": "^3.9.0",
+    "file-loader": "^0.9.0",
     "flow": "^0.2.3",
     "flow-bin": "^0.34.0",
     "gulp": "^3.9.1",
@@ -53,7 +55,9 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-test-renderer": "^15.3.2",
+    "style-loader": "^0.13.1",
     "superagent": "^2.0.0",
+    "svg-loader": "^0.0.2",
     "test-exclude": "^2.1.3",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.16.2"
@@ -62,6 +66,7 @@
     "start": "node server-build/server.js & npm run dev",
     "gulp": "gulp",
     "test": "jest --watch",
+    "build": "webpack -p",
     "dev": "NODE_ENV=development && webpack-dev-server --config webpack.config.js --progress --profile --colors --hot --port 8000",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
