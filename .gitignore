@@ -5,6 +5,6 @@ typings*
 *.json
 public/
 coverage/*
-public/*
+public/**
 
 

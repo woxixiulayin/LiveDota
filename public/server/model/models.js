@@ -252,7 +252,7 @@ var Live = exports.Live = function (_LiveModel) {
                 }, _callee4, this, [[5, 12]]);
             }));
 
-            function getLivesByCategoryAndType(_x3, _x4, _x5, _x6) {
+            function getLivesByCategoryAndType() {
                 return _ref4.apply(this, arguments);
             }
 

@@ -19,18 +19,12 @@ gulp.task('img', () => {
         .pipe(gulp.dest('public/src/img/'));
 });
 
-// gulp.task('babel', () => {
-//     gulp.src('src/js/**')
-//         .pipe(babel())
-//         .pipe(gulp.dest('public/js/'));
-// });
-
-// gulp.task('webpack', (callback) => {
-//     var myconfig = Object.create(webpackconfig);
-//     webpack(myconfig, (err, stats) => {
-//         callback();
-//     });
-// });
+gulp.task('webpack', (callback) => {
+    var myconfig = Object.create(webpackconfig);
+    webpack(myconfig, (err, stats) => {
+        console.log('webpack status:' + stats);
+    });
+});
 
 gulp.task('server', () => {
     gulp.src('dev/server/**')
@@ -66,10 +60,11 @@ gulp.task('watch', () => {
     gulp.watch('dev/src/html/*.html', ['html']);
     gulp.watch('dev/src/css/*.css', ['css']);
     gulp.watch('dev/src/img/*', ['img']);
-    gulp.watch('dev/src/js/*.js', ['webpack']);
+    // gulp.watch('./webpack.config.js', ['webpack']);
 
-    //浏览器重载
-    gulp.watch('public/**', browserSync.reload);
+    //html文件改动时，浏览器重载，
+    gulp.watch('public/src/html/*.html', browserSync.reload);
 });
 
-gulp.task('default', ['server', 'appjs', 'watch']);
+//开始webpack，编译css、js，监视后端改动和html文件
+gulp.task('default', ['server', 'appjs', 'watch', ]);

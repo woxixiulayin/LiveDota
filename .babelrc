@@ -1,6 +1,19 @@
-{   
+{
     //使用ES6
-    "presets": ["stage-3","es2015", "react"],
+    "presets": [
+        "stage-3",
+        "stage-0",
+        "es2015",
+        "react"
+    ],
     //使用async await
-    "plugins": ["transform-async-to-generator"]
+    "plugins": [
+        "transform-runtime",
+        "transform-async-to-generator"
+    ],
+    "env": {
+        "development": {
+            "presets": ["react-hmre"]
+        }
+    }
 }
