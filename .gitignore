@@ -3,8 +3,8 @@ livedota.sublime-project
 livedota.sublime-workspace
 typings*
 *.json
-public/
 coverage/*
-public/**
+server-build/*
+assets/dist/*
 
 

@@ -2,15 +2,15 @@ var assetPlugin = require('assets-webpack-plugin')
 
 module.exports = {
     entry: {
-        "index": "./dev/src/js/index"
+        "index": "./assets/js/index"
     },
     output: {
         //本地存放路径
-        path: __dirname + "/public/src/js",
+        path: __dirname + "/assets/dist",
         //name默认为main
         filename: "[name].bundle.js",
         //webpack-dev开启时,外部访问路径，(开发时的文件变动会推送到这个域名下)前缀：0.0.0.0:8000/webpack-dev-server/
-        publicPath: "http://0.0.0.0:8000/src/js/",
+        publicPath: "http://0.0.0.0:8000/js/",
         sourceMapFilename:"[name].bundle.map"
     },
     module: { //加载器配置 
@@ -18,7 +18,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
-                include: [__dirname + '/dev/src']
+                include: [__dirname + '/assets/js/']
             },
             {
                 test: /\.css$/, loader: 'style-loader!css-loader'
@@ -38,7 +38,7 @@ module.exports = {
     resolve: { //查找module的话从这里开始查找
         extensions: ['', '.js', '.jsx'],
         // root: __dirname + 'public/src/js', //绝对路径
-        modulesDirectories: ['node_modules', 'dev/src/js']
+        modulesDirectories: ['node_modules', '/assets/js']
     },
     plugins: [
         new assetPlugin({filename: 'assets.json'})
