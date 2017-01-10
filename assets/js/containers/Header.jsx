@@ -10,9 +10,9 @@ const mapDispatchToProps = ({
     switchCat: switchCategory
 })
 
-const Header = connect({
+const Header = connect(
     mapStateToProps,
     mapDispatchToProps
-})(Category)
+)(Category)
 
 export default Header
