@@ -1,6 +1,8 @@
-import Header from './components/header'
+import App from './components/App'
+import {createStore} from 'react-redux'
+import 
 import React from 'react'
 import ReactDom from 'react-dom'
 import '../css/style.css'
 
-ReactDom.render(<Header />, document.getElementById('app'))
+ReactDom.render(<App />, document.getElementById('app'))
