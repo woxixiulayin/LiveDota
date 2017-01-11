@@ -1,11 +1,17 @@
-import isEqual from 'lodash/isEqual'
+import _ from 'lodash'
 
 const lazySelctor = function(...funcs) {
     let lastRefers = []
-        
+    
+    funcs.map( func => {
+        if(typeof func !== 'function') {
+            throw new Error('input selector should be a function')
+        }
+    })
+
     const resultFunc = funcs.pop()
     const isEqualToLast = (value, index) => (
-        isEqual(value, funcs[index](...args))
+        _.isEqual(value, funcs[index](...args))
     )
 
     return (...args) => {

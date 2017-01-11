@@ -75,5 +75,10 @@ store.getState = function () {
     return currentState
 }
 
+store.setState = function (state) {
+    currentState = state
+    return currentState
+}
+
 
 export default store

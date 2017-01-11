@@ -1,8 +1,11 @@
 import App from './components/App'
-import {createStore} from 'react-redux'
-import 
 import React from 'react'
 import ReactDom from 'react-dom'
+import store from './lib/sedux'
 import '../css/style.css'
 
-ReactDom.render(<App />, document.getElementById('app'))
+store.setState({
+    categorys: ['data', 'lol', '炉石']
+})
+
+ReactDom.render(<App store={store}/>, document.getElementById('app'))
