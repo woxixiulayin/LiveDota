@@ -22,12 +22,12 @@ module.exports = {
                 include: [__dirname + '/assets/js/']
             },
             {
-                test: /\.css$/, loader: 'style-loader!css-loader'
-            },
-            {
                 test: /\.scss$/,
                 loader: 'style!css!sass?sourceMap',
                 include: [__dirname + './assets/css/']
+            },
+            {
+                test: /\.css$/, loader: 'style-loader!css-loader'
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
@@ -43,10 +43,10 @@ module.exports = {
         // root: __dirname + 'public/src/js', //绝对路径
         modulesDirectories: ['node_modules', '/assets/js']
     },
-    externals: {
-        'react': 'React',
-        'react-dom': 'ReactDOM'
-    },
+    // externals: {
+    //     'react': 'React',
+    //     'react-dom': 'ReactDOM'
+    // },
     //enable dev source map
     devtool: '#eval-source-map',
     devServer: {

@@ -1,11 +1,18 @@
-import App from './components/App'
 import React from 'react'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
 import ReactDom from 'react-dom'
-import store from './lib/sedux'
+import App from './app/containers/App'
+import reducers from './app/reducers'
+
 import '../css/style.css'
+import '../css/navbar.css'
 
-store.setState({
-    categorys: ['data', 'lol', '炉石']
-})
+const store = createStore(reducers)
 
-ReactDom.render(<App store={store}/>, document.getElementById('app'))
+ReactDom.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('app')
+)

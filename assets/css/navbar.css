@@ -1,0 +1,16 @@
+#nav-bar {
+    width: 800px;
+    background: rgba(255,255,255, .8);
+    margin: 30px auto 0;
+    border-radius: 10px;
+}
+
+.header-category {
+    display: inline-block;
+    padding: .3em 1em;
+    margin: 0 10px;
+}
+
+.header-category:hover {
+    color: #ff920b;
+}
