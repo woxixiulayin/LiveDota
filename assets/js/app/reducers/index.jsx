@@ -1,8 +1,20 @@
 import {combineReducers} from 'redux'
 import navConfig from '../../config/navConfig'
 
-const categorys = Object.keys(navConfig)
-const navbar = (state = categorys, action) => {
+const test = true
+
+let initNavInfo = {
+    list: Object.keys(navConfig),
+    currentIndex: 0,
+}
+
+if(test) {
+    // navInfo.currentCategory
+}
+
+
+
+const navInfo = (state = initNavInfo, action) => {
     switch(action.type) {
         default:
             return state
@@ -10,7 +22,7 @@ const navbar = (state = categorys, action) => {
 }
 
 const reducers = combineReducers({
-    navbar
+    navInfo
 })
 
 export default reducers

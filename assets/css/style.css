@@ -13,6 +13,12 @@ a:hover
     overflow: hidden;
 }
 
+body
+{    
+    font-family: PingFangSC-Regular,Tahoma,Microsoft Yahei;
+    background-image: url(../img/wrap_bg.png);
+}
+
 header
 {   
     position: fixed;
@@ -60,10 +66,6 @@ h2 {
     color: yellow;
 }
 
-body
-{
-    background-image: url(../img/wrap_bg.png);
-}
 
 .content
 {

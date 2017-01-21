@@ -1,17 +1,30 @@
 #nav-bar {
     width: 800px;
-    background: rgba(255,255,255, .8);
-    margin: 30px auto 0;
+    margin: 28px auto 0;
+    padding: 5px 0;
     border-radius: 10px;
-}
-
-.header-category {
-    display: inline-block;
-    padding: .3em 1em;
-    margin: 0 10px;
-    cursor: pointer;
-    color: yellow;
+    background: rgba(255,255,255, .8);
+    animation-duration: .6s;
     &:hover {
-        color: #ff920b;
+        background: rgba(255,255,255, .9);
+    }
+    .header-category {
+        display: inline-block;
+        display: inline-block;
+        text-align: center;
+        padding: .3em 1em;
+        margin: 0 10px;
+        cursor: pointer;
+        font-size: 15px;
+        line-height: 16px;
+        &.current {
+            border: 1px solid red;
+        }
+    }
+    .hint-border {
+        display: inline-block;
+        height: 3px;
+        background: $activityColor;
     }
 }
+
