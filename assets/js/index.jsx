@@ -6,7 +6,7 @@ import App from './app/containers/App'
 import reducers from './app/reducers'
 
 import '../css/style.css'
-import '../css/navbar.css'
+import '../css/navbar.scss'
 
 const store = createStore(reducers)
 

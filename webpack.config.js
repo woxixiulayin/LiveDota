@@ -24,7 +24,6 @@ module.exports = {
             {
                 test: /\.scss$/,
                 loader: 'style!css!sass?sourceMap',
-                include: [__dirname + './assets/css/']
             },
             {
                 test: /\.css$/, loader: 'style-loader!css-loader'
@@ -41,7 +40,6 @@ module.exports = {
     resolve: { //查找module的话从这里开始查找
         extensions: ['', '.js', '.jsx'],
         // root: __dirname + 'public/src/js', //绝对路径
-        modulesDirectories: ['node_modules', '/assets/js']
     },
     // externals: {
     //     'react': 'React',
