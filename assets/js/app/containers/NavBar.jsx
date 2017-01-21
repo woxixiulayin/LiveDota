@@ -28,42 +28,43 @@ class NavBar extends Component {
         let info = {}
 
         let node = this[`${category}`],
-            hintBorderWidth = node.clientWidth - 6,
-            hintBorderLeft = node.offsetLeft + 3,
-            hintBorderTop = node.offsetTop + 22
+            width = node.clientWidth - 10,
+            left = node.offsetLeft + 3,
+            top = node.offsetTop + 22
 
-        info = {hintBorderTop, hintBorderLeft, hintBorderWidth}
+        info = {width, left , top}
         return info
     }
 
+    setBorderStyle() {
+        let style = this.getCategoryNodeInfo(this.props.categorys[this.props.currentIndex]),
+            borderStyle = this.hintBorder.style
+            console.log(style)
+        borderStyle.left = style.left + 'px';
+        borderStyle.top = style.top + 'px';
+        borderStyle.width = style.width + 'px';
+    }
     changeIndex(index) {
         this.props.changeIndex(index)
         console.log('change')
     }
 
     componentDidMount() {
-        this.setState(this.getCategoryNodeInfo(this.props.categorys[this.props.currentIndex]))
+        // this.setState(this.getCategoryNodeInfo(this.props.categorys[this.props.currentIndex]))
+        this.setBorderStyle()
     }
 
     componentShouldUpdate(nextProps) {
         return nextProps.currentIndex !== this.props.currentIndex
     }
 
-    componentWillUpdate(nextProps) {
-        if(nextProps.currentIndex !== this.props.currentIndex) {
-            console.log('cahnge border')
-            console.log(this.props.categorys[nextProps.currentIndex])
-            console.log(this.getCategoryNodeInfo(this.props.categorys[nextProps.currentIndex]))
-            this.setState(this.getCategoryNodeInfo(this.props.categorys[nextProps.currentIndex]))
-        }
+    componentDidUpdate() {
+        this.setBorderStyle()
     }
 
     render() {                                        
-        let {categorys, currentIndex} = this.props,
-            {hintBorderLeft, hintBorderTop, hintBorderWidth} = this.state
-        
-        this.nodes = []
-            
+        let {categorys, currentIndex} = this.props
+
         return (<div id='nav-bar' className='container'>
             {categorys.map( (category, index) => {
                 return <span
@@ -79,11 +80,8 @@ class NavBar extends Component {
                     {category}
                 </span>
             })}
-            <HintBorder 
-                left={hintBorderLeft}
-                top={hintBorderTop}
-                width={hintBorderWidth}
-            />
+            <span ref={node => this.hintBorder = node} className='hint-border'>
+            </span>
         </div>)
 
     }
