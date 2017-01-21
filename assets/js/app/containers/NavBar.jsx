@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {switchCategory} from '../actions'
 import classNames from 'classnames'
 import FreeContent from '../Components/FreeContent'
+import * as actions from '../actions'
 
 const HintBorder = ({top=0, left=0, width=0}) => (
     <FreeContent {...{left, top}}>
@@ -23,34 +24,56 @@ class NavBar extends Component {
         }
     }
 
-    getCurrentNodeInfo() {
+    getCategoryNodeInfo(category) {
         let info = {}
 
-        let node = this.currentNode,
-            hintBorderWidth = node.clientWidth,
-            hintBorderLeft = node.offsetLeft,
-            hintBorderTop = node.offsetTop
+        let node = this[`${category}`],
+            hintBorderWidth = node.clientWidth - 6,
+            hintBorderLeft = node.offsetLeft + 3,
+            hintBorderTop = node.offsetTop + 22
 
         info = {hintBorderTop, hintBorderLeft, hintBorderWidth}
         return info
     }
 
+    changeIndex(index) {
+        this.props.changeIndex(index)
+        console.log('change')
+    }
+
     componentDidMount() {
-        this.setState(this.getCurrentNodeInfo())
+        this.setState(this.getCategoryNodeInfo(this.props.categorys[this.props.currentIndex]))
+    }
+
+    componentShouldUpdate(nextProps) {
+        return nextProps.currentIndex !== this.props.currentIndex
+    }
+
+    componentWillUpdate(nextProps) {
+        if(nextProps.currentIndex !== this.props.currentIndex) {
+            console.log('cahnge border')
+            console.log(this.props.categorys[nextProps.currentIndex])
+            console.log(this.getCategoryNodeInfo(this.props.categorys[nextProps.currentIndex]))
+            this.setState(this.getCategoryNodeInfo(this.props.categorys[nextProps.currentIndex]))
+        }
     }
 
     render() {                                        
         let {categorys, currentIndex} = this.props,
             {hintBorderLeft, hintBorderTop, hintBorderWidth} = this.state
-            console.log(this.state)
+        
+        this.nodes = []
+            
         return (<div id='nav-bar' className='container'>
             {categorys.map( (category, index) => {
                 return <span
                 ref={node => {
-                    if(+currentIndex === index) {
-                        this.currentNode = node
-                    }
+                    this[`${category}`] = node
                 }}
+                onClick={() => {
+                        this.changeIndex(index)
+                    }
+                 }
                 className={classNames("header-category main-font", {'current': +currentIndex === index})}
                     >
                     {category}
@@ -70,7 +93,15 @@ const mapStateToProp = (state, ownProps) => ({
     categorys: state.navInfo.list,
     currentIndex: state.navInfo.currentIndex,
 })
-
-NavBar = connect(mapStateToProp)(NavBar)
+const mapDispatchToProp = (dispatch, owdnProps) => ({
+    changeIndex: (index) => {
+        console.log(`dispatch ${index}`)
+        dispatch(actions.switchCategory(index))
+    }
+})
+NavBar = connect(
+    mapStateToProp,
+    mapDispatchToProp
+)(NavBar)
 
 export default NavBar

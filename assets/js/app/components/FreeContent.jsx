@@ -15,6 +15,7 @@ class FreeContent extends Component {
                 animationDuration: '1s',
                 left,
                 top,
+                fontSize: '0',
             }}
                 >
                 {children}

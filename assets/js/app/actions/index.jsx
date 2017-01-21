@@ -1,4 +1,6 @@
-export const switchCategory = category => ({
-    type: 'SWITCH_CATEGORY',
-    value: category
+import * as types from '../const/types'
+
+export const switchCategory = index => ({
+    type: types.SWITCH_CATEGORY,
+    index
 })

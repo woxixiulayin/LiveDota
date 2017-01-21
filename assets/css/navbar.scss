@@ -18,13 +18,14 @@
         font-size: 15px;
         line-height: 16px;
         &.current {
-            border: 1px solid red;
+            // color: $activityColor;
         }
     }
     .hint-border {
         display: inline-block;
-        height: 3px;
+        height: 4px;
         background: $activityColor;
+        border-radius: 4px;
     }
 }
 
