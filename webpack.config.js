@@ -41,10 +41,10 @@ module.exports = {
         extensions: ['', '.js', '.jsx'],
         // root: __dirname + 'public/src/js', //绝对路径
     },
-    // externals: {
-    //     'react': 'React',
-    //     'react-dom': 'ReactDOM'
-    // },
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM'
+    },
     //enable dev source map
     devtool: '#eval-source-map',
     devServer: {

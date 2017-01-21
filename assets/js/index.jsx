@@ -5,8 +5,7 @@ import ReactDom from 'react-dom'
 import App from './app/containers/App'
 import reducers from './app/reducers'
 
-import '../css/style.css'
-import '../css/navbar.scss'
+import '../css/index.scss'
 
 const store = createStore(reducers)
 
