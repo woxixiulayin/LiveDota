@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux'
-import navConfig from '../../config/navConfig'
+import navConfig from 'config/navConfig'
 import * as actions from '../actions'
 import * as types from '../const/types'
 
@@ -28,8 +28,4 @@ const navInfo = (state = initNavInfo, action) => {
     }
 }
 
-const reducers = combineReducers({
-    navInfo
-})
-
-export default reducers
+export default navInfo

@@ -1,9 +1,7 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
-import {switchCategory} from '../actions'
 import classNames from 'classnames'
-import FreeContent from '../Components/FreeContent'
-import * as actions from '../actions'
+import FreeContent from './FreeContent'
 
 const HintBorder = ({top=0, left=0, width=0}) => (
     <FreeContent {...{left, top}}>
@@ -86,20 +84,5 @@ class NavBar extends Component {
 
     }
 }
-
-const mapStateToProp = (state, ownProps) => ({
-    categorys: state.navInfo.list,
-    currentIndex: state.navInfo.currentIndex,
-})
-const mapDispatchToProp = (dispatch, owdnProps) => ({
-    changeIndex: (index) => {
-        console.log(`dispatch ${index}`)
-        dispatch(actions.switchCategory(index))
-    }
-})
-NavBar = connect(
-    mapStateToProp,
-    mapDispatchToProp
-)(NavBar)
 
 export default NavBar
