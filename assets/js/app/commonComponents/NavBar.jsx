@@ -22,10 +22,10 @@ class NavBar extends Component {
         }
     }
 
-    getCategoryNodeInfo(category) {
+    getItemNodeInfo(item) {
         let info = {}
 
-        let node = this[`${category}`],
+        let node = this[`${item}`],
             width = node.clientWidth - 10,
             left = node.offsetLeft + 3,
             top = node.offsetTop + 22
@@ -35,7 +35,7 @@ class NavBar extends Component {
     }
 
     setBorderStyle() {
-        let style = this.getCategoryNodeInfo(this.props.categorys[this.props.currentIndex]),
+        let style = this.getItemNodeInfo(this.props.items[this.props.currentIndex]),
             borderStyle = this.hintBorder.style
             console.log(style)
         borderStyle.left = style.left + 'px';
@@ -61,13 +61,13 @@ class NavBar extends Component {
     }
 
     render() {                                        
-        let {categorys, currentIndex} = this.props
+        let {items, currentIndex} = this.props
 
         return (<div id='nav-bar' className='container'>
-            {categorys.map( (category, index) => {
+            {items.map( (item, index) => {
                 return <span
                 ref={node => {
-                    this[`${category}`] = node
+                    this[`${item}`] = node
                 }}
                 onClick={() => {
                         this.changeIndex(index)
@@ -75,7 +75,7 @@ class NavBar extends Component {
                  }
                 className={classNames("header-category main-font", {'current': +currentIndex === index})}
                     >
-                    {category}
+                    {item}
                 </span>
             })}
             <span ref={node => this.hintBorder = node} className='hint-border'>

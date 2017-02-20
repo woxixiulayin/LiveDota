@@ -10,9 +10,12 @@
 }
 
 .container {
-    display: flex;
     position: relative;
     overflow: hidden;
     clear: both;
     zoom: 1;
+}
+
+.flex {
+    display: flex;
 }
