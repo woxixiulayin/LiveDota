@@ -5,8 +5,8 @@ import * as actions from '../actions'
 import {NavBar} from 'app/commonComponents'
 
 const mapStateToProp = (state, ownProps) => ({
-    items: state.navInfo.list,
-    currentIndex: state.navInfo.currentIndex,
+    items: Object.keys(state.liveBase),
+    currentIndex: state.currentCategoryIndex,
 })
 
 const mapDispatchToProp = (dispatch, owdnProps) => ({

@@ -1,12 +1,9 @@
 import React from 'react'
-import HeaderNav, { navInfo } from './Header'
+import HeaderNav from './Header'
 import LiveWrap from './LiveWrap'
-import { createStore, combineReducers } from 'redux'
+import { createStore} from 'redux'
 import { Provider } from 'react-redux'
-
-const reducers = combineReducers({
-    navInfo,
-})
+import reducers from './reducers'
 
 const store = createStore(reducers)
 
