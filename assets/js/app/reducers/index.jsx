@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { currentCategoryIndex } from '../Header'
+import { siteNavInfo } from '../LiveWrap'
 import {navConfig} from 'config'
 
 const liveBase = (state = navConfig, action) => {
@@ -11,7 +12,8 @@ const liveBase = (state = navConfig, action) => {
 
 const reducers = combineReducers({
     liveBase,
-    currentCategoryIndex
+    currentCategoryIndex,
+    siteNavInfo,
 })
 
 export default reducers

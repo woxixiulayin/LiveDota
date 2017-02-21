@@ -12,7 +12,7 @@ const App = () => (
     <Provider store={store}>
         <div className="container">
             <HeaderNav />
-
+            <LiveWrap />
         </div>
     </Provider>
 )
