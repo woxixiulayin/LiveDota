@@ -12,12 +12,13 @@ const mapStateToProps = (state, ownprops) => {
 
 const mapDispatchToProp = (dispatch, ownProps) => ({
     changeIndex: (index) => {
-        dispatch(actions.switch_liveSite())
+        dispatch(actions.switch_liveSite(ownProps.categoryIndex, index))
     }
 })
 
 const SiteNav = connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProp
 )(NavBar)
 
 export default SiteNav
