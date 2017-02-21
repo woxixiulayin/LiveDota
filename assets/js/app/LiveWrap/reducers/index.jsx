@@ -9,6 +9,7 @@ export const siteNavInfo = (state = initSiteNavInfo, action) => {
     switch(action.type) {
         case types.SWITCH_SITE:
             newState[action.categoryID] = action.siteID
+            console.log(newState)
             return newState
         default:
             return state

@@ -63,7 +63,7 @@ class NavBar extends Component {
     render() {                                        
         let {items, currentIndex} = this.props
 
-        return (<div id='nav-bar' className='container'>
+        return (<div className='nav-bar container'>
             {items.map( (item, index) => {
                 return <span
                 ref={node => {

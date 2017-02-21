@@ -6,19 +6,20 @@ const mapStateToProps = (state, ownprops) => {
     let {liveBase, siteNavInfo, currentCategoryIndex} = state
     return {
         items: liveBase[Object.keys(liveBase)[currentCategoryIndex]],
-        currentIndex: siteNavInfo[currentCategoryIndex],
+        currentIndex: siteNavInfo[ownprops.categoryIndex],
     }
 }
 
-const mapDispatchToProp = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({
     changeIndex: (index) => {
+        console.log(ownProps)
         dispatch(actions.switch_liveSite(ownProps.categoryIndex, index))
     }
 })
 
 const SiteNav = connect(
     mapStateToProps,
-    mapDispatchToProp
+    mapDispatchToProps
 )(NavBar)
 
 export default SiteNav
