@@ -1,4 +1,5 @@
 import React,{Component, PropTypes} from 'react'
+import {TabSwitcher} from 'app/commonComponents'
 import classnames from 'classnames'
 
 const CategoryWrap = props => (
