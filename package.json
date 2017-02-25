@@ -68,10 +68,11 @@
   },
   "scripts": {
     "start": "node server-build/server.js & npm run dev",
+    "server": "node server-build/server.js ",
     "gulp": "gulp",
     "test": "jest --watch",
     "build": "webpack -p",
-    "dev": "NODE_ENV=development && webpack-dev-server --config webpack.config.js --progress --profile --inline --colors --hot --port 8000",
+    "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --progress --profile --inline --colors --hot --port 8000",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "author": "",

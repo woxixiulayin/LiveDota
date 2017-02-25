@@ -56,6 +56,7 @@ module.exports = {
 }
 
 var env = process.env.NODE_ENV
+console.log('build env = ' + env)
 if (env !== 'development') {
     module.exports.devtool = '#source-map'
     module.exports.plugins = (module.exports.plugins || []).concat([
