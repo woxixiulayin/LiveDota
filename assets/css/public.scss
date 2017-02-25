@@ -20,8 +20,19 @@
     display: flex;
 }
 
+.absolute {
+    position: absolute;
+}
+
 .full {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.trans-dura-4 {
+    transition-duration: .4s;
+}
+.trans-dura-6 {
+    transition-duration: .6s;
 }

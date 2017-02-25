@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderNav from './Header'
-import LiveWrap from './LiveWrap'
+import CategoryWrap from './CategoryWrap'
 import { createStore} from 'redux'
 import { Provider } from 'react-redux'
 import reducers from './reducers'
@@ -12,7 +12,7 @@ const App = () => (
     <Provider store={store}>
         <div className="container">
             <HeaderNav />
-            <LiveWrap />
+            <CategoryWrap />
         </div>
     </Provider>
 )
