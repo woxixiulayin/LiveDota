@@ -11,7 +11,7 @@ const LiveWrap = () => (
         {
                 new Array(Object.keys(navConfig).length).fill({}).map((item, index) => <SiteNav categoryIndex={index} />)
             }
-    </div> 
+    </div>  
 )
 
 export default LiveWrap
