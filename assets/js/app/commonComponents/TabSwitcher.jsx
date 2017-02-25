@@ -31,7 +31,7 @@ const tabStrategies = {
     }
 }
 
-class TabContent extends Component {
+export class TabSwitcher extends Component {
     static propTypes = {
         items = PropTypes.array.isRequired,
         oneTabColumns= PropTypes.number.isRequired,
@@ -70,7 +70,7 @@ class TabContent extends Component {
             this.switchAnimation()
         }
     }
-    
+
     render() {
         let {index} = this.props,
         this.tabItems = []
