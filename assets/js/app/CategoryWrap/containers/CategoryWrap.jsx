@@ -5,7 +5,9 @@ import classnames from 'classnames'
 const CategoryWrap = props => (
     <div classname={classnames('category-live-container container flex')}
     >
-    {props.children}
+        <TabSwitcher index={1}>
+            {React.Children}   
+        </TabSwitcher>
     </div>
 )
 

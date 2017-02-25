@@ -3,12 +3,12 @@ import classNames from 'classnames'
 
 
 const tabStrategies = {
-    horzontalMove: {
+    horizontalMove: {
         tabLayout: tabContent => {
-            let {items, oneTabColumns, cuurentIndex} = tabContent.props,
+            let {oneTabColumns, cuurentIndex} = tabContent.props,
                 width = 100 / oneTabColumns
 
-            tabContent.tabItems && tabContent.tabItems.map((items, index) => (
+            tabContent.tabItems && tabContent.tabItems.map((item, index) => (
                 item.style = {
                     width,
                     height: '100%',
@@ -31,38 +31,37 @@ const tabStrategies = {
     }
 }
 
-export class TabSwitcher extends Component {
+export default class TabSwitcher extends Component {
     static propTypes = {
-        items = PropTypes.array.isRequired,
-        oneTabColumns= PropTypes.number.isRequired,
-        switchAnimationType = PropTypes.string.isRequired,
-        currentIndex = PropTypes.number.isRequired,
+        oneTabColumns: PropTypes.number.isRequired,
+        switchAnimationType: PropTypes.string.isRequired,
+        currentIndex: PropTypes.number.isRequired,
     }
 
-        constructor() {
+    static defaultProps = {
+        items: [],
+        oneTabColumns: 1,
+        switchAnimationType: 'horizontalMove',
+        currentIndex: 0,
+    }
+
+    constructor() {
         super()
-    }
-
-    getDefaultProps() {
-        return {
-            items: [],
-            oneTabColumns: 1,
-            switchAnimation: 'horizontalMove',
-            currentIndex: 0,
-        }
+        this.tabItems = []
     }
 
     getTabStrategy() {
         let {switchAnimationType='horizontalMove'} = this.props
-        return tabStrategies[switchAnimationType] ? tabStrategies[switchAnimationType] : tabStrategies['horizontalMove']
+        return tabStrategies[switchAnimationType] ? tabStrategies[switchAnimationType] : tabStrategies.horizontalMove
     }
 
     switchAnimation() {
-        this.getTabStrategy.switchAnimation(this)
+        this.tabStrategy.switchAnimation(this)
     }
 
     componentDidMount() {
-        this.getTabStrategy.tabLayout(this)
+        this.tabStrategy = this.getTabStrategy()
+        this.tabStrategy.tabLayout(this)
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -72,15 +71,14 @@ export class TabSwitcher extends Component {
     }
 
     render() {
-        let {index} = this.props,
-        this.tabItems = []
+        let {index} = this.props
 
         return (
-            <div classNames={classNames('container flex tab-content')}>
+            <div className={classNames('container flex tab-content')}>
                 <div ref={node => this.tabContainer = node } className="absolute full .trans-dura-4">
                     {
                         React.Children.map((child, index) => {
-                            <div ref={node => { this.tabItems.push(node) }} classNames='tab-item .trans-dura-4'>
+                            <div ref={node => { this.tabItems[index]= node }} className='tab-item .trans-dura-4'>
                                 {child}
                             </div>
                         })

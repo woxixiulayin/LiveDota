@@ -51,7 +51,7 @@ class NavBar extends Component {
         this.setBorderStyle()
     }
 
-    componentShouldUpdate(nextProps) {
+    shouldComponentUpdate(nextProps) {
         return nextProps.currentIndex !== this.props.currentIndex
     }
 
