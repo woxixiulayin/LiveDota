@@ -36,14 +36,12 @@ class NavBar extends Component {
     setBorderStyle() {
         let style = this.getItemNodeInfo(this.props.items[this.props.currentIndex]),
             borderStyle = this.hintBorder.style
-            console.log(style)
         borderStyle.left = style.left + 'px';
         borderStyle.top = style.top + 'px';
         borderStyle.width = style.width + 'px';
     }
     changeIndex(index) {
         this.props.changeIndex(index)
-        console.log('change')
     }
 
     componentDidMount() {

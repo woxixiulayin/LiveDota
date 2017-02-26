@@ -1,4 +1,4 @@
-const defaultSites = ['熊猫', '虎牙', '战旗', '斗鱼', '虎牙', '全名']
+const defaultSites = ['熊猫', '战旗', '斗鱼', '虎牙', '全名']
 
 const navConfig = {
     'DOTA': defaultSites,

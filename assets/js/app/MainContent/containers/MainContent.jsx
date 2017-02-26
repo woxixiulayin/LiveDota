@@ -15,9 +15,11 @@ let MainContent = ({currentIndex}) => (
     </div>
 )
 
-const mapStateToProp = (state, ownProps) => ({
-    currentIndex: state.currentCategoryIndex,
-})
+const mapStateToProp = (state, ownProps) => {
+    return {
+        currentIndex: state.currentCategoryIndex,
+    }
+}
 
 MainContent = connect(
     mapStateToProp

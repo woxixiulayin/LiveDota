@@ -8,30 +8,21 @@ const tabStrategies = {
             let {oneTabColumns, cuurentIndex} = tabContent.props,
                 width = 100 / oneTabColumns
 
-            tabContent.tabItems && tabContent.tabItems.map((item, index) => (
-                item.style = {
-                    width,
-                    height: '100%',
-                    position: "absolute",
-                    left: width * index,
-                    top: 0,
-                }
-            ))
+            tabContent.tabItems && tabContent.tabItems.map((item, index) => {
+                let oldCssText = item.style.cssText
+                item.style.cssText = oldCssText + `width: ${width}; heigh: 100%; position: absolute; left: ${width * index}%; top: 0;`
+            })
 
             tabContent.tabContainer.style = {
                 width: `${width * tabContent.tabItems.length}%`
             }
-            console.log(tabContent.tabContainer)
         },
 
         switchAnimation: tabContent => {
-            let {oneTabColumns, cuurentIndex} = tabContent.props,
-                container = tabContent.container,
+            let {oneTabColumns, currentIndex} = tabContent.props,
+                container = tabContent.tabContainer,
                 width = 100 / oneTabColumns
-
-                container.style = {
-                    left: `${-(currentIndex * width)}%`
-                }
+                container.style.left = `${-(currentIndex * width)}%`
         }
     }
 }
@@ -67,20 +58,21 @@ export default class TabSwitcher extends Component {
     componentDidMount() {
         this.tabStrategy = this.getTabStrategy()
         this.tabStrategy.tabLayout(this)
+        this.switchAnimation()
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    componentDidUpdate(nextProps, nextState) {
         if(nextProps.currentIndex != this.props.currentIndex) {
             this.switchAnimation()
         }
     }
 
     render() {
-        let {index, children} = this.props
+        let {children} = this.props
 
         return (
             <div className={classNames('container flex full tab-content')}>
-                <div ref={node => this.tabContainer = node } className="absolute full .trans-dura-4">
+                <div ref={node => this.tabContainer = node } className="absolute full trans-dura-4">
                     {
                     children && children.map((child, index) => (
                             <div
