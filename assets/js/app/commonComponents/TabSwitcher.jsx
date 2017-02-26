@@ -12,11 +12,16 @@ const tabStrategies = {
                 item.style = {
                     width,
                     height: '100%',
-                    position: absolute,
+                    position: "absolute",
                     left: width * index,
                     top: 0,
                 }
             ))
+
+            tabContent.tabContainer.style = {
+                width: `${width * tabContent.tabItems.length}%`
+            }
+            console.log(tabContent.tabContainer)
         },
 
         switchAnimation: tabContent => {
@@ -71,17 +76,20 @@ export default class TabSwitcher extends Component {
     }
 
     render() {
-        let {index} = this.props
+        let {index, children} = this.props
 
         return (
-            <div className={classNames('container flex tab-content')}>
+            <div className={classNames('container flex full tab-content')}>
                 <div ref={node => this.tabContainer = node } className="absolute full .trans-dura-4">
                     {
-                        React.Children.map((child, index) => {
-                            <div ref={node => { this.tabItems[index]= node }} className='tab-item .trans-dura-4'>
+                    children && children.map((child, index) => (
+                            <div
+                                ref={node => { this.tabItems[index]= node }}
+                                key = {index}
+                                className='tab-item .trans-dura-4'>
                                 {child}
                             </div>
-                        })
+                        ))
                     }
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderNav from './Header'
-import CategoryWrap from './CategoryWrap'
+import MainContent from './MainContent'
 import { createStore} from 'redux'
 import { Provider } from 'react-redux'
 import reducers from './reducers'
@@ -8,11 +8,12 @@ import reducers from './reducers'
 const store = createStore(reducers)
 
 console.log(store.getState())
+
 const App = () => (
     <Provider store={store}>
-        <div className="container">
+        <div className="full container">
             <HeaderNav />
-            <CategoryWrap />
+            <MainContent />
         </div>
     </Provider>
 )

@@ -68,6 +68,7 @@ class NavBar extends Component {
                 ref={node => {
                     this[`${item}`] = node
                 }}
+                key={index}
                 onClick={() => {
                         this.changeIndex(index)
                     }
