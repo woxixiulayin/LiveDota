@@ -12,7 +12,9 @@ console.log(store.getState())
 const App = () => (
     <Provider store={store}>
         <div className="full container">
-            <HeaderNav />
+            <div className="header-nav flex center">
+                <HeaderNav />
+            </div>
             <MainContent />
         </div>
     </Provider>

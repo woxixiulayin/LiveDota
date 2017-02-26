@@ -78,7 +78,7 @@ export default class TabSwitcher extends Component {
                             <div
                                 ref={node => { this.tabItems[index]= node }}
                                 key = {index}
-                                className='tab-item .trans-dura-4'>
+                                className='full tab-item .trans-dura-4'>
                                 {child}
                             </div>
                         ))
