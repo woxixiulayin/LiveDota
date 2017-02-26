@@ -10,3 +10,16 @@
 .header-nav {
     padding-top: 20px;
 }
+
+.live-wrap {
+    width: 70%;
+    height: 100%;
+    border-right: 1px solid $activityColor;
+    .nav-bar{
+        border-radius: 0;
+    }
+}
+
+.main-content {
+    border-top: 1px solid $activityColor;
+}

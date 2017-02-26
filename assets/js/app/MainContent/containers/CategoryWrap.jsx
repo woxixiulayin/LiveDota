@@ -3,9 +3,11 @@ import classnames from 'classnames'
 import {SiteNav} from '.'
 
 const CategoryWrap = ({categoryIndex}) => (
-    <div className={classnames('category-live-container container flex')}
-    >
-        <SiteNav categoryIndex={categoryIndex} />
+    <div className={classnames('category-live-container container full flex')}
+    >   
+        <div className="live-wrap">
+            <SiteNav categoryIndex={categoryIndex} />
+        </div>
     </div>
 )
 
