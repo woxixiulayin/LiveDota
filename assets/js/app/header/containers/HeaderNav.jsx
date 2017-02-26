@@ -11,7 +11,6 @@ const mapStateToProp = (state, ownProps) => ({
 
 const mapDispatchToProp = (dispatch, owdnProps) => ({
     changeIndex: (index) => {
-        console.log(`dispatch ${index}`)
         dispatch(actions.switchCategory(index))
     }
 })

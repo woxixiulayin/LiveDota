@@ -30,7 +30,6 @@ export default class LiveList extends Component {
             >
             {
                 items.map((item, index) => {
-                    console.log(item)
                 })
             }
             </div> 

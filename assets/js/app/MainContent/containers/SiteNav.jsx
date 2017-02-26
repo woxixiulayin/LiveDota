@@ -12,7 +12,6 @@ const mapStateToProps = (state, ownprops) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
     changeIndex: (index) => {
-        console.log(ownProps)
         dispatch(actions.switch_liveSite(ownProps.categoryIndex, index))
     }
 })
