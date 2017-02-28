@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
-
+import {setNodeStyle} from 'lib/domUtils'
 
 const tabStrategies = {
     horizontalMove: {
@@ -13,9 +13,10 @@ const tabStrategies = {
                 item.style.cssText = oldCssText + `width: ${width}; heigh: 100%; position: absolute; left: ${width * index}%; top: 0;`
             })
 
-            tabContent.tabContainer.style = {
-                width: `${width * tabContent.tabItems.length}%`
-            }
+            // tabContent.tabContainer.style = {
+            //     width: `${width * tabContent.tabItems.length}%`
+            // }
+            setNodeStyle(tabContent.tabContainer, {width: `${width * tabContent.tabItems.length}%`})
         },
 
         switchAnimation: tabContent => {
