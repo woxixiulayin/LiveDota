@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PureComponent, PropTypes } from 'react'
 import classNames from 'classnames'
 import {setNodeStyle} from 'lib/domUtils'
 
@@ -28,7 +28,7 @@ const tabStrategies = {
     }
 }
 
-export default class TabSwitcher extends Component {
+export default class TabSwitcher extends PureComponent {
     static propTypes = {
         oneTabColumns: PropTypes.number.isRequired,
         switchAnimationType: PropTypes.string.isRequired,

@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React,{Component, PureComponent} from 'react'
 import classNames from 'classnames'
 import FreeContent from './FreeContent'
 
@@ -10,7 +10,7 @@ const HintBorder = ({top=0, left=0, width=0}) => (
     </FreeContent>
 )
 
-class NavBar extends Component {
+class NavBar extends PureComponent {
 
     constructor() {
         super()
