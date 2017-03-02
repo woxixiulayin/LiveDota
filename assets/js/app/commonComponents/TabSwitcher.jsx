@@ -1,29 +1,33 @@
 import React, { PureComponent, PropTypes } from 'react'
 import classNames from 'classnames'
-import {setNodeStyle} from 'lib/domUtils'
+import { setNodeStyle } from 'lib/domUtils'
 
 const tabStrategies = {
-    horizontalMove: {
-        tabLayout: tabContent => {
-            let {oneTabColumns, cuurentIndex} = tabContent.props,
-                width = 100 / oneTabColumns
+    horizontalMove(tabContent) {
+        let {oneTabColumns} = tabContent.props,
+            container = tabContent.tabContainer,
+            itemCount = tabContent.tabItems.length,
+            itemWidth = 100 / itemCount
 
-            tabContent.tabItems && tabContent.tabItems.map((item, index) => {
-                let oldCssText = item.style.cssText
-                item.style.cssText = oldCssText + `width: ${width}; heigh: 100%; position: absolute; left: ${width * index}%; top: 0;`
-            })
+        return {
+            tabLayout() {
+                tabContent.tabItems && tabContent.tabItems.map((item, index) => {
+                    let oldCssText = item.style.cssText
+                    setNodeStyle(item, {
+                        width: `${itemWidth}%`,
+                        height: '100%',
+                        position: 'absolute',
+                        left: `${itemWidth * index}%`,
+                        top: 0,
+                    })
+                })
+                container.style.width = `${100 * itemCount}%`
+            },
 
-            // tabContent.tabContainer.style = {
-            //     width: `${width * tabContent.tabItems.length}%`
-            // }
-            setNodeStyle(tabContent.tabContainer, {width: `${width * tabContent.tabItems.length}%`})
-        },
-
-        switchAnimation: tabContent => {
-            let {oneTabColumns, currentIndex} = tabContent.props,
-                container = tabContent.tabContainer,
-                width = 100 / oneTabColumns
-                container.style.left = `${-(currentIndex * width)}%`
+            switchAnimation() {
+                let {currentIndex} = tabContent.props
+                container.style.left = `${-(currentIndex * 100)}%`
+            }
         }
     }
 }
@@ -48,22 +52,22 @@ export default class TabSwitcher extends PureComponent {
     }
 
     getTabStrategy() {
-        let {switchAnimationType='horizontalMove'} = this.props
-        return tabStrategies[switchAnimationType] ? tabStrategies[switchAnimationType] : tabStrategies.horizontalMove
+        let {switchAnimationType = 'horizontalMove'} = this.props
+        return tabStrategies[switchAnimationType] ? tabStrategies[switchAnimationType](this) : tabStrategies.horizontalMove(this)
     }
 
     switchAnimation() {
-        this.tabStrategy.switchAnimation(this)
+        this.tabStrategy.switchAnimation()
     }
 
     componentDidMount() {
         this.tabStrategy = this.getTabStrategy()
-        this.tabStrategy.tabLayout(this)
+        this.tabStrategy.tabLayout()
         this.switchAnimation()
     }
 
     componentDidUpdate(nextProps, nextState) {
-        if(nextProps.currentIndex != this.props.currentIndex) {
+        if (nextProps.currentIndex != this.props.currentIndex) {
             this.switchAnimation()
         }
     }
@@ -73,12 +77,12 @@ export default class TabSwitcher extends PureComponent {
 
         return (
             <div className={classNames('container flex full tab-content')}>
-                <div ref={node => this.tabContainer = node } className="absolute full trans-dura-4">
+                <div ref={node => this.tabContainer = node} className="absolute full trans-dura-4">
                     {
-                    children && children.map((child, index) => (
+                        children && children.map((child, index) => (
                             <div
-                                ref={node => { this.tabItems[index]= node }}
-                                key = {index}
+                                ref={node => { this.tabItems[index] = node }}
+                                key={index}
                                 className='full tab-item .trans-dura-4'>
                                 {child}
                             </div>
