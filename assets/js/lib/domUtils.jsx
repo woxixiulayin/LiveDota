@@ -6,9 +6,9 @@ export const setNodeStyle = (node, styleObj) => {
 
     let oldCssText = node.style.cssText,
         cssText
-    
+
     cssText = Object.keys(styleObj).reduce((cssTemp, item) => {
-        return cssTemp + `${item}: ${styleObj};`
+        return cssTemp + `${item}: ${styleObj[item]};`
     }, oldCssText)
 
     node.style.cssText = cssText
