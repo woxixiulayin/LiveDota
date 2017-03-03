@@ -1,14 +1,5 @@
-import React,{Component, PureComponent} from 'react'
+import React,{PureComponent} from 'react'
 import classNames from 'classnames'
-import FreeContent from './FreeContent'
-
-const HintBorder = ({top=0, left=0, width=0}) => (
-    <FreeContent {...{left, top}}>
-        <span className='hint-border'
-        style={{width}}
-        ></span>
-    </FreeContent>
-)
 
 class NavBar extends PureComponent {
 
