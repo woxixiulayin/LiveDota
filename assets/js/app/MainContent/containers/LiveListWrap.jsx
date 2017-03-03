@@ -9,7 +9,7 @@ let LiveListWrap = ({categoryIndex, currentSiteIndex}) => (
     <div className="container flex full">
         <TabSwitcher currentIndex={currentSiteIndex}>
             {navConfig[Object.keys(navConfig)[categoryIndex]].map((item, index) => (
-                <div className='live-item full flex' key={index}>
+                <div className='container full flex' key={index}>
                 <LiveList categoryIndex={categoryIndex} siteIndex={index}/>
                 </div>
             ))}

@@ -1,7 +1,10 @@
-import React,{PureComponent} from 'react'
+import React,{PureComponent, PropTypes} from 'react'
 import classNames from 'classnames'
 
 class NavBar extends PureComponent {
+    static propType = {
+        currentIndex: PropTypes.number.isRequired
+    }
 
     constructor() {
         super()

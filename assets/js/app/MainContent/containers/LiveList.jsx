@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import classnames from 'classnames'
-import {CategoryWrap} from '.'
+import {CategoryWrap, LiveItem} from '.'
 import {navConfig} from 'config'
 import {connect} from 'react-redux'
 
@@ -22,15 +22,15 @@ export default class LiveList extends Component {
     }
 
     render() {
-        let {items} = this.props
+        // let {items} = this.props
+        let items = new Array(20).fill(1)
 
         return (
             <div
-                className='container flex full live-list'
+                className='full live-list'
             >
             {
-                items.map((item, index) => {
-                })
+                items.map((item, index) => <LiveItem />)
             }
             </div> 
         )

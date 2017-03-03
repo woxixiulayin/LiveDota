@@ -14,7 +14,7 @@ import classnames from 'classnames'
 export default class LiveItem extends Component {
     render() {
         return (
-            <div className="container flex full">
+            <div className="live-item">
 
             </div>
         )
