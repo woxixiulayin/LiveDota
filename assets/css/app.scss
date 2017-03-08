@@ -27,10 +27,11 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    overflow: scroll;
 }
 
 .live-item {
-    width: 270px;
+    width: 280px;
     height: 215px;
     border: 1px solid black;
     background: white;
