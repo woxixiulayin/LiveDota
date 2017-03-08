@@ -30,9 +30,49 @@
 }
 
 .live-item {
-    width: 250px;
-    height: 150px;
+    width: 270px;
+    height: 215px;
     border: 1px solid black;
-    background: sienna;
-    margin: 5px 10px;
+    background: white;
+    margin: 5px 5px;
+    display: flex;
+    flex-flow: row wrap;
+    .video-cover {
+        position: relative;
+        width: 100%;
+        height: 158px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .play-mask {
+            position: absolute;
+            left: 0;
+            height: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background: #fff;
+        }
+    }
+    .video-title {
+        margin-left: 5px;
+        width: 100%;
+        line-height: 30px;
+        white-space: nowrap;
+        font-size: 15px;
+    }
+    .video-info {
+        margin-left: 5px;
+        font-size: 14px;
+        width: 100%;
+        .video-nickname {
+            margin-left: 3px;
+            float: left;
+        }
+        .video-nums {
+            float: right;
+            margin-right: 5px;
+        }
+    }
 }
