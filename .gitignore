@@ -6,5 +6,6 @@ typings*
 coverage/*
 server-build/*
 assets/dist/*
+.idea/*
 
 
