@@ -28,10 +28,10 @@
 }
 
 .trans-dura-4 {
-    transition-duration: .4s;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275)
 }
 .trans-dura-6 {
-    transition-duration: .6s;
+    transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275)
 }
 
 .center {

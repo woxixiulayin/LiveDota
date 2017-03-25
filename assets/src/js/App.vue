@@ -1,13 +1,11 @@
 <template>
   <div id="app">
-    <global-header />
     <router-view>
     </router-view>
   </div> 
 </template>
 
 <script>
-import Header from 'js/header'
 import store from 'js/store'
 
 console.log(store)
@@ -17,9 +15,6 @@ export default {
     return {
       store: store
     }
-  },
-  components: {
-    'global-header': Header
   }
 }
 </script>
