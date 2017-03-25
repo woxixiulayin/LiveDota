@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <my-header />
     <router-view>
     </router-view>
   </div> 
@@ -7,6 +8,7 @@
 
 <script>
 import store from 'js/store'
+import myHeader from 'js/header'
 
 console.log(store)
 export default {
@@ -15,6 +17,9 @@ export default {
     return {
       store: store
     }
+  },
+  components: {
+    myHeader
   }
 }
 </script>

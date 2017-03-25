@@ -1,15 +1,7 @@
 <template>
-  <div class="live-section" ref='liveSection'>
-    <transition-group name="categoryList" tag="div">
-      <el-tabs v-for='categoryItem in categoryList' v-show='currentCategory===categoryItem' @tab-click="handleClick" :value='currentSiteName'
-        :key='categoryItem'>
-        <el-tab-pane v-for='(site,index) in categorySites[currentCategory]' :label="site" :name="site" :key='site'>
-          <div class="video-list">
-            <video-item v-for='video in videoStore[categoryItem][site]' :key='video' :itemWidth='itemWidth' :video='video' />
-          </div>
-        </el-tab-pane>
-      </el-tabs>
-    </transition-group>
+  <div class="live-list-wrap" ref='liveSection'>
+    <ul class="live-list">
+    </ul>
   </div>
 </template>
 
@@ -58,20 +50,20 @@
       videoItem
     },
     mounted () {
-      const liveSection = this.$refs.liveSection
-      console.log(liveSection)
-      // const that = this
-      const reSizeIfWidthChange = (() => {
-        let lastWidth = Math.floor(liveSection.clientWidth)
-        return () => {
-          let width = Math.floor(liveSection.clientWidth)
-          if (width !== lastWidth) {
-            lastWidth = width
-            this.itemWidth = getItemWidth(width)
-          }
-        }
-      })()
-      setInterval(reSizeIfWidthChange, 400)
+      // const liveSection = this.$refs.liveSection
+      // console.log(liveSection)
+      // // const that = this
+      // const reSizeIfWidthChange = (() => {
+      //   let lastWidth = Math.floor(liveSection.clientWidth)
+      //   return () => {
+      //     let width = Math.floor(liveSection.clientWidth)
+      //     if (width !== lastWidth) {
+      //       lastWidth = width
+      //       this.itemWidth = getItemWidth(width)
+      //     }
+      //   }
+      // })()
+      // setInterval(reSizeIfWidthChange, 400)
     },
     methods: {
       handleClick: function (vm) {
@@ -87,7 +79,8 @@
 </script>
 
 <style lang='scss' scoped>
-  .live-section {
+@import "~@/css/variable.scss";
+  .live-list-wrap{
     flex-grow: 1;
     flex-shrink: 1;
   }

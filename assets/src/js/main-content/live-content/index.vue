@@ -1,18 +1,18 @@
 <template>
 <div class="main-content">
-    <liveSection :currentCategory='$route.params.currentCategory'/>
-    <rankSection :currentCategory='$route.params.currentCategory'/>
+    <router-view></router-view>
+    <rank-section :currentCategory='$route.params.currentCategory'/>
 </div>
 </template>
 
 <script>
 import rankSection from './rank-section'
-import liveSection from './live-section'
+import liveList from './live-list'
 
 export default {
   components: {
     rankSection,
-    liveSection
+    liveList
   }
 }
 
