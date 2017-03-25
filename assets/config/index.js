@@ -1,8 +1,6 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 
-
-const DEV_PORT = 8000
 module.exports = {
   build: {
     env: require('./prod.env'),
@@ -25,11 +23,11 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: DEV_PORT,
+    port: 8000,
     // autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     // assetsPublicPath: '/',
-    assetsPublicPath: 'http://localhost:' + DEV_PORT + '/',
+    assetsPublicPath: 'http://0.0.0.0:8000/',
     // proxyTable: {
     //   '/live/**': {
     //     target: 'http://0.0.0.0:8080',

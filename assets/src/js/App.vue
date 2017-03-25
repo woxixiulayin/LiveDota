@@ -20,13 +20,6 @@ export default {
   },
   components: {
     'global-header': Header
-  },
-  mounted () {
-    console.log(this.$http)
-    this.$http.get('/live/dota/熊猫').then(data => {
-      console.log(data)
-      store.state.videoStore['DOTA']['熊猫'] = data.body
-    })
   }
 }
 </script>
