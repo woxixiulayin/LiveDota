@@ -1,6 +1,8 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 
+
+const DEV_PORT = 8000
 module.exports = {
   build: {
     env: require('./prod.env'),
@@ -23,19 +25,20 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8000,
+    port: DEV_PORT,
     // autoOpenBrowser: true,
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-    proxyTable: {
-      '/live/**': {
-        target: 'http://0.0.0.0:8080',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/live': ''
-        }
-      }
-    },
+    // assetsPublicPath: '/',
+    assetsPublicPath: 'http://localhost:' + DEV_PORT + '/',
+    // proxyTable: {
+    //   '/live/**': {
+    //     target: 'http://0.0.0.0:8080',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/live': ''
+    //     }
+      // }
+    // },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

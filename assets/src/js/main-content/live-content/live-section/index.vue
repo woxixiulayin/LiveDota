@@ -1,14 +1,14 @@
 <template>
   <div class="live-section" ref='liveSection'>
     <transition-group name="categoryList" tag="div">
-    <el-tabs v-for='categoryItem in categoryList' v-show='currentCategory===categoryItem' @tab-click="handleClick" :value='currentSiteName'
-      :key='categoryItem'>
-      <el-tab-pane v-for='(site,index) in categorySites[currentCategory]' :label="site" :name="site" :key='site'>
-        <div class="video-list">
-          <video-item v-for='video in videoStore[currentCategory][site]' :key='video' :itemWidth='itemWidth' :video='video'/>
-        </div>
-      </el-tab-pane>
-    </el-tabs>
+      <el-tabs v-for='categoryItem in categoryList' v-show='currentCategory===categoryItem' @tab-click="handleClick" :value='currentSiteName'
+        :key='categoryItem'>
+        <el-tab-pane v-for='(site,index) in categorySites[currentCategory]' :label="site" :name="site" :key='site'>
+          <div class="video-list">
+            <video-item v-for='video in videoStore[categoryItem][site]' :key='video' :itemWidth='itemWidth' :video='video' />
+          </div>
+        </el-tab-pane>
+      </el-tabs>
     </transition-group>
   </div>
 </template>
@@ -43,14 +43,16 @@
         categorySites: globalState.categorySites,
         videoStore: globalState.videoStore,
         currentSiteIndexMap: new Map(globalState.categoryList.map(category => [category, 0])),
-        itemWidth: getItemWidth(window.innerWidth - 350)
+        itemWidth: getItemWidth(window.innerWidth - 350),
+        currentSiteName: ''
       }
     },
     computed: {
-      currentSiteName: function () {
-        const currentCategory = this.currentCategory
-        return this.categorySites[currentCategory][this.currentSiteIndexMap.get(currentCategory)]
-      }
+    //   currentSiteName: function () {
+    //     const currentCategory = this.currentCategory
+    //     console.log(this.categorySites[currentCategory][this.currentSiteIndexMap.get(currentCategory)])
+    //     return this.categorySites[currentCategory][this.currentSiteIndexMap.get(currentCategory)]
+    //   }
     },
     components: {
       videoItem
@@ -72,7 +74,13 @@
       setInterval(reSizeIfWidthChange, 400)
     },
     methods: {
-      handleClick: () => {}
+      handleClick: function (vm) {
+        this.$http.get(`/live/dota/${encodeURIComponent(vm.name)}`).then(data => {
+          console.log(data.body)
+          console.log(this.value)
+          this.siteVideoList = data.body
+        })
+      }
     }
   }
 
@@ -84,21 +92,24 @@
     flex-shrink: 1;
   }
   
-  .categoryList-enter-active{
+  .categoryList-enter-active {
     transition: all .4s;
     transform: scale(1);
   }
+  
   .categoryList-leave-active {
     transition: all .4s;
     opacity: 0;
   }
-  .categoryList-leave{
+  
+  .categoryList-leave {
     transform: scale(1);
   }
-  .categoryList-enter{
+  
+  .categoryList-enter {
     transform: scale(0);
   }
-
+  
   .video-list {
     flex-wrap: wrap;
     padding: 5px;
@@ -108,6 +119,5 @@
   .video-item-wrap {
     display: flex;
   }
-
 
 </style>

@@ -20,7 +20,7 @@ gulp.task('server', () => {
             //支持generators
             plugins: ['transform-runtime']
         }))
-        .pipe(gulp.dest(serverBuild));
+        .pipe(gulp.dest(serverBuild))
 });
 
 gulp.task('watch', () => {
