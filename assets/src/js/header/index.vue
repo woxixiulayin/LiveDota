@@ -48,6 +48,7 @@
     width: 80px;
     line-height: 28px;
     font-size: 15px;
+    font-weight: bold;
     &:hover {
       color: $activeColor;
       cursor: pointer;

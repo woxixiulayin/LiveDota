@@ -18,7 +18,7 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~@/css/variable.scss";
 
 .main-content {
@@ -28,5 +28,6 @@ export default {
   flex-direction: row;
   flex-grow: 1;
   height: 100%;
+  text-align: center;
 }
 </style>

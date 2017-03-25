@@ -1,46 +1,45 @@
 <template>
-  <div class="live-list-wrap" ref='liveSection'>
-    <ul class="live-list">
-      123
-    </ul>
+<div class="live-list-wrap">
+  <ul class="live-list-header">
+    <router-link tag="li" v-for="site in siteList" class="live-list-site trans-dura-4" active-class="current" :to="`/${currentCategory}/${site}`" :key="site">
+      {{site}}
+    </router-link>
+  </ul>
+  <div class="live-list">
+  </div>
   </div>
 </template>
 
 <script>
-  import store from 'js/store'
+  // import store from 'js/store'
   import videoItem from './video'
+  import {gameCategory} from 'js/config'
 
-  const videoMaxWidth = 380
-  const videoMinWidth = 220
-  const itemMargin = 10
-  const listPadding = 5
+  // const videoMaxWidth = 380
+  // const videoMinWidth = 220
+  // const itemMargin = 10
+  // const listPadding = 5
 
-  function getItemWidth (width) {
-    let itemWidth = videoMinWidth
-    for (var i = 0; i < 7; i++) {
-      let tempWidth = (width - i * itemMargin - listPadding * 2) / i
-      if (tempWidth < videoMaxWidth && tempWidth > videoMinWidth) {
-        itemWidth = tempWidth
-        break
-      }
-    }
-    return itemWidth - 1
-  }
+  // function getItemWidth (width) {
+  //   let itemWidth = videoMinWidth
+  //   for (var i = 0; i < 7; i++) {
+  //     let tempWidth = (width - i * itemMargin - listPadding * 2) / i
+  //     if (tempWidth < videoMaxWidth && tempWidth > videoMinWidth) {
+  //       itemWidth = tempWidth
+  //       break
+  //     }
+  //   }
+  //   return itemWidth - 1
+  // }
   export default {
-    props: ['currentCategory'],
-    data: () => {
-      const globalState = store.state
-
-      return {
-        categoryList: globalState.categoryList,
-        categorySites: globalState.categorySites,
-        videoStore: globalState.videoStore,
-        currentSiteIndexMap: new Map(globalState.categoryList.map(category => [category, 0])),
-        itemWidth: getItemWidth(window.innerWidth - 350),
-        currentSiteName: ''
-      }
-    },
+    // 计算属性会缓存数据
     computed: {
+      siteList: function () {
+        return gameCategory[this.$route.params.currentCategory]
+      },
+      currentCategory: function () {
+        return this.$route.params.currentCategory
+      }
     //   currentSiteName: function () {
     //     const currentCategory = this.currentCategory
     //     console.log(this.categorySites[currentCategory][this.currentSiteIndexMap.get(currentCategory)])
@@ -114,4 +113,26 @@
     display: flex;
   }
 
+.live-list-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  height: 35px;
+}
+
+.current {
+  border-bottom: 3px solid $activeColor;
+  color: $activeColor;
+}
+
+.live-list-site {
+  display: inline;
+  padding: 0 .5em;
+  cursor: pointer;
+  margin-bottom: 2px;
+  &:hover {
+    color: $activeColor;
+  }
+}
 </style>
