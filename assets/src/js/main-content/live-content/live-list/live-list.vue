@@ -1,6 +1,7 @@
 <template>
   <div class="live-list-wrap" ref='liveSection'>
     <ul class="live-list">
+      123
     </ul>
   </div>
 </template>
