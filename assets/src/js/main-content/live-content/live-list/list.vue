@@ -1,16 +1,14 @@
 <template>
   <div class="live-list" ref="liveSection">
-    <video-item v-for="video in currentLives" :video="video" :itemWidth="itemWidth">
-
+    <video-item v-show="!noData" v-for="video in currentLives" :video="video" :itemWidth="itemWidth">
     </video-item>
+    <div v-show="noData">暂无数据，请刷新</div>
   </div>
 </template>
 
 <script>
-  // import store from '/js/store'
   import videoItem from './video'
   import {gameCategory} from '/js/config'
-//  import router from '/js/router'
 
   const videoMaxWidth = 380
   const videoMinWidth = 220
@@ -34,12 +32,20 @@
       return {
         itemWidth: 300,
         currentCategory: 'DOTA',
-        currentSite: gameCategory['DOTA'][0]
+        currentSite: gameCategory['DOTA'][0],
+        noData: false
       }
     },
     computed: {
       currentLives: function () {
-        return this.$store.state.categorySiteLives[this.currentCategory][this.currentSite]
+        let lives = this.$store.state.categorySiteLives[this.currentCategory][this.currentSite]
+        console.log(lives)
+        if (!Array.isArray(lives) || lives.length === 0) {
+          this.noData = true
+        } else {
+          this.noData = false
+        }
+        return lives
       }
     },
     beforeRouteEnter (to, from, next) {
@@ -47,22 +53,20 @@
       if (Object.keys(gameCategory).indexOf(currentCategory) === -1) {
         next('/')
       } else if (gameCategory[currentCategory].indexOf(currentSite) === -1) {
-        console.log(1)
         next(`/${currentCategory}/${gameCategory[currentCategory][0]}`)
       } else {
-        next(vm => {
-          console.log(currentCategory)
-          vm.currentCategory = currentCategory
-          vm.currentSite = currentSite
-          vm.$store.dispatch('fetchCategorySiteLives', {
-            category: currentCategory,
-            site: currentSite
-          })
-        })
+        next()
       }
     },
     watch: {
       '$route' (to, from) {
+        let {currentCategory, currentSite} = to.params
+        this.currentCategory = currentCategory
+        this.currentSite = currentSite
+        this.$store.dispatch('fetchCategorySiteLives', {
+          category: currentCategory,
+          site: currentSite
+        })
       }
     },
     components: {

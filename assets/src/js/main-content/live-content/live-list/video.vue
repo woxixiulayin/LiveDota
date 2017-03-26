@@ -1,5 +1,6 @@
 <template>
   <li class="live-item" :style="{width: itemWidth +'px'}">
+    <a :href="video.link" target="_blank">
     <div class="video-cover">
       <img :src='video.img' alt="" class="video-img" />
       <div class="play-mask"></div>
@@ -9,6 +10,7 @@
       <span class="video-nickname">{{video.name}}</span>
       <span class="video-nums">{{video.nums}}</span>
     </div>
+    </a>
   </li>
 </template>
 

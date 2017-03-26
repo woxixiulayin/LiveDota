@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5251c274-c60a-4931-9438-746604c63e06" name="Default" comment="修改获取lives的log">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/list.vue" afterPath="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/list.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/video.vue" afterPath="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/video.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/vuexModule.js" afterPath="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/vuexModule.js" />
     </list>
     <ignored path="LiveDota.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,10 +63,10 @@
       <file leaf-file-name="list.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/list.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
+            <state relative-caret-position="120">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding>
-                <element signature="e#227#258#0" expanded="true" />
+                <element signature="e#248#279#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,8 +75,8 @@
       <file leaf-file-name="vuexModule.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/vuexModule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="24" />
+            <state relative-caret-position="34">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -106,8 +109,8 @@
       <file leaf-file-name="video.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/video.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="216">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -133,7 +136,6 @@
         <option value="$PROJECT_DIR$/assets/src/js/lib/ajax.js" />
         <option value="$PROJECT_DIR$/server/src/config.js" />
         <option value="$PROJECT_DIR$/assets/src/js/store/state.js" />
-        <option value="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/vuexModule.js" />
         <option value="$PROJECT_DIR$/assets/src/js/main.js" />
         <option value="$PROJECT_DIR$/assets/src/js/main-content/live-content/index.vue" />
         <option value="$PROJECT_DIR$/assets/src/js/store/index.js" />
@@ -141,6 +143,8 @@
         <option value="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/index.js" />
         <option value="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/liveList.vue" />
         <option value="$PROJECT_DIR$/assets/src/js/router/index.js" />
+        <option value="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/video.vue" />
+        <option value="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/vuexModule.js" />
         <option value="$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/list.vue" />
       </list>
     </option>
@@ -584,7 +588,7 @@
       <workItem from="1478064631352" duration="902000" />
       <workItem from="1488794890824" duration="54000" />
       <workItem from="1490510945063" duration="855000" />
-      <workItem from="1490511989000" duration="16182000" />
+      <workItem from="1490511989000" duration="17609000" />
     </task>
     <task id="LOCAL-00001" summary="add CategorySiteLives">
       <created>1490514537645</created>
@@ -615,7 +619,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17993000" />
+    <option name="totallyTimeSpent" value="19420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1055,8 +1059,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/vuexModule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="24" />
+        <state relative-caret-position="34">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1065,18 +1069,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/video.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="216">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
+        <state relative-caret-position="120">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding>
-            <element signature="e#227#258#0" expanded="true" />
+            <element signature="e#248#279#0" expanded="true" />
           </folding>
         </state>
       </provider>

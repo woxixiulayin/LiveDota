@@ -11,7 +11,7 @@ const state = Object.keys(gameCategory).reduce((categorySiteLives, category) => 
 
 const mutations = {
   setCategorySiteLives (state, {category, site, lives}) {
-    console.log(state)
+    console.log(`mutations setCategorySiteLives`)
     state[category][site] = lives
   }
 }
