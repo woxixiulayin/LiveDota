@@ -49,6 +49,8 @@
           router.push('/')
         } else if (gameCategory[currentCategory].indexOf(currentSite) === -1) {
           router.push(`/${currentCategory}/${gameCategory[currentCategory][0]}`)
+        } else {
+          this.currentLives = this.$store.state.categorySiteLives[currentCategory][currentSite]
         }
       }
     },
