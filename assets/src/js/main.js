@@ -23,3 +23,5 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+
+store.dispatch('fetchCategorySiteLives', {category: 'DOTA', site: '熊猫'})

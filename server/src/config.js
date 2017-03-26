@@ -13,36 +13,36 @@ export const sitesMap = {
     "全民": {
         "spiderName": "Quanminspider",
         "gameUrls": {
-            "dota": "http://www.quanmin.tv/json/categories/dota2/list.json"
+            "DOTA": "http://www.quanmin.tv/json/categories/dota2/list.json"
         }
     },
     "熊猫": {
         "spiderName": "Pandaspider",
         "gameUrls": {
-            "dota": "http://www.panda.tv/cate/dota2"
+            "DOTA": "http://www.panda.tv/cate/dota2"
         }
     },
     "战旗": {
         "spiderName": "Zhanqispider",
         "gameUrls": {
-            "dota": "www.zhanqi.tv/games/dota2"
+            "DOTA": "www.zhanqi.tv/games/dota2"
         }
     },
     "虎牙": {
         "spiderName": "Huyaspider",
         "gameUrls": {
-            "dota": "http://www.huya.com/g/6"
+            "DOTA": "http://www.huya.com/g/6"
         }
     },
     "斗鱼": {
         "spiderName": "Douyuspider",
         "gameUrls": {
-            "dota": "https://www.douyu.com/directory/game/LOL"
+            "DOTA": "https://www.douyu.com/directory/game/DOTA2"
         }
     }
 }
 export var outDateTime = 2 * 60;
-export var categories = ['dota', 'lol', 'hearthstone'];
+export var categories = ['DOTA', 'LOL', '炉石'];
 export { DEBUG, jobs };
 export var types = _.keys(sitesMap).concat(['rank', 'all']);
 export var rankNum = 10;
