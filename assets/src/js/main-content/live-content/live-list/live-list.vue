@@ -79,25 +79,25 @@
     flex-grow: 1;
     flex-shrink: 1;
   }
-  
+
   .categoryList-enter-active {
     transition: all .4s;
     transform: scale(1);
   }
-  
+
   .categoryList-leave-active {
     transition: all .4s;
     opacity: 0;
   }
-  
+
   .categoryList-leave {
     transform: scale(1);
   }
-  
+
   .categoryList-enter {
     transform: scale(0);
   }
-  
+
   .video-list {
     flex-wrap: wrap;
     padding: 5px;
