@@ -1,23 +1,23 @@
 <template>
   <div class="header">
     <ul class="header-nav">
-      <router-link tag="li" class="header-nav-item trans-dura-4" active-class="current" :to="`/${item}`" v-for='(item, index) in items' :key="index">
-          {{item}}
+      <router-link tag="li" class="header-nav-item trans-dura-4" active-class="current" :to="`/${category}/${categoryCurrentSite[category]}`" v-for='category in categories' :key="category">
+          {{category}}
       </router-link>
     </ul>
   </div>
 </template>
 
 <script>
-  import {
-    gameCategory
-  } from 'js/config'
-
+  import { mapState } from 'vuex'
   export default {
-    data: () => {
-      return {
-        items: Object.keys(gameCategory)
-      }
+    computed: {
+      categories: function () {
+        return this.$store.getters.categories
+      },
+      ...mapState({
+        categoryCurrentSite: state => state.ui.categoryCurrentSite
+      })
     }
   }
 

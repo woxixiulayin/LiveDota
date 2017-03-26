@@ -2,7 +2,7 @@
 <div class="main-content">
   <div class="live-list-wrap">
   <ul class="live-list-header">
-    <router-link tag="li" v-for="site in siteList" class="live-list-site trans-dura-4" active-class="current" :to="`/${currentCategory}/${site}`" :key="site">
+    <router-link @click.native="handleClick(site)" tag="li" v-for="site in siteList" class="live-list-site trans-dura-4" active-class="current" :to="`/${currentCategory}/${site}`" :key="site">
       {{site}}
     </router-link>
   </ul>
@@ -29,12 +29,8 @@ export default {
     rankSection
   },
   methods: {
-    handleClick: function (vm) {
-      this.$http.get(`/live/dota/${encodeURIComponent(vm.name)}`).then(data => {
-        console.log(data.body)
-        console.log(this.value)
-        this.siteVideoList = data.body
-      })
+    handleClick: function (site) {
+      this.$store.commit('setCategoryCurrentSite', {category: this.currentCategory, site: site})
     }
   }
 }

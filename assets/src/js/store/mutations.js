@@ -1,5 +1,6 @@
-import state from './'
-
-export function setCategorySiteVideos (category, site, videoList) {
-  state[category][site] = videoList
+export default {
+  setCategoryCurrentSite: (state, payload) => {
+    const { category, site } = payload
+    state.ui.categoryCurrentSite[category] = site
+  }
 }

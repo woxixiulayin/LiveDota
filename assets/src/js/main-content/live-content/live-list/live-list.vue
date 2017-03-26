@@ -8,7 +8,7 @@
   // import store from 'js/store'
   import videoItem from './video'
   import {gameCategory} from 'js/config'
-  import router from '../../../router'
+  import router from 'js/router'
 
   const videoMaxWidth = 380
   const videoMinWidth = 220
