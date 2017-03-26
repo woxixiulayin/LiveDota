@@ -1,6 +1,8 @@
 <template>
   <div class="live-list" ref="liveSection">
-    {{currentLives}}
+    <video-item v-for="video in currentLives" :video="video">
+
+    </video-item>
   </div>
 </template>
 
@@ -8,7 +10,7 @@
   // import store from '/js/store'
   import videoItem from './video'
   import {gameCategory} from '/js/config'
-  import router from '/js/router'
+//  import router from '/js/router'
 
   const videoMaxWidth = 380
   const videoMinWidth = 220
@@ -30,6 +32,7 @@
     name: 'live-list',
     data: function () {
       return {
+        itemWidth: 200,
         currentCategory: 'DOTA',
         currentSite: gameCategory['DOTA'][0]
       }
@@ -39,17 +42,27 @@
         return this.$store.state.categorySiteLives[this.currentCategory][this.currentSite]
       }
     },
+    beforeRouteEnter (to, from, next) {
+      let {currentCategory, currentSite} = to.params
+      if (Object.keys(gameCategory).indexOf(currentCategory) === -1) {
+        next('/')
+      } else if (gameCategory[currentCategory].indexOf(currentSite) === -1) {
+        console.log(1)
+        next(`/${currentCategory}/${gameCategory[currentCategory][0]}`)
+      } else {
+        next(vm => {
+          console.log(currentCategory)
+          vm.currentCategory = currentCategory
+          vm.currentSite = currentSite
+          vm.$store.dispatch('fetchCategorySiteLives', {
+            category: currentCategory,
+            site: currentSite
+          })
+        })
+      }
+    },
     watch: {
       '$route' (to, from) {
-        let {currentCategory, currentSite} = to.params
-        if (Object.keys(gameCategory).indexOf(currentCategory) === -1) {
-          router.push('/')
-        } else if (gameCategory[currentCategory].indexOf(currentSite) === -1) {
-          router.push(`/${currentCategory}/${gameCategory[currentCategory][0]}`)
-        } else {
-          this.currentCategory = currentCategory
-          this.currentSite = currentSite
-        }
       }
     },
     components: {
