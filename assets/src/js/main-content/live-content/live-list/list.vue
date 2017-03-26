@@ -39,7 +39,6 @@
     computed: {
       currentLives: function () {
         let lives = this.$store.state.categorySiteLives[this.currentCategory][this.currentSite]
-        console.log(lives)
         if (!Array.isArray(lives) || lives.length === 0) {
           this.noData = true
         } else {
@@ -55,7 +54,14 @@
       } else if (gameCategory[currentCategory].indexOf(currentSite) === -1) {
         next(`/${currentCategory}/${gameCategory[currentCategory][0]}`)
       } else {
-        next()
+        next(vm => {
+          vm.currentCategory = currentCategory
+          vm.currentSite = currentSite
+          vm.$store.dispatch('fetchCategorySiteLives', {
+            category: currentCategory,
+            site: currentSite
+          })
+        })
       }
     },
     watch: {

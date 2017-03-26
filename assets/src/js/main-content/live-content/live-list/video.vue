@@ -6,7 +6,7 @@
       <div class="play-mask"></div>
     </div>
     <div class="video-title">{{video.title}}</div>
-    <div class="video-info">
+    <div class="video-info cleaerfix">
       <span class="video-nickname">{{video.name}}</span>
       <span class="video-nums">{{video.nums}}</span>
     </div>
@@ -33,42 +33,52 @@
     display: inline-flex;
     flex-flow: row wrap;
     overflow: hidden;
+    a {
+      color: #333;
+      display: block;
+      text-align: left;
+      width: 100%;
+      display: inline-block;
+    }
     .video-cover {
       position: relative;
       width: 100%;
       height: 158px;
+    &:hover {
+      .play-mask {
+        left: 0;
+      }
+     }
       img {
         width: 100%;
         height: 100%;
       }
       .play-mask {
         position: absolute;
-        left: 0;
-        height: 0;
+        left: -9999px;
+        top: 0;
         width: 100%;
         height: 100%;
-        opacity: 0;
+        opacity: .5;
         background: #fff;
       }
     }
     .video-title {
-      margin-left: 5px;
+      padding-left: 2px;
       width: 100%;
       line-height: 30px;
       white-space: nowrap;
       font-size: 15px;
     }
     .video-info {
-      margin-left: 5px;
+      padding: 0 8px;
       font-size: 14px;
-      width: 100%;
+      color: #666;
       .video-nickname {
-        margin-left: 3px;
         float: left;
       }
       .video-nums {
         float: right;
-        margin-right: 5px;
       }
     }
   }
