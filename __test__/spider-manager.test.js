@@ -1,10 +1,10 @@
 import jest from 'jest';
-import { mongoose } from '../dev/server/db/db';
-import sitesMap from '../dev/server/config';
+import { mongoose } from '../server/src/db/db';
+import sitesMap from '../server/src/config';
 import _ from 'lodash';
-import * as spiderManager from '../dev/server/spider-manager';
-import Douyuspider from "../dev/server/spider/douyuspider";
-import Huyaspider from "../dev/server/spider/huyaspider";
+import * as spiderManager from '../server/src/spider-manager';
+import Douyuspider from "../server/src/spider/douyuspider";
+import Huyaspider from "../server/src/spider/huyaspider";
 
 describe('test dev/server/spider-manajer.js', () => {
     beforeEach(async function (done) {

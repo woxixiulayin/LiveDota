@@ -1,8 +1,8 @@
 import 'jest';
 // jest.enableAutomock();
 import mongoose  from "mongoose";
-import {Live} from "../dev/server/model/models";
-import {getLivesByParams} from "../dev/server/spider-manager.js"
+import {Live} from "../server/src/model/models";
+import {getLivesByParams} from "../server/src/spider-manager.js"
 import fs from 'fs';
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;

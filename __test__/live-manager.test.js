@@ -1,10 +1,8 @@
 //@flow
-import jset from 'jest';
-import * as Spiders from "../dev/server/spider/spiderindex";
 import {isCategoryOutOfDate,
     categoryUpdateTime,
     workList,
-    getLives} from '../dev/server/live-manager'
+    getLives} from '../server/src/live-manager'
 import _ from 'lodash';
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;
 describe('test live-manager', () => {
