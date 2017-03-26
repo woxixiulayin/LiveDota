@@ -32,7 +32,8 @@ const router = new Router({
           component: liveList
         }
       ]
-    }
+    },
+    {path: '*', redirect: '/'}
   ]
 })
 

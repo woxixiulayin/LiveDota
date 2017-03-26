@@ -1,6 +1,6 @@
 <template>
   <div class="live-list" ref="liveSection">
-    {{currentSite}}
+    {{currentLives}}
   </div>
 </template>
 
@@ -30,7 +30,7 @@
     name: 'live-list',
     data: function () {
       return {
-        categoryCurrentSiteMap: {}
+        currentLives: {}
       }
     },
     // 计算属性会缓存数据
@@ -44,12 +44,11 @@
     },
     watch: {
       '$route' (to, from) {
-        let {currentCategory, currentSite, categoryCurrentSiteMap} = this
-        console.log(90)
-        if (gameCategory[currentCategory].indexOf(currentSite) === -1) {
+        let {currentCategory, currentSite} = this
+        if (Object.keys(gameCategory).indexOf(currentCategory) === -1) {
+          router.push('/')
+        } else if (gameCategory[currentCategory].indexOf(currentSite) === -1) {
           router.push(`/${currentCategory}/${gameCategory[currentCategory][0]}`)
-        } else {
-          categoryCurrentSiteMap[currentCategory] = currentSite
         }
       }
     },
