@@ -17,6 +17,7 @@ import rankSection from './rank-section'
 import {gameCategory} from '/js/config'
 
 export default {
+  name: 'live-content',
   computed: {
     siteList: function () {
       return gameCategory[this.$route.params.currentCategory]

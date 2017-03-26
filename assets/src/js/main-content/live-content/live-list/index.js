@@ -1,5 +1,3 @@
-import liveList from './live-list'
-import liveListModul from './vuexModule'
+import liveListModule from './vuexModule'
 
-export {liveListModul}
-export default liveList
+export {liveListModule}

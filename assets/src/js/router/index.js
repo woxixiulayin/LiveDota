@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import liveContent from '/js/main-content/live-content'
-import liveList from '/js/main-content/live-content/live-list'
+import liveList from '/js/main-content/live-content/live-list/list.vue'
 import {gameCategory} from '/js/config'
 
 Vue.use(Router)
-
+console.log(liveList)
 const defaultCategory = Object.keys(gameCategory)[0]
-
 const router = new Router({
   routes: [
     {
@@ -20,7 +19,7 @@ const router = new Router({
       // 导航的路径中只有category时进行重定向，会对所有符合该匹配的路由进行跳转
       redirect: to => {
         let currentCategory = to.params.currentCategory
-        if (!Object.keys(gameCategory).indexOf(currentCategory)) {
+        if (Object.keys(gameCategory).indexOf(currentCategory) === -1) {
           // 重定向到下级路由
           currentCategory = defaultCategory
         }

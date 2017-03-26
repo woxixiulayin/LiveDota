@@ -27,6 +27,7 @@
     return itemWidth - 1
   }
   export default {
+    name: 'live-list',
     data: function () {
       return {
         categoryCurrentSiteMap: {}
@@ -44,6 +45,7 @@
     watch: {
       '$route' (to, from) {
         let {currentCategory, currentSite, categoryCurrentSiteMap} = this
+        console.log(90)
         if (gameCategory[currentCategory].indexOf(currentSite) === -1) {
           router.push(`/${currentCategory}/${gameCategory[currentCategory][0]}`)
         } else {
@@ -75,6 +77,7 @@
 
 <style lang='scss' scoped>
 @import "~@/css/variable.scss";
+
   .live-list-wrap{
     flex-grow: 1;
     flex-shrink: 1;

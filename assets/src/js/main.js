@@ -24,4 +24,4 @@ new Vue({
   components: { App }
 })
 
-store.dispatch('fetchCategorySiteLives', {category: 'DOTA', site: '熊猫'})
+store.commit('setCategorySiteLives', {category: 'DOTA', site: '熊猫', lives: [2, 3, 4]})

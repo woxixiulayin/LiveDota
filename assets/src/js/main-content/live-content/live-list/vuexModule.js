@@ -28,6 +28,7 @@ const actions = {
       category ${category} support site list is: [${gameCategory[category]}]
 `)
     }
+    // 获得游戏种类下指定网站的直播
     ajax.get(`/${category}/${site}`)
       .then(data => {
         if (Array.isArray(data)) {
