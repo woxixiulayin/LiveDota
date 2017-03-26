@@ -8,6 +8,7 @@
   // import store from 'js/store'
   import videoItem from './video'
   import {gameCategory} from 'js/config'
+  import router from '../../../router'
 
   const videoMaxWidth = 380
   const videoMinWidth = 220
@@ -42,8 +43,11 @@
     },
     watch: {
       '$route' (to, from) {
-        if (gameCategory[this.currentCategory].indexOf(this.currentSite) === -1) {
-
+        let {currentCategory, currentSite, categoryCurrentSiteMap} = this
+        if (gameCategory[currentCategory].indexOf(currentSite) === -1) {
+          router.push(`/${currentCategory}/${gameCategory[currentCategory][0]}`)
+        } else {
+          categoryCurrentSiteMap[currentCategory] = currentSite
         }
       }
     },
