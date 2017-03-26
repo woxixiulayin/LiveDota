@@ -1,65 +1,70 @@
 <template>
-  <div class="live-list">
+  <div class="live-list" ref="liveSection">
+    {{currentSite}}
   </div>
 </template>
 
 <script>
   // import store from 'js/store'
   import videoItem from './video'
-  // import {gameCategory} from 'js/config'
+  import {gameCategory} from 'js/config'
 
-  // const videoMaxWidth = 380
-  // const videoMinWidth = 220
-  // const itemMargin = 10
-  // const listPadding = 5
+  const videoMaxWidth = 380
+  const videoMinWidth = 220
+  const itemMargin = 10
+  const listPadding = 5
 
-  // function getItemWidth (width) {
-  //   let itemWidth = videoMinWidth
-  //   for (var i = 0; i < 7; i++) {
-  //     let tempWidth = (width - i * itemMargin - listPadding * 2) / i
-  //     if (tempWidth < videoMaxWidth && tempWidth > videoMinWidth) {
-  //       itemWidth = tempWidth
-  //       break
-  //     }
-  //   }
-  //   return itemWidth - 1
-  // }
+  function getItemWidth (width) {
+    let itemWidth = videoMinWidth
+    for (var i = 0; i < 7; i++) {
+      let tempWidth = (width - i * itemMargin - listPadding * 2) / i
+      if (tempWidth < videoMaxWidth && tempWidth > videoMinWidth) {
+        itemWidth = tempWidth
+        break
+      }
+    }
+    return itemWidth - 1
+  }
   export default {
+    data: function () {
+      return {
+        categoryCurrentSiteMap: {}
+      }
+    },
     // 计算属性会缓存数据
-    //   currentSiteName: function () {
-    //     const currentCategory = this.currentCategory
-    //     console.log(this.categorySites[currentCategory][this.currentSiteIndexMap.get(currentCategory)])
-    //     return this.categorySites[currentCategory][this.currentSiteIndexMap.get(currentCategory)]
-    //   }
-    // },
+    computed: {
+      currentCategory: function () {
+        return this.$route.params.currentCategory
+      },
+      currentSite: function () {
+        return this.$route.params.currentSite
+      }
+    },
+    watch: {
+      '$route' (to, from) {
+        if (gameCategory[this.currentCategory].indexOf(this.currentSite) === -1) {
+
+        }
+      }
+    },
     components: {
       videoItem
     },
     mounted () {
-      // const liveSection = this.$refs.liveSection
-      // console.log(liveSection)
-      // // const that = this
-      // const reSizeIfWidthChange = (() => {
-      //   let lastWidth = Math.floor(liveSection.clientWidth)
-      //   return () => {
-      //     let width = Math.floor(liveSection.clientWidth)
-      //     if (width !== lastWidth) {
-      //       lastWidth = width
-      //       this.itemWidth = getItemWidth(width)
-      //     }
-      //   }
-      // })()
-      // setInterval(reSizeIfWidthChange, 400)
+      const liveSection = this.$refs.liveSection
+      // const that = this
+      const reSizeIfWidthChange = (() => {
+        let lastWidth = Math.floor(liveSection.clientWidth)
+        return () => {
+          let width = Math.floor(liveSection.clientWidth)
+          if (width !== lastWidth) {
+            lastWidth = width
+            this.itemWidth = getItemWidth(width)
+          }
+        }
+      })()
+      setInterval(reSizeIfWidthChange, 400)
     }
-    // methods: {
-    //   handleClick: function (vm) {
-    //     this.$http.get(`/live/dota/${encodeURIComponent(vm.name)}`).then(data => {
-    //       console.log(data.body)
-    //       console.log(this.value)
-    //       this.siteVideoList = data.body
-    //     })
-    //   }
-    // }
   }
 
 </script>

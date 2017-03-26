@@ -1,9 +1,10 @@
-import state from './state'
-import mutations from './mutations'
+// import mutations from './mutations'
+import Vuex from 'vuex'
 
-const store = {
-  state,
-  mutations
-}
+const store = new Vuex.Store({
+  state: {
+    lives: []
+  }
+})
 
 export default store

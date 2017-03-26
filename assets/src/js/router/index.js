@@ -29,7 +29,7 @@ const router = new Router({
       children: [
         {
           // site的过滤可以放在组件中进行检测跳转
-          path: ':site',
+          path: ':currentSite',
           component: liveList
         }
       ]

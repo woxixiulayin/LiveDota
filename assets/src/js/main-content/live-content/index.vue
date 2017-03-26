@@ -6,7 +6,7 @@
       {{site}}
     </router-link>
   </ul>
-    <!--<router-view></router-view>-->
+      <router-view></router-view>
       </div>
     <rank-section :currentCategory='$route.params.currentCategory'/>
 </div>
@@ -19,7 +19,6 @@ import {gameCategory} from 'js/config'
 export default {
   computed: {
     siteList: function () {
-      console.log(this.$route.params)
       return gameCategory[this.$route.params.currentCategory]
     },
     currentCategory: function () {
@@ -28,6 +27,15 @@ export default {
   },
   components: {
     rankSection
+  },
+  methods: {
+    handleClick: function (vm) {
+      this.$http.get(`/live/dota/${encodeURIComponent(vm.name)}`).then(data => {
+        console.log(data.body)
+        console.log(this.value)
+        this.siteVideoList = data.body
+      })
+    }
   }
 }
 
@@ -49,14 +57,18 @@ export default {
     display: flex;
   }
 
+.live-list-wrap {
+  flex-grow: 1;
+}
 .live-list-header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding-top: 8px;
+  border-bottom: 1px solid $activeColor;
 }
 
-.current {
+.current.current {
   border-bottom: 3px solid $activeColor;
   color: $activeColor;
 }
@@ -65,7 +77,8 @@ export default {
   display: inline;
   padding: 0 .5em;
   cursor: pointer;
-  margin-bottom: 2px;
+  border-bottom: 3px solid transparent;
+  width: 100px;
   &:hover {
     color: $activeColor;
   }

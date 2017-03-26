@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import VueResource from 'vue-resource'
+import vuex from 'vuex'
 import {Button, Menu, MenuItem, Tabs, TabPane} from 'element-ui'
 import '@/css/index.scss'
 
@@ -12,7 +12,7 @@ Vue.use(Menu)
 Vue.use(MenuItem)
 Vue.use(Tabs)
 Vue.use(TabPane)
-Vue.use(VueResource)
+Vue.use(vuex)
 
 Vue.config.productionTip = false
 
