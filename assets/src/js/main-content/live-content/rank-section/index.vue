@@ -9,7 +9,7 @@
   </section>
 </template>
 <script>
-  import store from 'js/store'
+  import store from '/js/store'
 
   export default {
     props: ['currentCategory'],

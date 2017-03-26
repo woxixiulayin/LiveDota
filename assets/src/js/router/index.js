@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import liveContent from 'js/main-content/live-content'
-import liveList from 'js/main-content/live-content/live-list'
-import {gameCategory} from 'js/config'
+import liveContent from '/js/main-content/live-content'
+import liveList from '/js/main-content/live-content/live-list'
+import {gameCategory} from '/js/config'
 
 Vue.use(Router)
 

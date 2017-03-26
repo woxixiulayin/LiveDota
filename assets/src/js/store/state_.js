@@ -1,6 +1,6 @@
 import {
   gameCategory
-} from 'js/config'
+} from '/js/config'
 
 const state = {
   videoStore: Object.keys(gameCategory).reduce((categoryVideoMap, category) => {
