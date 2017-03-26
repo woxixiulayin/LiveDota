@@ -60,8 +60,8 @@
       <file leaf-file-name="list.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/list.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="52" column="94" selection-start-line="52" selection-start-column="94" selection-end-line="52" selection-end-column="94" />
+            <state relative-caret-position="168">
+              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
               <folding>
                 <element signature="e#144#175#0" expanded="true" />
               </folding>
@@ -584,7 +584,7 @@
       <workItem from="1478064631352" duration="902000" />
       <workItem from="1488794890824" duration="54000" />
       <workItem from="1490510945063" duration="855000" />
-      <workItem from="1490511989000" duration="13516000" />
+      <workItem from="1490511989000" duration="14445000" />
     </task>
     <task id="LOCAL-00001" summary="add CategorySiteLives">
       <created>1490514537645</created>
@@ -615,7 +615,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15327000" />
+    <option name="totallyTimeSpent" value="16256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1073,8 +1073,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="52" column="94" selection-start-line="52" selection-start-column="94" selection-end-line="52" selection-end-column="94" />
+        <state relative-caret-position="168">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
           <folding>
             <element signature="e#144#175#0" expanded="true" />
           </folding>

@@ -30,27 +30,25 @@
     name: 'live-list',
     data: function () {
       return {
-        currentLives: {}
+        currentCategory: 'DOTA',
+        currentSite: gameCategory['DOTA'][0]
       }
     },
-    // 计算属性会缓存数据
     computed: {
-      currentCategory: function () {
-        return this.$route.params.currentCategory
-      },
-      currentSite: function () {
-        return this.$route.params.currentSite
+      currentLives: function () {
+        return this.$store.state.categorySiteLives[this.currentCategory][this.currentSite]
       }
     },
     watch: {
       '$route' (to, from) {
-        let {currentCategory, currentSite} = this
+        let {currentCategory, currentSite} = to.params
         if (Object.keys(gameCategory).indexOf(currentCategory) === -1) {
           router.push('/')
         } else if (gameCategory[currentCategory].indexOf(currentSite) === -1) {
           router.push(`/${currentCategory}/${gameCategory[currentCategory][0]}`)
         } else {
-          this.currentLives = this.$store.state.categorySiteLives[currentCategory][currentSite]
+          this.currentCategory = currentCategory
+          this.currentSite = currentSite
         }
       }
     },
