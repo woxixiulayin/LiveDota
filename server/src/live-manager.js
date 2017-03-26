@@ -41,8 +41,7 @@ export const workList = (() => {
 
 export var isCategoryOutOfDate = category => {
     let res;
-    if (!_.keys(categories).indexOf(category)) return;
-    res = new Date() - categoryUpdateTime[category] > outDateTime; 
+    res = new Date() - categoryUpdateTime[category] > outDateTime;
     return res;
 }
 

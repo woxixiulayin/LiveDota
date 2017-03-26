@@ -43,7 +43,7 @@ export class Live extends LiveModel {
 
     static async getLivesByCategoryAndType (category='none', type = 'all', limit = 100, sort = {}) {
         let lives = [], query = {};
-        console.log(`get lives from db`);
+        console.log(`get [${category}-${type}] lives from db`);
         if (types.indexOf(type) === -1) {
             throw new Error(`${type} is not search type`);
         }

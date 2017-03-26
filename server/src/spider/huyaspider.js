@@ -11,7 +11,6 @@ export default class Huyaspider extends Spider {
 
     //具体的爬取策略
     pickInfo (html) {
-        console.log(html)
         let lives = [],
             parse = $.load(html),
             list = parse("li.game-live-item"),
