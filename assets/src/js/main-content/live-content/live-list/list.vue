@@ -1,6 +1,6 @@
 <template>
   <div class="live-list" ref="liveSection">
-    <video-item v-for="video in currentLives" :video="video">
+    <video-item v-for="video in currentLives" :video="video" :itemWidth="itemWidth">
 
     </video-item>
   </div>
@@ -32,7 +32,7 @@
     name: 'live-list',
     data: function () {
       return {
-        itemWidth: 200,
+        itemWidth: 300,
         currentCategory: 'DOTA',
         currentSite: gameCategory['DOTA'][0]
       }

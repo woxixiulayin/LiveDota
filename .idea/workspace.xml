@@ -60,10 +60,10 @@
       <file leaf-file-name="list.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/list.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+            <state relative-caret-position="48">
+              <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
               <folding>
-                <element signature="e#204#235#0" expanded="true" />
+                <element signature="e#227#258#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,8 +106,8 @@
       <file leaf-file-name="video.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/video.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="360">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -584,7 +584,7 @@
       <workItem from="1478064631352" duration="902000" />
       <workItem from="1488794890824" duration="54000" />
       <workItem from="1490510945063" duration="855000" />
-      <workItem from="1490511989000" duration="16114000" />
+      <workItem from="1490511989000" duration="16182000" />
     </task>
     <task id="LOCAL-00001" summary="add CategorySiteLives">
       <created>1490514537645</created>
@@ -615,7 +615,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17925000" />
+    <option name="totallyTimeSpent" value="17993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1065,18 +1065,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/video.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="360">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/js/main-content/live-content/live-list/list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        <state relative-caret-position="48">
+          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
           <folding>
-            <element signature="e#204#235#0" expanded="true" />
+            <element signature="e#227#258#0" expanded="true" />
           </folding>
         </state>
       </provider>
