@@ -13,6 +13,7 @@ export default class Huyaspider extends Spider {
     pickInfo (html) {
         console.log(html)
         let lives = [],
+            parse = $.load(html),
             list = parse("li.game-live-item"),
             category = parse("div.box-hd h2").text(),
             website = "虎牙";
@@ -21,7 +22,7 @@ export default class Huyaspider extends Spider {
                 nums = this.transWan($(ele).find("i.js-num").text()),
                 title = $(ele).find("a.title").text(),
                 link = $(ele).find("a").attr("href"),
-                img = $(ele).find("span.imgbox>img").attr("src"),
+                img = $(ele).find(".video-info .pic").attr("data-original"),
                 live = new Live({name, nums, title, link, category, img, website});
                 lives.push(live);
         })
