@@ -45,14 +45,14 @@ export let getLivesByParams = async (site, category) => {
     let lives = [];
     let url = getUrlByParams(site, category),
         spider = createSpiderByParams(site, category);
+    console.log(`getLivesByParams: begin to spider ${category}-${site} lives from net `);
     try {
         lives = await spider.parseUrl(url);
     } catch (e) {
-        console.log(`getLivesByParams`);
         console.log(e.stack);
     }
     if (!lives || lives.length < 1) {
-        console.log(`get no ${category} lvies from ${site} `);
+        console.log(`cat not spider ${category}-${site} lives from net  `);
         return [];
     }
     //重新定义每个live的类别
