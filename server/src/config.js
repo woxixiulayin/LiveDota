@@ -41,6 +41,7 @@ export const sitesMap = {
         }
     }
 }
+
 export var outDateTime = 2 * 60 * 1000; // 单位毫秒
 export var categories = ['DOTA', 'LOL', '炉石'];
 export { DEBUG, jobs };

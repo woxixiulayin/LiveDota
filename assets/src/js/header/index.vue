@@ -33,7 +33,7 @@
     flex-shrink: 0;
     border-bottom: 2px solid $activeColor;
   }
-  
+
   .header-nav {
     max-width: 1200px;
     height: 30px;
@@ -42,7 +42,7 @@
     background: transparent;
     text-align: center;
   }
-  
+
   .header-nav-item {
     display: inline-block;
     width: 80px;
@@ -64,7 +64,7 @@
     font-size: 17px;
     // color : #333;
   }
-  
+
   .is-active {
     border-bottom: 5px solid #20a0ff;
   }

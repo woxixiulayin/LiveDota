@@ -23,11 +23,11 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8000,
+    port: 8888,
     // autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     // assetsPublicPath: '/',
-    assetsPublicPath: 'http://0.0.0.0:8000/',
+    assetsPublicPath: 'http://0.0.0.0:8888/',
     // proxyTable: {
     //   '/live/**': {
     //     target: 'http://0.0.0.0:8080',

@@ -28,7 +28,7 @@ var sendPage = function (ctx, filePath) {
 }
 
 //静态文件
-app.use(serve(pagesRoot));
+app.use(serve(assetsPath));
 
 app.use(async(ctx, next) => {
     if (ctx.path === '/') 
