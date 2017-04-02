@@ -1,6 +1,6 @@
 <template>
   <div class="live-list" ref="liveSection">
-    <video-item v-show="!noData" v-for="video in currentLives" :video="video" :itemWidth="itemWidth">
+    <video-item v-show="!noData" v-for="video in currentLives" :video="video" :itemWidth="itemWidth" :key="video._id">
     </video-item>
     <div v-show="noData">暂无数据，请刷新</div>
   </div>
@@ -55,28 +55,28 @@
         next(`/${currentCategory}/${gameCategory[currentCategory][0]}`)
       } else {
         next(vm => {
-          vm.currentCategory = currentCategory
-          vm.currentSite = currentSite
-          vm.$store.dispatch('fetchCategorySiteLives', {
-            category: currentCategory,
-            site: currentSite
-          })
+          vm.setCurrentCategorySite(currentCategory, currentSite)
         })
       }
     },
     watch: {
       '$route' (to, from) {
         let {currentCategory, currentSite} = to.params
-        this.currentCategory = currentCategory
-        this.currentSite = currentSite
-        this.$store.dispatch('fetchCategorySiteLives', {
-          category: currentCategory,
-          site: currentSite
-        })
+        this.setCurrentCategorySite(currentCategory, currentSite)
       }
     },
     components: {
       videoItem
+    },
+    methods: {
+      setCurrentCategorySite (currentCategory, currentSite) {
+        this.currentCategory = currentCategory
+        this.currentSite = currentSite
+        this.$store.dispatch('updateLivesIfNeed', {
+          category: currentCategory,
+          site: currentSite
+        })
+      }
     },
     mounted () {
       const liveSection = this.$refs.liveSection

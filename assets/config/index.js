@@ -27,6 +27,7 @@ module.exports = {
     // autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     // assetsPublicPath: '/',
+    index: path.resolve(__dirname, '../dist/index.html'),
     assetsPublicPath: 'http://0.0.0.0:8888/',
     // proxyTable: {
     //   '/live/**': {

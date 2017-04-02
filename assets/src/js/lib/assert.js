@@ -1,4 +1,4 @@
-const assert = (condition, errMsg = 'error') =>{
+const assert = (condition, errMsg = 'error') => {
   if (!condition) {
     throw new Error(`[assert] error`)
   }

@@ -24,4 +24,3 @@ new Vue({
   components: { App }
 })
 
-store.commit('setCategorySiteLives', {category: 'DOTA', site: '熊猫', lives: [2, 3, 4]})
