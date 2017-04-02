@@ -103,6 +103,7 @@
   .live-list{
     flex-grow: 1;
     flex-shrink: 1;
+    margin-top: 35px;
   }
 
   .categoryList-enter-active {

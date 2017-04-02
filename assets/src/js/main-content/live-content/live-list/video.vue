@@ -8,7 +8,7 @@
     <div class="video-title">{{video.title}}</div>
     <div class="video-info cleaerfix">
       <span class="video-nickname">{{video.name}}</span>
-      <span class="video-nums">{{video.nums}}</span>
+      <span class="video-nums">{{video.nums > 10000 ? (video.nums / 10000).toFixed(1) + '万' : video.nums}}</span>
     </div>
     </a>
   </li>
