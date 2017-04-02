@@ -1,4 +1,4 @@
-import {gameCategory} from '/js/config'
+import {gameCategory} from 'js/config'
 
 const state = {
   ui: {

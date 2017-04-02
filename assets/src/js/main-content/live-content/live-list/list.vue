@@ -8,7 +8,7 @@
 
 <script>
   import videoItem from './video'
-  import {gameCategory} from '/js/config'
+  import {gameCategory} from 'js/config'
 
   const videoMaxWidth = 380
   const videoMinWidth = 220

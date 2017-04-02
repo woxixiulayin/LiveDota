@@ -1,5 +1,5 @@
-import {gameCategory} from '/js/config'
-import ajax from '/js/lib/ajax'
+import {gameCategory} from 'js/config'
+import ajaxOperation from 'js/ajaxOperation'
 
 const state = Object.keys(gameCategory).reduce((categorySiteLives, category) => {
   categorySiteLives[category] = gameCategory[category].reduce((siteLives, site) => {
@@ -29,13 +29,8 @@ const actions = {
 `)
     }
     // 获得游戏种类下指定网站的直播
-    ajax.get(`/${category}/${site}`)
-      .then(data => {
-        if (Array.isArray(data)) {
-          console.log({category, site, lives: data})
-          context.commit('setCategorySiteLives', {category, site, lives: data})
-        }
-      })
+    ajaxOperation.live.fetchLives({category, site})
+      .then(lives => context.commit('setCategorySiteLives', {category, site, lives: lives}))
   }
 }
 

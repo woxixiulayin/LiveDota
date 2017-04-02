@@ -14,7 +14,7 @@
 
 <script>
 import rankSection from './rank-section'
-import {gameCategory} from '/js/config'
+import {gameCategory} from 'js/config'
 
 export default {
   name: 'live-content',

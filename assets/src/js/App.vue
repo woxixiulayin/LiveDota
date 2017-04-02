@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import store from '/js/store'
-import myHeader from '/js/header'
+import store from 'js/store'
+import myHeader from 'js/header'
 
 console.log(store)
 export default {
