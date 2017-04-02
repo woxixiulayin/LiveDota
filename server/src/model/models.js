@@ -41,7 +41,7 @@ export class Live extends LiveModel {
         return await super.find({category}).exec();
     }
 
-    static async getLivesByCategoryAndType (category='none', type = 'all', limit = 100, sort = {}) {
+    static async getLivesByCategoryAndType (category='none', type = 'all', limit = 100) {
         let lives = [], query = {};
         console.log(`get [${category}-${type}] lives from db`);
         if (types.indexOf(type) === -1) {
@@ -52,17 +52,17 @@ export class Live extends LiveModel {
         } else if (type === 'rank') {
             query = {"category":category};
             limit = rankNum;
-            sort = {"nums": -1};
         } else if (Object.keys(sitesMap).indexOf(type) !== -1) {
             query = {"category":category, "website": type};
         }
         try {
-            lives = await super.find(query).sort(sort).limit(limit).exec();
+          // sort使用字符串选定属性来排序，object不行
+            lives = await super.find(query).limit(limit).sort('-nums').exec();
             return lives;
         } catch (e) {
             console.log(e.stack);
+            return [];
         }
-        return lives;
     }
 
     async findAndUpdate () {

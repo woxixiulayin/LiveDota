@@ -76,7 +76,7 @@ var getLivesFromNetBycategory = async category => {
  * param: category
  * param: type
  */
-export async function getLives(category = "none", type = "all", limit = 100, sort = {}) {
+export async function getLives(category = "none", type = "all", limit = 100) {
     let lives = [];
     if (categories.indexOf(category) === -1) {
         throw new Error(`no ${category} in categories`);
@@ -86,16 +86,13 @@ export async function getLives(category = "none", type = "all", limit = 100, sor
             console.log(`get lives from net`);
             workList.addWork(category);
             lives = await getLivesFromNetBycategory(category);
-            await Promise.all(lives.map(async live => {
-                //save lives
-                return live.findAndUpdate();
-            }));
+            await Promise.all(lives.map(async live => live.findAndUpdate()));
             workList.deleteWork(category);
         } catch (e) {
             console.log(e.stack);
             return [];
         }
     }
-    lives = await Live.getLivesByCategoryAndType(category, type, limit, sort);
+    lives = await Live.getLivesByCategoryAndType(category, type, limit);
     return lives;
 }
