@@ -27,7 +27,13 @@
 <style lang="scss">
   @import "~@/css/variable.scss";
   .rank-section {
+    position: fixed;
+    background-color: white;
+    z-index: 1;
     height: 100%;
+    top: 50px;
+    right: 0;
+    width: 350px;
     // width: $rightSideWidth;
     border-left: 1px solid $activeColor;
     flex-basis: $rightSideWidth;

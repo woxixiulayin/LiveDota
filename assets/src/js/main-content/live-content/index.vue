@@ -44,7 +44,10 @@ export default {
 .main-content {
   // margin-top: $headerHeight+1;
   // margin-right: $rightSideWidth;
+  position: relative;
+  top: 50px;
   display: flex;
+  margin-right: 350px;
   flex-direction: row;
   flex-grow: 1;
   height: 100%;
@@ -58,6 +61,10 @@ export default {
   flex-grow: 1;
 }
 .live-list-header {
+  position: fixed;
+  background: white;
+  z-index: 1;
+  width: calc(100% - 350px);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

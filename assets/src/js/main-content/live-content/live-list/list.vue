@@ -100,7 +100,7 @@
 <style lang='scss' scoped>
 @import "~@/css/variable.scss";
 
-  .live-list-wrap{
+  .live-list{
     flex-grow: 1;
     flex-shrink: 1;
   }
