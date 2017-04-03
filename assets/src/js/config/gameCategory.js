@@ -4,10 +4,12 @@ const gameCategory = {
   'DOTA': defaultSites,
   'DOTA2': defaultSites,
   'LOL': defaultSites,
+  '颜值': defaultSites,
   '炉石': defaultSites,
   '王者荣耀': defaultSites,
   '守望先锋': defaultSites,
-  '狼人杀': defaultSites
+  '狼人杀': defaultSites,
+  '魔兽世界': defaultSites
 }
 
 export default gameCategory

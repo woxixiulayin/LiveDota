@@ -43,16 +43,20 @@ const labelMaps = {
     "炉石": 'heartstone',
     "王者荣耀": 'wangzhe',
     "守望先锋": 'overwatch',
-    "狼人杀": 'tiantianlangrensha'
+    "狼人杀": 'tiantianlangrensha',
+    "魔兽世界": 'blizzard',
+    "颜值": 'showing'
   },
   "熊猫": {
-    "DOTA": "wra3",
+    "DOTA": "war3",
     "DOTA2": "dota2",
     "LOL": "lol",
     "炉石": "hearthstone",
     "王者荣耀": "kingglory",
     "守望先锋": "overwatch",
-    "狼人杀": 'langrensha'
+    "狼人杀": 'langrensha',
+    "魔兽世界": 'wow',
+    '颜值': 'yzdr'
   },
   "战旗": {
     "DOTA": "war3",
@@ -61,7 +65,9 @@ const labelMaps = {
     "炉石": "how",
     "王者荣耀": "wangzherongyao",
     "守望先锋": 'watch',
-    "狼人杀": 'langrensha'
+    "狼人杀": 'langrensha',
+    "魔兽世界": 'wow',
+    "颜值": 'xindong'
   },
   "虎牙": {
     "DOTA": "6",
@@ -70,7 +76,9 @@ const labelMaps = {
     "炉石": "393",
     "王者荣耀": "2336",
     "守望先锋": '2174',
-    "狼人杀": '2785'
+    "狼人杀": '2785',
+    "魔兽世界": 'wow',
+    '颜值': '1663'
   },
   "斗鱼": {
     "DOTA": "mszb",
@@ -79,7 +87,9 @@ const labelMaps = {
     "炉石": "how",
     "王者荣耀": "wzry",
     "守望先锋": 'Overwatch',
-    "狼人杀": 'werewolf'
+    "狼人杀": 'werewolf',
+    "魔兽世界": 'wow',
+    "颜值": 'yz'
   }
 }
 
@@ -111,7 +121,7 @@ export const sitesMap = {
 }
 
 export var outDateTime = 2 * 60 * 1000; // 单位毫秒
-export var categories = ['DOTA', 'DOTA2', 'LOL', '炉石', '王者荣耀', '守望先锋', '狼人杀'];
+export var categories = ['DOTA', 'DOTA2', 'LOL', '颜值', '炉石', '王者荣耀', '守望先锋', '狼人杀', '魔兽世界'];
 export {
   DEBUG,
   jobs
