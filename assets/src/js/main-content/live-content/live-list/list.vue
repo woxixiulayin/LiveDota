@@ -12,7 +12,7 @@
 
   const videoMaxWidth = 380
   const videoMinWidth = 220
-  const itemMargin = 10
+  const itemMargin = 20
   const listPadding = 5
 
   function getItemWidth (width) {

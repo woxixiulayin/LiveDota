@@ -3,7 +3,7 @@
     <a :href="video.link" target="_blank">
     <div class="video-cover">
       <img :src='video.img' alt="" class="video-img" />
-      <div class="play-mask"></div>
+      <div class="play-mask"><i class="iconfont">&#xe6fe;</i></div>
     </div>
     <div class="video-title">{{video.title}}</div>
     <div class="video-info cleaerfix">
@@ -27,12 +27,26 @@
     //min 250px
     height: 215px;
     // flex-basis: 250px;
-    border: 1px solid black;
+    border: 1px solid #ddd;
     background: white;
-    margin: 5px 5px;
+    margin: 10px 10px;
     display: inline-flex;
     flex-flow: row wrap;
     overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    transition: all .16s linear;
+    overflow: hidden;
+    &:hover {
+      border: 1px solid rgba(0,0,0,.1);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      & img {
+        transform: scale(1.1);
+      }
+      & .play-mask.play-mask {
+        top: 0;
+        transition: all .3s ease-in;
+      }
+    }
     a {
       color: #333;
       display: block;
@@ -44,23 +58,31 @@
       position: relative;
       width: 100%;
       height: 158px;
-    &:hover {
-      .play-mask {
-        left: 0;
-      }
-     }
+      overflow: hidden;
       img {
         width: 100%;
         height: 100%;
+        transition: all .3s ease-out;
       }
       .play-mask {
         position: absolute;
-        left: -9999px;
-        top: 0;
+        top: 100%;
+        left: 0;
         width: 100%;
         height: 100%;
-        opacity: .5;
-        background: #fff;
+        transition: all .3s ease-out;
+        text-align: center;
+        i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          color: white;
+          display: inline-block;
+          font-size: 60px;
+          opacity: .9;
+          transform: translate(-50%, -50%);
+          // trans
+        }
       }
     }
     .video-title {
