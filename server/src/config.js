@@ -40,31 +40,46 @@ const labelMaps = {
     "DOTA": 'war3',
     "DOTA2": 'dota2',
     "LOL": 'lol',
-    "炉石": 'heartstone'
+    "炉石": 'heartstone',
+    "王者荣耀": 'wangzhe',
+    "守望先锋": 'overwatch',
+    "狼人杀": 'tiantianlangrensha'
   },
   "熊猫": {
     "DOTA": "wra3",
     "DOTA2": "dota2",
     "LOL": "lol",
-    "炉石": "hearthstone"
+    "炉石": "hearthstone",
+    "王者荣耀": "kingglory",
+    "守望先锋": "overwatch",
+    "狼人杀": 'langrensha'
   },
   "战旗": {
     "DOTA": "war3",
     "DOTA2": "dota2",
     "LOL": "lol",
-    "炉石": "how"
+    "炉石": "how",
+    "王者荣耀": "wangzherongyao",
+    "守望先锋": 'watch',
+    "狼人杀": 'langrensha'
   },
   "虎牙": {
     "DOTA": "6",
     "DOTA2": "7",
     "LOL": "lol",
     "炉石": "393",
+    "王者荣耀": "2336",
+    "守望先锋": '2174',
+    "狼人杀": '2785'
   },
   "斗鱼": {
     "DOTA": "mszb",
     "DOTA2": "dota2",
     "LOL": "lol",
     "炉石": "how",
+    "王者荣耀": "wzry",
+    "守望先锋": 'Overwatch',
+    "狼人杀": 'werewolf'
   }
 }
 
@@ -96,7 +111,7 @@ export const sitesMap = {
 }
 
 export var outDateTime = 2 * 60 * 1000; // 单位毫秒
-export var categories = ['DOTA', 'LOL', '炉石'];
+export var categories = ['DOTA', 'DOTA2', 'LOL', '炉石', '王者荣耀', '守望先锋', '狼人杀'];
 export {
   DEBUG,
   jobs

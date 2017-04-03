@@ -10,6 +10,7 @@
 import {mongoose} from '../db/db';
 import {log} from '../utils/utils';
 import {types, rankNum, sitesMap} from '../config';
+import moment from 'moment'
 
 //直播信息
 var liveSchema = mongoose.Schema({
@@ -42,18 +43,21 @@ export class Live extends LiveModel {
     }
 
     static async getLivesByCategoryAndType (category='none', type = 'all', limit = 100) {
-        let lives = [], query = {};
+        let lives = [], query = {
+          "category":category,
+          'updatedAt': {$gte: moment().subtract(1, 'm').format('YYYY-MM-DD hh:mm:ss')}
+        };
         console.log(`get [${category}-${type}] lives from db`);
         if (types.indexOf(type) === -1) {
             throw new Error(`${type} is not search type`);
         }
         if (type === 'all') {
-            query = {"category":category};
+            // query = {"category":category};
         } else if (type === 'rank') {
-            query = {"category":category};
+            // query = {"category":category};
             limit = rankNum;
         } else if (Object.keys(sitesMap).indexOf(type) !== -1) {
-            query = {"category":category, "website": type};
+            query["website"] = type;
         }
         try {
           // sort使用字符串选定属性来排序，object不行
@@ -67,7 +71,7 @@ export class Live extends LiveModel {
 
     async findAndUpdate () {
         try {
-            let res =  await LiveModel.findOneAndUpdate({name: this.name},{
+            let res =  await LiveModel.findOneAndUpdate({link: this.link},{
                 nums: Number(this.nums),
                 img: this.img,
                 title: this.title,
