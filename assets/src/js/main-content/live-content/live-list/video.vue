@@ -44,7 +44,7 @@
       }
       & .play-mask.play-mask {
         top: 0;
-        transition: all .3s ease-in;
+        transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
     }
     a {
@@ -70,8 +70,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        transition: all .3s ease-out;
         text-align: center;
+        transition: all .5s ease-out;
         i {
           position: absolute;
           top: 50%;
@@ -79,7 +79,7 @@
           color: white;
           display: inline-block;
           font-size: 60px;
-          opacity: .9;
+          font-weight: bold;
           transform: translate(-50%, -50%);
           // trans
         }
