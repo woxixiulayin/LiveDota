@@ -13,10 +13,10 @@ import {types, rankNum, sitesMap} from '../config';
 
 //直播信息
 var liveSchema = mongoose.Schema({
-    name: {type:String, unique:true},
+    name: String,
     nums: Number,
     title: String,
-    link: String,
+    link: {type:String, unique:true},
     category: String,
     img: String,
     website: String

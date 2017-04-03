@@ -49,6 +49,8 @@ export let getLivesByParams = async (site, category) => {
     try {
         lives = await spider.parseUrl(url);
     } catch (e) {
+        console.log(lives)
+        console.log(url)
         console.log(e.stack);
     }
     if (!lives || lives.length < 1) {
