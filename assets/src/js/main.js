@@ -3,15 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import {Button, Menu, MenuItem, Tabs, TabPane} from 'element-ui'
 import store from './store'
 import '@/css/index.scss'
-
-Vue.use(Button)
-Vue.use(Menu)
-Vue.use(MenuItem)
-Vue.use(Tabs)
-Vue.use(TabPane)
 
 Vue.config.productionTip = false
 
