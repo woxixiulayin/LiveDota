@@ -1,5 +1,5 @@
 import {DEBUG} from '../config.js'
-
+import path from 'path'
 var log = function (str) {
     if (DEBUG === true) {
         let date = new Date();
@@ -14,6 +14,6 @@ var log = function (str) {
 }
 
 function getRootPath() {
-    return "/Users/Jackson/work/web/LiveDota/";
+    return path.resolve('.');
 }
 export {log, getRootPath};
