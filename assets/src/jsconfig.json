@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "allowSyntheticDefaultImports": true,
+        "module": "commonjs",
+        "baseUrl": "./",
+        "sourceRoot": "./",
+        "paths": {
+            "js/*": ["js/*"],
+            "lib/*": ["js/lib/*"]
+        }
+    },
+    "module": "commonjs",
+    "include": [
+        "./"
+    ],
+    "typeAcquisition": {
+      "include": [
+        "element-ui"
+      ]
+    }
+}

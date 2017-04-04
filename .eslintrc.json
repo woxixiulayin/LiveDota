@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "no-const-assign": "warn",
+        "jsx-quotes": 1,
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn",
+        "react/display-name": 1,
+        "react/jsx-boolean-value": 1,
+        "react/jsx-no-undef": 1,
+        "react/jsx-sort-props": 1,
+        "react/jsx-sort-prop-types": 1,
+        "react/jsx-uses-react": 1,
+        "react/jsx-uses-vars": 1,
+        "react/no-did-mount-set-state": 1,
+        "react/no-did-update-set-state": 1,
+        "react/no-multi-comp": 1,
+        "react/no-unknown-property": 1,
+        "react/prop-types": 1,
+        "react/react-in-jsx-scope": 1,
+        "react/self-closing-comp": 1,
+        "react/wrap-multilines": 1
+    }
+}

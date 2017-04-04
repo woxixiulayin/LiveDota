@@ -2,7 +2,8 @@
 livedota.sublime-project
 livedota.sublime-workspace
 typings*
-*.json
+config.json
+.vscode
 coverage/*
 server-build/*
 assets/dist/*
