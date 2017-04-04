@@ -7,3 +7,4 @@ export const fetchLives = ({category = '', site = ''}) =>
     assert(Array.isArray(data), 'lives should be an array')
     return data
   })
+

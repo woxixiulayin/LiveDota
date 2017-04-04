@@ -32,10 +32,13 @@ const actions = {
 `)
     }
     if (shouldGetNewLive(context.state[category][site])) {
-      console.log(context.state)
       // 获得游戏种类下指定网站的直播
-      return ajaxOperation.live.fetchLives({category, site})
-        .then(lives => context.commit('setCategorySiteLives', {category, site, lives: lives}))
+      return Promise.all([
+        ajaxOperation.live.fetchLives({category, site})
+        .then(lives => context.commit('setCategorySiteLives', {category, site, lives: lives})),
+        ajaxOperation.live.fetchLives({category, site: 'rank'})
+        .then(lives => context.commit('setCategoryRankLives', {category, site, lives: lives}))
+      ])
     }
   }
 }

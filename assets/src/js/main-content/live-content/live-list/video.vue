@@ -21,7 +21,7 @@
 
 </script>
 
-<style lang='scss' scoped>
+<style lang='scss'>
   .live-item {
     //max 320px
     //min 250px

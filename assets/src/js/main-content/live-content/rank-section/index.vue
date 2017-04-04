@@ -1,25 +1,25 @@
 <template>
   <section class="rank-section">
-    {{currentCategory}}
+    全网{{currentCategory}}直播排行
     <ul class="rank-list">
-      <li class="rank-item">
-        123
-      </li>
+      <rank-video v-for="video in lives" :video="video" :key="video._id">
+      </rank-video>
     </ul>
   </section>
 </template>
 <script>
-  import store from 'js/store'
-
+  import rankVideo from './rankVideo'
   export default {
     props: ['currentCategory'],
-    data: () => {
-      const globalState = store.state
-
-      return {
-        categoryList: globalState.categoryList
+    components: {
+      rankVideo
+    },
+    computed: {
+      lives: function () {
+        return this.$store.state.rankLives[this.currentCategory]
       }
     }
+
   }
 
 </script>
@@ -39,6 +39,7 @@
     flex-basis: $rightSideWidth;
     flex-grow: 0;
     flex-shrink: 0;
+    overflow: scroll;
   }
 
 </style>

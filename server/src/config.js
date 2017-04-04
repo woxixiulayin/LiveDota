@@ -127,4 +127,4 @@ export {
   jobs
 };
 export var types = Object.keys(sitesMap).concat(['rank', 'all']);
-export var rankNum = 10;
+export var rankNum = 15;

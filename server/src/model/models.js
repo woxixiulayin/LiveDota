@@ -44,7 +44,7 @@ export class Live extends LiveModel {
 
     static async getLivesByCategoryAndType (category='none', type = 'all', limit = 100) {
         let lives = [], query = {
-          "category":category,
+          category,
           'updatedAt': {$gte: moment().subtract(1, 'm').format('YYYY-MM-DD hh:mm:ss')}
         };
         console.log(`get [${category}-${type}] lives from db`);
@@ -52,9 +52,7 @@ export class Live extends LiveModel {
             throw new Error(`${type} is not search type`);
         }
         if (type === 'all') {
-            // query = {"category":category};
         } else if (type === 'rank') {
-            // query = {"category":category};
             limit = rankNum;
         } else if (Object.keys(sitesMap).indexOf(type) !== -1) {
             query["website"] = type;

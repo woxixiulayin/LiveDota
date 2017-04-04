@@ -8,7 +8,7 @@
   </ul>
       <router-view></router-view>
       </div>
-    <rank-section :currentCategory='$route.params.currentCategory'/>
+    <rank-section :currentCategory='currentCategory'/>
 </div>
 </template>
 

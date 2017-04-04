@@ -72,6 +72,7 @@
       setCurrentCategorySite (currentCategory, currentSite) {
         this.currentCategory = currentCategory
         this.currentSite = currentSite
+        this.$store.commit('setCategoryCurrentSite', {category: currentCategory, site: currentSite})
         this.$store.dispatch('updateLivesIfNeed', {
           category: currentCategory,
           site: currentSite
